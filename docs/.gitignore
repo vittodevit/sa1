@@ -1,0 +1,13 @@
+## LaTeX byproducts, only the .tex sources and the .pdf are tracked
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.toc
