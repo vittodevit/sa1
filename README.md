@@ -3,10 +3,14 @@
 ## PDF Documentation with GIT guide.
 See [here](docs/main.pdf)
 
-## Topic and group organization
-*Group Leader / GIT management*: Vittorio Lo Mele
-*Group Leader*: Angelica Vetere ([vetereangy-png](https://github.com/vetereangy-png))
+## Topic and group organization 
+*Group Leader / GIT management*: Vittorio Lo Mele     
+*Group Leader*: Angelica Vetere ([vetereangy-png](https://github.com/vetereangy-png))   
 
+## CSS leaders:
+- Giulio Finocchiaro  
+- Lazar Bogosavljevic ([Lucky-Lix](https://github.com/Lucky-Lix))  
+  
 *4 Topic leaders with groups*:
 - *Adam Balice ([Adam-Balix](https://github.com/Adam-Balix))*: Common threats, malware
   - Marco Scapinello
