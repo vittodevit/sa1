@@ -1,8 +1,6 @@
 # Simple project guide
 
-This guide explains how to use the project without assuming that you already know HTML or CSS.
-The project is static: it uses no JavaScript, framework, or build system.
-It targets desktop screens; mobile media queries are intentionally omitted.
+This guide explains how to use the css project.
 
 ## Where to start
 
