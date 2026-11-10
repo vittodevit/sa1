@@ -260,9 +260,7 @@ img {
 
 /* Form controls inherit the page typography instead of the browser default. */
 button,
-input,
-select,
-textarea {
+select{
   font: inherit;
   color: inherit;
 }
