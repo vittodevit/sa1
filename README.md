@@ -1,20 +1,35 @@
-# CSS documentation
+# Software Atelier 1 - Group 3 Project
 
-This folder documents the project's CSS as it is. The source files are:
+## PDF Documentation with GIT guide.
+See [here](docs/main.pdf)
 
-- `styles/styles.css` — design tokens, base element styles, typography and utilities.
-- `styles/shared.css` — layout primitives and reusable components.
-- `components.html` — the component catalogue.
-- `article.html` — an example article page.
+## Topic and group organization 
+*Group Leader / GIT management*: Vittorio Lo Mele     
+*Group Leader*: Angelica Vetere ([vetereangy-png](https://github.com/vetereangy-png))   
 
-Files in this folder:
-
-- `01-css.md` — CSS guide, token reference and complete class reference.
-- `02-components.md` — copyable HTML examples for every component.
-- `03-notes.md` — practical rules for editing and checking pages.
-
-The pages are desktop-first. The layout adapts at `900px` for the article
-sidebar and at `800px` / `1100px` for the footer. 
-
-The `brand` palette is the default. The accent aliases are available from
-`:root`, so `data-theme="brand"` is optional.
+## CSS leaders:
+- Giulio Finocchiaro  
+- Lazar Bogosavljevic ([Lucky-Lix](https://github.com/Lucky-Lix))  
+  
+*4 Topic leaders with groups*:
+- *Adam Balice ([Adam-Balix](https://github.com/Adam-Balix))*: Common threats, malware
+  - Marco Scapinello
+  - Camilla Budelli
+  - Jiaming Ren ([jiamingr7](https://github.com/jiamingr7))
+  - Lazar Bogosavljevic
+- *Carlo Augusto Conti*: Privacy, famous incidents
+  - Francesco Taddei ([france999ll](https://github.com/france999ll))
+  - Tommaso Fasolo ([TommasoFasoloUSI](https://github.com/TommasoFasoloUSI))
+  - Bora Lapushi ([borallapushi](https://github.com/borallapushi))
+  - Melis Tezcan ([melistezcan](https://github.com/melistezcan))
+- *Raul Moreno*: good security practices, secure communication
+  - Veronika Pavlova ([pavlovaveronika942](https://github.com/pavlovaveronika942))
+  - Tugrul Yildirim ([TugrulYildirim-7](https://github.com/TugrulYildirim-7))
+  - Mohammadreza Ravasizadeh
+  - Gjorgji Zlatevski ([zlatevskii](https://github.com/zlatevskii))
+- *Matteo Mignone*: risk brought by AI, authentication
+  - Alejandro Munera Pineda
+  - Giulio Finocchiaro
+  - Sezer Uygül
+  - Atakan Kyuchukov ([kaankyuchuk](https://github.com/kaankyuchuk))
+  - Yhoshua Filianoti ([filiay](https://github.com/filiay))
