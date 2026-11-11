@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Angelica Vetere">
+    <title>CyberAware | Discover</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shared.css">
+    
+    
+    <style>
+       
+       /* hover topic cards */
+        .topic-card {
+            transition: background-color .2s ease, border-color .2s ease;
+        }
+
+        .topic-card:hover {
+            background-color: rgba(70, 143, 161, 0.16);
+            border-color: var(--accent-border);
+        }
+
+        /* make the topic cards more compact */
+        #topics .topic-card {
+            min-height: 11.5rem;
+            padding: 1rem;
+            gap: .55rem;
+        }
+
+        #topics .topic-card__title {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        #topics .topic-card::after {
+            font-size: 3.5rem;
+        }
+
+        #topics .topic-card__text {
+            margin: 0;
+            font-size: var(--text-xs);
+            line-height: 1.45;
+        }
+
+         /* navbar underline animation */
+       .site-nav__link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .site-nav__link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-text);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .22s ease;
+        }
+
+        .site-nav__link:hover::after,
+        .site-nav__link:focus-visible::after,
+        .site-nav__link.is-active::after {
+            transform: scaleX(1);
+        }
+    </style>
+
+</head>
+
+<body style="background: radial-gradient(circle at 15% 30%, rgba(55, 149, 172, 0.14), transparent 35%), linear-gradient(135deg, #0b2635, #071d2b);">
+
+
+    <header class="site-header">
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="index.html">
+                <span class="brand__copy">CyberAware</span>
+            </a>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link is-active" href="index.html">Home</a></li>
+                <li><a class="site-nav__link" href="#topics">Topics</a></li>
+                <li><a class="site-nav__link" href="#mission">Our mission</a></li>
+                <li><a class="site-nav__link" href="credits.html"> Credits</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- main top box -->
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; align-items: stretch;">
+
+                    <div style="position: relative; overflow: hidden; padding: clamp(26px, 5vw, 58px); border: 1px solid var(--color-border-strong); border-radius: 24px;">
+                        <div aria-hidden="true" style="position: absolute; width: 230px; height: 230px; right: -85px; top: -105px; border: 1px solid var(--accent-border); border-radius: 50%; box-shadow: 0 0 0 24px rgba(70, 190, 220, .06), 0 0 0 52px rgba(70, 190, 220, .04);"></div>
+
+                        <p class="eyebrow" style="margin-bottom: 22px;">YOUR DIGITAL WORLD, DECODED</p>
+                        <h1 style="max-width: 760px; margin: 0 0 20px; font-size: clamp(38px, 6vw, 68px); line-height: 1.02;">
+                            The internet is powerful.<br>
+                            <span style="color: var(--accent-text);">Be smarter than the threats.</span></h1>
+                        <p class="lead" style="max-width: 570px; margin-bottom: 28px;">
+                            From malware to online privacy, explore the ideas and habits
+                            that help you navigate the digital world with confidence.
+                        </p>
+                        <div class="cluster">
+                            <a class="btn btn--primary" href="#topics">Start exploring <span aria-hidden="true">↗</span></a>
+                            <a class="btn btn--secondary" href="#mission">Why it matters</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--MISSING LINKS TO EACH TOPIC-->
+        <!-- topics -->
+    <section class="section section--tight" id="topics">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 28px;">
+                    <div class="section__header" style="margin-bottom: 0;">
+                        <p class="eyebrow">THE CYBERAWARE GUIDE</p>
+                        <h2 class="section__title">Pick your starting point.</h2>
+                    </div>
+                    <span style="padding-bottom: 8px; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;">TOPICS</span>
+                </div>
+
+                <div class="grid grid--3">
+                    <a class="topic-card" data-theme="threats" data-index="01" href="threats link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--threats">THREATS</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">SPOT THE RISK</span>
+                        <h3 class="topic-card__title">Common Threats</h3>
+                        <p class="topic-card__text">Spot attacks and vulnerabilities.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="threats" data-index="02" href="malware link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--threats">MALWARE</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">UNDERSTAND THE THREAT</span>
+                        <h3 class="topic-card__title">Malware</h3>
+                        <p class="topic-card__text">Understand malicious software.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="privacy" data-index="03" href="privacy link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--privacy">PRIVACY</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">KNOW YOUR DATA</span>
+                        <h3 class="topic-card__title">Online Privacy</h3>
+                        <p class="topic-card__text">Protect your personal data.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="privacy" data-index="04" href="incidents linkg">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--privacy">INCIDENTS</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">LEARN FROM THE PAST</span>
+                        <h3 class="topic-card__title">Famous Incidents</h3>
+                        <p class="topic-card__text">Lessons from major cyberattacks.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="security" data-index="05" href="protecton link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--security">PROTECTION</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">BUILD GOOD HABITS</span>
+                        <h3 class="topic-card__title">Good Security Practices</h3>
+                        <p class="topic-card__text">Build safer digital habits.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="security" data-index="06" href="communication link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--security">COMMUNICATION</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">COMMUNICATE SAFELY</span>
+                        <h3 class="topic-card__title">Secure Communication</h3>
+                        <p class="topic-card__text">Keep your messages private.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="brand" data-index="07" href="ai link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--outline">AI & THE FUTURE</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">FACE NEW CHALLENGES</span>
+                        <h3 class="topic-card__title">Risks Brought by AI</h3>
+                        <p class="topic-card__text">Recognise AI-powered threats.</p>
+                    </a>
+
+                    <a class="topic-card" data-theme="brand" data-index="08" href="identity link">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <span class="badge badge--outline">IDENTITY</span>
+                            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
+                        </div>
+                        <span class="topic-card__index">VERIFY YOURSELF</span>
+                        <h3 class="topic-card__title">Authentication</h3>
+                        <p class="topic-card__text">Secure accounts and identities.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- our mission-->
+        <section class="section section--tight" id="mission">
+            <div class="container">
+                <div class="surface" style="position: relative; overflow: hidden;">
+                    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, .55fr); gap: 28px; align-items: center;">
+                        <div>
+                            <p class="eyebrow">WHY CYBERAWARE EXISTS</p>
+                            <h2 style="max-width: 650px;">A safer digital world starts with informed people.</h2>
+                            <p style="max-width: 650px;">Our mission is to raise awareness about the risks we face in the digital world and help people understand how to deal with them. 
+                               <br><br> By exploring common cyber threats, online privacy and security practices, we aim to provide practical knowledge and solutions that make it easier to recognise dangers, protect personal information and make safer decisions online. 
+                                Because staying safe starts with knowing what to look out for.</p>
+                        </div>
+                        <div style="padding: 22px; border-left: 1px solid var(--color-border-strong);">
+                            <p style="margin: 0 0 10px; color: var(--accent-text); font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;">OUR APPROACH</p>
+                            <p style="margin: 0; font-size: 19px; line-height: 1.5; font-weight: 600;">Learn what can go wrong.<br>Discover what you can do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer class="site-footer">
+        <div class="container site-footer__main">
+            <div class="site-footer__brand">
+                <a class="brand" href="index.html">
+                    <span class="brand__copy">CyberAware <br><br>
+                        <span class="brand__sub">USI · Software Atelier I</span></span>
+                </a>
+                <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+            </div>
+            <div>
+                <h2 class="site-footer__title">Explore</h2>
+                <ul class="site-footer__list">
+
+                     <!--MISSING LINKSTO TOPICS--> 
+                    <li><a class="site-footer__link" href="1">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="2">Malware</a></li>
+                    <li><a class="site-footer__link" href="3">Online Privacy</a></li>
+                   <li><a class="site-footer__link" href="4">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="5">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="6">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="7">Risks Brought by AI</a></li>
+                    <li><a class="site-footer__link" href="8">Authentication</a></li>
+                </ul>
+            </div>
+            <div>
+                
+                <!--change this maybe?-->
+                <h2 class="site-footer__title">Project</h2>
+                <p class="site-footer__text">Software Atelier I</p>
+                <p class="site-footer__text">Group 3</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
