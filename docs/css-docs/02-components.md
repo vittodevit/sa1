@@ -1,8 +1,8 @@
 # 02 — HTML components
 
 This file explains every component demonstrated in `components.html`. The
-examples use the classes defined in `styles/styles.css` and
-`styles/shared.css`.
+examples use the classes defined in `css/styles.css` and
+`css/shared.css`.
 
 The safest workflow is:
 
@@ -27,8 +27,8 @@ The `id="main"` gives in-page links a target. Use only one `<main>` on a page.
 Load the stylesheets in this order:
 
 ```html
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/shared.css">
 ```
 
 The pages are desktop-first. The article sidebar and the footer adapt at

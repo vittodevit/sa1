@@ -12,12 +12,12 @@
 
 ## Working with the CSS
 
-- Load `styles/styles.css` first, then `styles/shared.css`.
+- Load `css/styles.css` first, then `css/shared.css`.
 - The `brand` palette is the default. The `data-theme="brand"` attribute is
   optional because `:root` already provides the accent aliases.
 - The build is desktop-first. The layout adapts at `900px` for the article
   sidebar and at `800px` / `1100px` for the footer. There is no mobile drawer.
-- Use the tokens from `styles/styles.css` instead of raw colours, spacing values and
+- Use the tokens from `css/styles.css` instead of raw colours, spacing values and
   font sizes.
 
 ## Links
@@ -66,7 +66,7 @@ different version. Layout helpers and utilities are outside BEM:
 First copy a similar component from `components.html`. If it is not enough:
 
 1. Choose a simple BEM name.
-2. Add the rule to `styles/shared.css`.
+2. Add the rule to `css/shared.css`.
 3. Use the existing colour, spacing, radius and typography variables.
 4. Add an example to `components.html`.
 5. Test the result at the normal desktop widths and at the layout breakpoints.

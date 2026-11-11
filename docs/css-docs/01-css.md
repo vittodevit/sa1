@@ -10,15 +10,15 @@ the article sidebar and the footer. There is no mobile navigation.
 
 The project uses two stylesheets:
 
-- `styles/styles.css` contains the design tokens, base element styles,
+- `css/styles.css` contains the design tokens, base element styles,
   typography and the three global utilities.
-- `styles/shared.css` contains layout primitives and reusable components.
+- `css/shared.css` contains layout primitives and reusable components.
 
 Always load them in this order:
 
 ```html
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/shared.css">
 ```
 
 `components.html` also has a local `<style>` block for the gallery previews.
@@ -44,7 +44,7 @@ Layout and utility classes are intentionally outside BEM: `.container`,
 ## Design tokens
 
 Avoid raw values in new components. Use the variables declared in
-`styles/styles.css`.
+`css/styles.css`.
 
 ### Core palette
 
@@ -170,7 +170,7 @@ Tracking: `--tracking-wide` (`0.1em`), `--tracking-wider` (`0.18em`) and
 
 ## Base element styles
 
-`styles/styles.css` styles elements directly instead of resetting everything:
+`css/styles.css` styles elements directly instead of resetting everything:
 
 - `body` sets the page background, the two decorative radial gradients, the
   body font, the base size and the normal line-height.
@@ -189,7 +189,7 @@ reset, a global `box-sizing: border-box` or a form-control reset. Components
 bring their own spacing and borders; new interactive elements should use `.btn`
 or an explicit component style.
 
-## Global utilities from `styles/styles.css`
+## Global utilities from `css/styles.css`
 
 | Class | What it does |
 | --- | --- |
@@ -197,7 +197,7 @@ or an explicit component style.
 | `.text-sm` | Uses the small text size (`--text-sm`). |
 | `.text-muted` | Uses the secondary text colour (`--color-text-muted`). |
 
-## Layout classes from `styles/shared.css`
+## Layout classes from `css/shared.css`
 
 | Class | What it does |
 | --- | --- |
