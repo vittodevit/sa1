@@ -12,6 +12,3 @@
 *.synctex.gz
 *.toc
 
-## macOS
-.DS_Store
-
