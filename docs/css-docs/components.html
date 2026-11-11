@@ -1,0 +1,792 @@
+<!--
+  components.html — catalogue of the project's components.
+
+  Each section isolates one piece of UI (buttons, cards, tables, etc.) so it
+  can be copied into a real page without reinventing the markup. The class
+  names are documented in docs/02-components.md.
+
+-->
+<!DOCTYPE html>
+<html lang="it" data-theme="brand">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Giulio Finocchiaro">
+  <title>CyberAware Components</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/shared.css">
+
+  <style>
+    /* Outer preview box for one component section. */
+    .component {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+    }
+
+    /* Inner area with a soft radial accent in the top-left corner. */
+    .component__preview {
+      display: grid;
+      gap: var(--space-2);
+      padding: clamp(1rem, 3vw, 1.75rem);
+      background:
+        radial-gradient(40rem 20rem at 10% 0%, var(--accent-soft), transparent 60%),
+        var(--color-surface);
+    }
+
+    /* Stacked preview layout: the live demo comes first, then its name caption.
+       Both share one full-width column, giving examples more room than the old
+       two-column grid. */
+    .component-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-1-5);
+      align-items: start;
+    }
+
+    /* Names are metadata, not headings, so they use the mono uppercase style.
+       They sit below their preview as a small caption. */
+    .component-list__name {
+      padding-top: 0;
+      color: var(--color-text-dim);
+      font-family: var(--font-mono);
+      font-size: var(--text-2xs);
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    /* The preview owns the full row. min-width: 0 prevents wide demos (tables,
+       code) from blowing out the grid. */
+    .component-list__demo {
+      min-width: 0;
+    }
+
+    /* Keep the navigation demo visible inside the component gallery. It should
+       scroll with the page, not stick to the viewport. */
+    .site-header--preview {
+      position: static;
+    }
+
+    /* Keep the demo navbar on one line inside its preview box. */
+    .site-header--preview .site-nav__inner {
+      flex-wrap: nowrap;
+      gap: var(--space-2);
+      padding-block: var(--space-2);
+    }
+
+    /* The desktop header always shows these links. The preview compacts them
+       slightly so all topics fit on a single row. */
+    .site-header--preview .site-nav__links,
+    .site-header--preview .site-nav__actions {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .site-header--preview .site-nav__links {
+      gap: var(--space-1);
+    }
+
+    .site-header--preview .site-nav__link {
+      font-size: var(--text-2xs);
+      letter-spacing: 0.04em;
+    }
+
+    /* Horizontal index of all component sections. */
+    .component-index {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1) var(--space-3);
+      padding-block: var(--space-2);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Index links look like small uppercase metadata. */
+    .component-index a {
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+      font-size: var(--text-2xs);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    /* Grid of colour samples. */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      gap: var(--space-2);
+    }
+
+    /* One sample: colour block on top, name and value below. */
+    .swatch {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface-3);
+    }
+
+    /* The actual colour comes from the --swatch custom property set inline in
+       the HTML. The accent is only a fallback. */
+    .swatch__color {
+      height: 4.5rem;
+      background: var(--swatch, var(--accent));
+    }
+
+    /* Text area under the colour block. */
+    .swatch__meta {
+      display: grid;
+      gap: 0.15rem;
+      padding: 0.65rem 0.75rem;
+    }
+
+    /* Human-readable colour name. */
+    .swatch__name {
+      font-size: var(--text-xs);
+      font-weight: 600;
+    }
+
+    /* Token name and hex value, in the same mono metadata style. */
+    .swatch__value {
+      color: var(--color-text-dim);
+      font-family: var(--font-mono);
+      font-size: var(--text-2xs);
+      text-transform: uppercase;
+    }
+
+    /* Horizontal demo layout used inside component previews. */
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-1-5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="main">
+    <section class="section section--tight" id="top">
+      <div class="container">
+
+        <!-- Quick index: each item jumps to the matching section. -->
+        <nav class="component-index" aria-label="Component sections">
+          <a href="#buttons">Buttons</a>
+          <a href="#labels">Labels</a>
+          <a href="#navigation">Navigation</a>
+          <a href="#cards">Cards</a>
+          <a href="#data">Data</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#alerts">Alerts</a>
+          <a href="#small-pieces">Small pieces</a>
+          <a href="#colours">Colours</a>
+          <a href="#footer">Footer</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Buttons: variants, sizes and destructive actions. -->
+    <section class="section section--tight" id="buttons">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Buttons</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <!-- Each pair stacks a full-width live example above its name caption. -->
+            <div class="component-list">
+              <!-- Primary variant, also available in two sizes. -->
+              <div class="component-list__demo">
+                <div class="demo-row">
+                  <a class="btn btn--primary" href="#buttons">Primary</a>
+                  <a class="btn btn--primary btn--sm" href="#buttons">Small</a>
+                  <a class="btn btn--primary btn--lg" href="#buttons">Large</a>
+                </div>
+              </div>
+              <div class="component-list__name">Primary button</div>
+
+              <!-- Secondary variant: less visual weight, but still bordered. -->
+              <div class="component-list__demo">
+                <a class="btn btn--secondary" href="#buttons">Secondary</a>
+              </div>
+              <div class="component-list__name">Secondary button</div>
+
+              <!-- Ghost: almost invisible until you hover it. -->
+              <div class="component-list__demo">
+                <button class="btn btn--ghost" type="button">Ghost</button>
+              </div>
+              <div class="component-list__name">Ghost button</div>
+
+              <!-- Destructive actions: filled, outlined or icon-only. -->
+              <div class="component-list__demo">
+                <div class="demo-row">
+                  <button class="btn btn--danger" type="button">Danger</button>
+                  <button class="btn btn--danger-outline" type="button">Danger outline</button>
+                  <button class="btn btn--delete" type="button">
+                    <!-- Decorative icon: the "Delete" text stays readable to screen readers. -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"
+                      focusable="false">
+                      <path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13M10 11v6M14 11v6" />
+                    </svg>
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="component-list__name">Danger buttons</div>
+
+              <!-- A link that looks like a button, useful for text-level actions. -->
+              <div class="component-list__demo">
+                <a class="btn btn--link" href="#buttons">Open section →</a>
+              </div>
+              <div class="component-list__name">Link button</div>
+
+              <!-- Square button: the accessible label lives in aria-label. -->
+              <div class="component-list__demo">
+                <button class="btn btn--secondary btn--icon" type="button" aria-label="Adiv item">+</button>
+              </div>
+              <div class="component-list__name">Icon button</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Labels: badges, tags and statuses. All variants of the same theme. -->
+    <section class="section section--tight" id="labels">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Labels</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Badges: short labels, with colour variants and an optional dot. -->
+              <div class="component-list__demo">
+                <div class="demo-row">
+                  <span class="badge badge--accent">Accent</span>
+                  <span class="badge badge--threats">Threats</span>
+                  <span class="badge badge--privacy">Privacy</span>
+                  <span class="badge badge--security">Security</span>
+                  <span class="badge badge--outline">Outline</span>
+                  <span class="badge badge--solid">Solid</span>
+                  <span class="badge badge--accent badge--dot">Live</span>
+                </div>
+              </div>
+              <div class="component-list__name">Badges</div>
+
+              <!-- Tags: lighter than badges, meant for topic lists. -->
+              <div class="component-list__demo">
+                <ul class="tag-list">
+                  <li><span class="tag tag--accent">Malware</span></li>
+                  <li><span class="tag tag--threats">Zero-day</span></li>
+                  <li><span class="tag tag--privacy">Privacy</span></li>
+                  <li><span class="tag tag--security">Encryption</span></li>
+                </ul>
+              </div>
+              <div class="component-list__name">Tags</div>
+
+              <!-- Statuses: colour carries the meaning (info, ok, warning, error). -->
+              <div class="component-list__demo">
+                <div class="demo-row">
+                  <span class="status status--info">Draft</span>
+                  <span class="status status--success">Verified</span>
+                  <span class="status status--warning">Review</span>
+                  <span class="status status--danger">Critical</span>
+                </div>
+              </div>
+              <div class="component-list__name">Status labels</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation: page header, navbar and breadcrumbs in one place. -->
+    <section class="section section--tight" id="navigation">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Navigation</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Page header: a small eyebrow, a title and an optional intro. -->
+              <div class="component-list__demo">
+                <header class="stack stack--sm">
+                  <p class="eyebrow">Section label</p>
+                  <h3 class="section__title">Page title</h3>
+                  <p class="text-muted">A short introduction to the page.</p>
+                </header>
+              </div>
+              <div class="component-list__name">Page header</div>
+
+              <!-- Navbar demo: the preview modifier keeps it in the page flow. -->
+              <div class="component-list__demo">
+                <header class="site-header site-header--preview">
+                  <nav class="container site-nav__inner" aria-label="Main navigation">
+                    <a class="brand" href="...">
+                      <span class="brand__copy">
+                        CyberAware
+                      </span>
+                    </a>
+
+                    <ul class="site-nav__links">
+                      <li><a class="site-nav__link" href="...">Home</a></li>
+                      <li><a class="site-nav__link" href="...">Common Threats</a></li>
+                      <li><a class="site-nav__link" href="...">Malware</a></li>
+                      <li><a class="site-nav__link" href="...">Privacy</a></li>
+                      <li><a class="site-nav__link" href="...">Famous Incidents</a></li>
+                      <li><a class="site-nav__link" href="...">Good Security Practices</a></li>
+                      <li><a class="site-nav__link" href="...">Secure Communication</a></li>
+                      <li><a class="site-nav__link" href="...">Authentication</a></li>
+                    </ul>
+                  </nav>
+                </header>
+              </div>
+              <div class="component-list__name">Navbar</div>
+
+              <!-- Breadcrumbs: the last item uses aria-current="page". -->
+              <div class="component-list__demo">
+                <nav aria-label="Breadcrumb">
+                  <ol class="breadcrumbs">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#cards">Modules</a></li>
+                    <li><span aria-current="page">Current page</span></li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="component-list__name">Breadcrumbs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards: topic cards, article cards, unit cards and a standalone metric. -->
+    <section class="section section--tight" id="cards">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Cards</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+
+              <!-- Topic cards -->
+              <div class="component-list__demo">
+                <div class="grid grid--3">
+                  <a class="topic-card" data-index="01" href="#cards">
+                    <span class="topic-card__index">Module 01 · Threats</span>
+                    <h3 class="topic-card__title">Common Threats</h3>
+                    <p class="topic-card__text">
+                      Malware, phishing, zero-day attacks, and common defensive methods.
+                    </p>
+                    <span class="topic-card__cta">Explore section →</span>
+                  </a>
+
+                  <a class="topic-card" data-index="02" href="#cards">
+                    <span class="topic-card__index">Module 02 · Privacy</span>
+                    <h3 class="topic-card__title">Digital Privacy</h3>
+                    <p class="topic-card__text">
+                      Personal data, tracking, privacy settings, and responsible data use.
+                    </p>
+                    <span class="topic-card__cta">Explore section →</span>
+                  </a>
+
+                  <a class="topic-card" data-index="03" href="#cards">
+                    <span class="topic-card__index">Module 03 · Security</span>
+                    <h3 class="topic-card__title">Staying Secure</h3>
+                    <p class="topic-card__text">
+                      Secure communication, authentication, encryption, and safe habits.
+                    </p>
+                    <span class="topic-card__cta">Explore section →</span>
+                  </a>
+                </div>
+              </div>
+              <div class="component-list__name">Topic cards</div>
+
+              <!-- Article card -->
+              <div class="component-list__demo">
+                <article class="card article-card">
+                  <div class="card__media">
+                    <span class="badge badge--accent article-card__tag">Special dossier</span>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__meta">
+                      <span>Threats · Module 01</span>
+                      <span>12 min read</span>
+                    </div>
+                    <h3 class="card__title">The Evolution of Modern Ransomware</h3>
+                    <p class="card__text">
+                      An introduction to ransomware, its effects, and the security lessons it teaches.
+                    </p>
+                    <a class="article-card__read" href="#cards">Read full dossier →</a>
+                  </div>
+                </article>
+              </div>
+              <div class="component-list__name">Article card</div>
+
+              <!-- Unit card -->
+              <div class="component-list__demo">
+                <article class="unit-card">
+                  <div class="unit-card__meta">
+                    <span>Unit 01.1</span>
+                    <span>8 min</span>
+                  </div>
+                  <h3 class="unit-card__title">Common Cybersecurity Threats</h3>
+                  <p class="unit-card__text">
+                    Threat categories, attack surfaces, and basic risk evaluation.
+                  </p>
+                  <div class="unit-card__footer">
+                    <span class="badge badge--outline">Theory</span>
+                    <a class="btn btn--link btn--sm" href="#cards">Open unit →</a>
+                  </div>
+                </article>
+              </div>
+              <div class="component-list__name">Unit card</div>
+
+              <!-- Metric -->
+              <div class="component-list__demo">
+                <div class="metric">
+                  <span class="metric__value">3</span>
+                  <span class="metric__label">Core modules</span>
+                </div>
+              </div>
+              <div class="component-list__name">Metric</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data: statistics blocks and a table. -->
+    <section class="section section--tight" id="data">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Data</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Statistics: the grid shares one border between all cells. -->
+              <div class="component-list__demo">
+                <div class="stat-grid">
+                  <div class="stat"><span class="stat__value">3</span><span class="stat__label">Core modules</span>
+                  </div>
+                  <div class="stat"><span class="stat__value">3</span><span class="stat__label">Curricular themes</span>
+                  </div>
+                  <div class="stat"><span class="stat__value">0</span><span class="stat__label">JavaScript files</span>
+                  </div>
+                  <div class="stat"><span class="stat__value">8px</span><span class="stat__label">Spacing rhythm</span>
+                  </div>
+                </div>
+              </div>
+              <div class="component-list__name">Statistics</div>
+
+              <!-- Data table: caption, column scopes and status pills inside cells. -->
+              <div class="component-list__demo">
+                <div class="table-wrap">
+                  <table class="data-table">
+                    <caption>Authentication factors security matrix</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Factor</th>
+                        <th scope="col">Phishing resistance</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>SMS one-time code</strong></td>
+                        <td>Low</td>
+                        <td><span class="status status--danger">Deprecated</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>TOTP authenticator app</strong></td>
+                        <td>Medium</td>
+                        <td><span class="status status--warning">Review</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>FIDO2 / WebAuthn passkey</strong></td>
+                        <td>Very high</td>
+                        <td><span class="status status--success">Verified</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="component-list__name">Data table</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline: a vertical sequence of dated events. -->
+    <section class="section section--tight" id="timeline">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Timeline</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Each item needs a time, a title and a description; CSS draws the line. -->
+              <div class="component-list__demo">
+                <ol class="timeline">
+                  <li class="timeline__item">
+                    <p class="timeline__time">07:44 · Initial outbreak</p>
+                    <h3 class="timeline__title">Systems become compromised</h3>
+                    <p class="timeline__text">The first affected devices begin showing signs of an attack.</p>
+                  </li>
+                  <li class="timeline__item">
+                    <p class="timeline__time">18:24 · Response begins</p>
+                    <h3 class="timeline__title">The spread is contained</h3>
+                    <p class="timeline__text">The response team limits the incident and starts recovery work.</p>
+                  </li>
+                </ol>
+              </div>
+              <div class="component-list__name">Timeline component</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts: callout variations, one per semantic state. -->
+    <section class="section section--tight" id="alerts">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Alerts</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Default callout: the neutral information state. -->
+              <div class="component-list__demo">
+                <div class="callout">
+                  <p class="callout__title">Editorial note</p>
+                  <p>This callout provides extra context or a short explanation.</p>
+                </div>
+              </div>
+              <div class="component-list__name">Info callout</div>
+
+              <!-- Success callout: confirms that something has been checked. -->
+              <div class="component-list__demo">
+                <div class="callout callout--success">
+                  <p class="callout__title">Verified practice</p>
+                  <p>This callout confirms that a security practice has been checked.</p>
+                </div>
+              </div>
+              <div class="component-list__name">Success callout</div>
+
+              <!-- Warning callout: asks the reader to review or decide something. -->
+              <div class="component-list__demo">
+                <div class="callout callout--warning">
+                  <p class="callout__title">Attention required</p>
+                  <p>This callout tells the reader that a decision or review is needed.</p>
+                </div>
+              </div>
+              <div class="component-list__name">Warning callout</div>
+
+              <!-- Danger callout: reserved for serious, urgent problems. -->
+              <div class="component-list__demo">
+                <div class="callout callout--danger">
+                  <p class="callout__title">Critical issue</p>
+                  <p>This callout is used for a serious problem that needs immediate attention.</p>
+                </div>
+              </div>
+              <div class="component-list__name">Danger callout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Small pieces: avatars and the empty state. -->
+    <section class="section section--tight" id="small-pieces">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Small pieces</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Avatars: initials in a circle, with a smaller size modifier. -->
+              <div class="component-list__demo">
+                <div class="demo-row">
+                  <span class="avatar">AD</span>
+                  <span class="avatar avatar--sm">CA</span>
+                  <span class="avatar avatar--sm">RM</span>
+                  <span class="text-sm text-muted">Group 3</span>
+                </div>
+              </div>
+              <div class="component-list__name">Avatars</div>
+
+              <!-- Empty state: used when a section has no content yet. -->
+              <div class="component-list__demo">
+                <div class="empty-state">
+                  <span class="empty-state__icon" aria-hidden="true">∅</span>
+                  <h3>No case studies yet</h3>
+                  <p class="text-sm text-muted">This module does not have a case study at the moment.</p>
+                  <a class="btn btn--secondary btn--sm" href="#cards">Browse modules</a>
+                </div>
+              </div>
+              <div class="component-list__name">Empty state</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Colours: the palette and the semantic status colours. -->
+    <section class="section section--tight" id="colours">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Colours</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Core blues: the five supplied colours, shown with their token names. -->
+              <div class="component-list__demo">
+                <div class="swatch-grid">
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #133C55"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Yale Blue</span>
+                      <span class="swatch__value">#133C55 · --yale-blue</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #386FA4"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Cornflower Ocean</span>
+                      <span class="swatch__value">#386FA4 · --cornflower-ocean</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #59A5D8"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Fresh Sky</span>
+                      <span class="swatch__value">#59A5D8 · --fresh-sky</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #84D2F6"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Frozen Lake</span>
+                      <span class="swatch__value">#84D2F6 · --frozen-lake</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #91E5F6"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Frosted Blue</span>
+                      <span class="swatch__value">#91E5F6 · --frosted-blue</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="component-list__name">Core blues</div>
+
+              <!-- Status colours: danger, success and warning, straight from the tokens. -->
+              <div class="component-list__demo">
+                <div class="swatch-grid">
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #E7404D"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Danger</span>
+                      <span class="swatch__value">#E7404D · --color-danger</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #18BB85"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Success</span>
+                      <span class="swatch__value">#18BB85 · --color-success</span>
+                    </div>
+                  </div>
+                  <div class="swatch">
+                    <div class="swatch__color" style="--swatch: #F0B35A"></div>
+                    <div class="swatch__meta">
+                      <span class="swatch__name">Warning</span>
+                      <span class="swatch__value">#F0B35A · --color-warning</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="component-list__name">Status colours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: the complete footer example, ready to be copied. -->
+    <section class="section section--tight" id="footer">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Footer</h2>
+        </div>
+        <div class="component">
+          <div class="component__preview">
+            <div class="component-list">
+              <!-- Footer demo: the inner container keeps the same width as the page. -->
+              <div class="component-list__demo">
+                <footer class="site-footer">
+                  <div class="container site-footer__main">
+                    <!-- Left column: logo and a short description. -->
+                    <div class="site-footer__brand">
+                      <span class="brand__copy">
+                        CyberAware
+                        <span class="brand__sub">USI · Software Atelier I</span>
+                      </span>
+                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
+                      </p>
+                    </div>
+
+                    <!-- Middle column: the same modules as the main navigation. -->
+                    <div>
+                      <h2 class="site-footer__title">Lorem modules</h2>
+                      <ul class="site-footer__list site-footer__list--grid">
+                        <li><a class="site-footer__link" href="...">Common Threats</a></li>
+                        <li><a class="site-footer__link" href="...">Malware</a></li>
+                        <li><a class="site-footer__link" href="...">Privacy</a></li>
+                        <li><a class="site-footer__link" href="...">Famous Incidents</a></li>
+                        <li><a class="site-footer__link" href="...">Good Security Practices</a></li>
+                        <li><a class="site-footer__link" href="...">Secure Communication</a></li>
+                        <li><a class="site-footer__link" href="...">Authentication</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Right column: information about the project and the group. -->
+                    <div>
+                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+                      <ul class="site-footer__list">
+                        <li><span class="site-footer__text">Software Atelier 1</span></li>
+                        <li><span class="site-footer__text">USI 2026/27</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+              <div class="component-list__name">Footer component</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

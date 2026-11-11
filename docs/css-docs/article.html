@@ -1,0 +1,239 @@
+<!--
+  article.html — example page for a single article.
+
+  The structure is the same across the site: utility bar, header,
+  editorial content and footer. The text is intentionally placeholder:
+  the point here is showing how the components fit together.
+
+  The page is marked with data-theme="brand": that attribute is the hook for
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Giulio Finocchiaro">
+  <title>CyberSecurity Article</title>
+
+  <!-- Load the foundations first (variables, reset, typography), then the components. -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+
+  <!-- Shared header: logo on the left, main navigation on the right. -->
+  <header class="site-header">
+    <nav class="container site-nav__inner" aria-label="Main navigation">
+      <a class="brand" href="...">
+        <span class="brand__copy">
+          CyberAware
+        </span>
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a class="site-nav__link" href="...">Home</a></li>
+        <li><a class="site-nav__link" href="...">Common Threats</a></li>
+        <li><a class="site-nav__link" href="...">Malware</a></li>
+        <li><a class="site-nav__link" href="...">Privacy</a></li>
+        <li><a class="site-nav__link" href="...">Famous Incidents</a></li>
+        <li><a class="site-nav__link" href="...">Good Security Practices</a></li>
+        <li><a class="site-nav__link" href="...">Secure Communication</a></li>
+        <li><a class="site-nav__link" href="...">Authentication</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content: page heading first, then the two-column article body. -->
+  <main id="main">
+    <section class="section section--tight">
+      <div class="container container--narrow">
+        <!-- Breadcrumb: helps readers understand where this page sits. -->
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="components.html">Lorem</a></li>
+            <li><a href="components.html#cards">Ipsum</a></li>
+            <li><span aria-current="page">Dolor sit amet</span></li>
+          </ol>
+        </nav>
+
+        <!-- Article header: category, title, abstract and reading metadata. -->
+        <p class="eyebrow">Lorem 01 · Ipsum</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua, ut enim ad minim veniam.
+        </p>
+        <div class="cluster">
+          <span class="badge badge--threats">Lorem badge</span>
+          <span class="status status--warning">12 min lorem</span>
+          <span class="text-sm text-muted">By lorem ipsum</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article body: internal index on the left, content on the right. -->
+    <section class="section section--flush-top">
+      <div class="container grid grid--sidebar">
+        <!-- Internal index: every link points to an id further down the page. -->
+        <aside class="surface stack stack--sm">
+          <p class="eyebrow eyebrow--plain">Lorem index</p>
+          <a href="#overview">Lorem</a>
+          <a href="#timeline">Ipsum</a>
+          <a href="#impact">Dolor</a>
+          <a href="#lessons">Sit amet</a>
+        </aside>
+
+        <div class="stack stack--lg">
+          <!-- 1. Overview: context and a short summary of the incident. -->
+          <article class="surface" id="overview">
+            <h2>Lorem overview</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
+              tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
+              diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+            </p>
+          </article>
+
+          <!-- 2. Timeline: the main events in chronological order. -->
+          <article class="surface" id="timeline">
+            <h2>Lorem timeline</h2>
+            <!-- The vertical line is drawn by CSS; the markup only needs the list. -->
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__time">07:44 · Lorem ipsum</p>
+                <h3 class="timeline__title">Dolor sit amet</h3>
+                <p class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__time">12:30 · Lorem ipsum</p>
+                <h3 class="timeline__title">Consectetur adipiscing</h3>
+                <p class="timeline__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__time">18:24 · Lorem ipsum</p>
+                <h3 class="timeline__title">Ut enim ad minim</h3>
+                <p class="timeline__text">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- 3. Impact: key numbers that show the scale of the incident. -->
+          <article class="surface" id="impact">
+            <h2>Lorem impact</h2>
+            <!-- Four values: CSS lays them out in an automatic grid. -->
+            <div class="stat-grid">
+              <div class="stat"><span class="stat__value">150+</span><span class="stat__label">Lorem ipsum</span></div>
+              <div class="stat"><span class="stat__value">200k+</span><span class="stat__label">Dolor sit</span></div>
+              <div class="stat"><span class="stat__value">48h</span><span class="stat__label">Amet lorem</span></div>
+              <div class="stat"><span class="stat__value">$</span><span class="stat__label">Ipsum value</span></div>
+            </div>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in mauris eu nibh euismod
+              gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit.
+            </p>
+          </article>
+
+          <!-- 4. Lessons learned: a table of controls and their risk level. -->
+          <article class="surface" id="lessons">
+            <h2>Lorem lessons</h2>
+            <!-- The wrapper allows horizontal scrolling on small screens. -->
+            <div class="table-wrap">
+              <table class="data-table">
+                <caption>Lorem table</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Lorem</th>
+                    <th scope="col">Ipsum</th>
+                    <th scope="col">Dolor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Lorem control</strong></td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td><span class="status status--danger">Lorem</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ipsum control</strong></td>
+                    <td>Sed do eiusmod tempor incididunt.</td>
+                    <td><span class="status status--warning">Ipsum</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dolor control</strong></td>
+                    <td>Ut labore et dolore magna aliqua.</td>
+                    <td><span class="status status--success">Dolor</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui ligula, fringilla a, euismod
+              sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at,
+              lobortis vitae, ultricies et, tellus.
+            </p>
+          </article>
+
+          <!-- Closing note: the danger colour signals a warning. -->
+          <div class="callout callout--danger">
+            <p class="callout__title">Lorem note</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Closing actions: go back to the components or return to the top. -->
+          <div class="cluster">
+            <a class="btn btn--primary" href="components.html">Lorem components</a>
+            <a class="btn btn--secondary" href="#main">Lorem top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer: project identity, modules and project information. -->
+  <footer class="site-footer">
+    <div class="container site-footer__main">
+      <!-- Left column: logo and a short description. -->
+      <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+        <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..</p>
+      </div>
+
+      <!-- Middle column: the same modules as the main navigation. -->
+      <div>
+        <h2 class="site-footer__title">Lorem modules</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+          <li><a class="site-footer__link" href="...">Common Threats</a></li>
+          <li><a class="site-footer__link" href="...">Malware</a></li>
+          <li><a class="site-footer__link" href="...">Privacy</a></li>
+          <li><a class="site-footer__link" href="...">Famous Incidents</a></li>
+          <li><a class="site-footer__link" href="...">Good Security Practices</a></li>
+          <li><a class="site-footer__link" href="...">Secure Communication</a></li>
+          <li><a class="site-footer__link" href="...">Authentication</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: information about the project and the group. -->
+      <div>
+        <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier 1</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
