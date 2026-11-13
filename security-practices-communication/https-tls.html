@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Veronika Pavlova">
+        <title>HTTPS and TLS</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section class="section">
+
+                <ul class="breadcrumbs">
+                    <li><a href="intro.html">Secure Communication</a></li>
+                    <li aria-current="page">HTTPS and TLS</li>
+                </ul>
+
+                <h1>HTTPS and TLS</h1>
+
+                <p class="lead">
+                    The padlock means the connection is private.
+                    It doesn't imply that the site is trustful.
+                </p>
+
+                <div class="surface">
+                    <img src="https and tls.jpg"
+                    alt="HTTPS secure website connection">
+                    <p>HTTPS uses TLS to encrypt communication
+                        between a browser and a website.</p>
+                </div>
+
+                <h2>HTTP vs HTTPS</h2>
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>HTTP</th>
+                                <th>HTTPS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data sent as plain text</td>
+                                <td>Data sncrypted with TLS</td>
+                            </tr>
+                            <tr>
+                                <td>Network observers can read the data</td>
+                                <td>Data is protected between browser and website</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>What HTTPS means</h2>
+
+                <ul>
+                    <li>It encrypts the connection.</li>
+                    <li>It confirms that the website controls its domain.</li>
+                    <li>It does not guarantee that the website is trustful.</li>
+                </ul>
+
+                <div class="surface">
+                    <h3> Check website address</h3>
+                    <p><code>https://your-bank.com</code></p>
+                    <p><code>https://your-bank.comlogin-check.example</code></p>
+                    <p>
+                        The second website belongs to login-check.example, and not your-bank.com, as it can seem
+                    </p>
+                </div>
+
+                <div class="surface">
+                    <h3>Useful tips.</h3>
+                    <ul>
+                        <li>Never enter passwords on HTTP pages.</li>
+                        <li>Do not ignore certificate warnings.</li>
+                        <li>Check the domain, not only the padlock</li>
+                    </ul>
+                </div>
+
+                <p class="text-muted">
+                    Source: <a href="https://www.cloudflare.com/learning/ssl/what-is-https/">Cloudflare, What is HTTPS?</a>
+                    <a href="https://letsencrypt.org/how-it-works/">Let's Encrypt, How It Works.</a>
+                </p>
+
+                <div class="cluster">
+                    <a class="btn btn--secondary" href="encryption-basics.html">Encryption basics</a>
+                    <a class="btn btn--primary" href="end-to-end-messaging.html">End-to-end messaging</a>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>
