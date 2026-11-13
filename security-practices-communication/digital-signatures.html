@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Veronika Pavlova">
+        <title>Digital signatures and certificates</title>
+        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section class="section">
+
+                <ul class="breadcrumbs">
+                    <li><a href="into.html">Secure Commuication</a></li>
+                    <li aria-current="page">Digital signatures and certificates.</li>
+                </ul>
+
+                <h1>Digital signatures and certificates</h1>
+
+                <p class="lead">
+                    A digital signature helps to prove who sent a document
+                    and that its content was not modified since.
+                    A certificate connects a pubic key to an identity.
+                </p>
+
+                <div class="surface">
+                    <img src="../img/digital-signatures.jpeg"
+                    alt="Digital signature and certificate verification">
+                    <p>Digital signatures help verify the sender and protect the integrity of the document.</p>
+                </div>
+
+                <h2>How digital signatures work</h2>
+
+                <div class="surface">
+                    <p>1. Sign with private key.</p>
+                    <p>2. Send the document and signature.</p>
+                    <p>3. Verify with public key.</p>
+                </div>
+
+                <h2>Certificates</h2>
+
+                <ul>
+                    <li><strong>Certificate:</strong>An electronic ID card linking a public key to a name.</li>
+                    <li><strong>Certificate Authority:</strong> A trusted organization that issues certificates.</li>
+                    <li><strong>Chain of trust:</strong> Firstly website, then certificateAuthority and finally browser.</li>
+                </ul>
+
+                <h2>Where they are used</h2>
+
+                <div class="tbale-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Used in</th>
+                                <th>What it proves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTTPS websites</td>
+                                <td>The website controls the doamin</td>
+                            </tr>
+                            <tr>
+                                <td>Software updates</td>
+                                <td>Real developer, file not modifies</td>
+                            </tr>
+                            <tr>
+                                <td>Signed PDFs</td>
+                                <td>Who signed and that nothing changed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <h3 class="callout__title">Example</h3>
+                    <p>
+                        Before installing a software update, the computer can check
+                        its digital signature. If the file was changed the verification will fail.
+                    </p>
+                </div>
+
+                <div class="surface">
+                    <h3>Useful tips</h3>
+                    <ul>
+                        <li>Be careful with inknown developer warnings.</li>
+                        <li>Check certificate information in your browser.</li>
+                        <li>Install software from official sources.</li>
+                    </ul>
+                </div>
+
+                <p class="text-muted">
+                    Source: <a href="https://letsencrypt.org/how-it-works/">Let's Encrypt, How It Works</a>
+                </p>
+
+                <div class="cluster">
+                    <a class="btn btn--secondary" href="public-wifi.html">
+                        Public Wi-Fi risks
+                    </a>
+                    <a class="btn btn--primary" href="intro.html">
+                        Secure Communication
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
