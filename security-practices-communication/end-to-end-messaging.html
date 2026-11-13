@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Veronika Pavlova">
+        <title>End-to-end encrypted messaging</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure-Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="section">
+
+            <section class="section">
+
+            <ul class="breadcrumbs">
+                <li><a href="intro.html">Secure Communication</a></li>
+                <li aria-current="page">End-to-end messaging</li>
+            </ul>
+
+            <h1>End-to-end encrypted messaging</h1>
+
+            <p class="lead">
+                The end-to-end encryption system (E2EE) allows only
+                the sender and recipient to read messages, and not the messaging 
+                company itself.
+            </p>
+
+            <h2>Encryption in transit vs E2EE</h2>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Encryption in transit</th>
+                            <th>End-to-end encryption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Link betwen you and the server.</td>
+                            <td>Link between sender and receiver.</td>
+                        </tr>
+                        <tr>
+                            <td>Provider can access content</td>
+                            <td>Provider cannot read the content of the message.</td>
+                        </tr>
+                        <tr>
+                            <td>Usual email, most websites</td>
+                            <td>Signal, WhatsApp, iMessage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="surface">
+                <h3>How E2EE works</h3>
+                <p>Sender locks the message and then server transfers it
+                    to the receiver. After that only the receiver can unlock it.
+                </p>
+            </div>
+
+            <h2>What E2EE does not protect</h2>
+
+            <ul>
+                <li>Metadata, such as who communicates and when.</li>
+                <li>Unencrypted cloud backups.</li>
+                <li>Unlocked or infected devices.</li>
+                <li>Screenshots taken by the receiver.</li>
+            </ul>
+
+            <div class="callout">
+                <h3 class="callout__title">Real-world example: WhatsApp</h3>
+                <p>
+                    In April 2016, WhatsApp introduced end-to-end encryption for more than
+                    one billion users, with the help of the Signal Protocol.
+                </p>
+            </div>
+
+            <div class="surface">
+                <h3>Useful tips</h3>
+                <ul>
+                    <li>Use E2EE apps for private conversations.</li>
+                    <li>Enable encrypted backups.</li>
+                    <li>Always lock your phone.</li>
+                </ul>
+            </div>
+
+            <p class="text-muted">
+                Source: <a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed">Signal Support, What is a safety number and why do I see that it changed?, </a>
+            </p>
+
+            <div class="cluster">
+                <a class="btn btn--secondary" href="https-tls.html">
+                    HTTPS and TLS 
+                </a>
+                <a class="btn btn--primary" href="email-security.html">
+                    Email security
+                </a>
+            </div>
+            
+            </section>
+            
+        </main>
+    </body>
+</html>
