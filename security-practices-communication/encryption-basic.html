@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Veronika Pavlova">
+        <title>Encryption basics</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/shared.css">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section class="section">
+
+                <ul class="breadcrumbs">
+                    <li><a href="intro.html">Secure Communication</a></li>
+                    <li aria-current="page">Encryption basics</li>
+                </ul>
+
+                <h1>Encryption basics</h1>
+
+                <p class="lead">
+                    Encryption turns a readable message into unreadable symbols, which only a person with 
+                    the correct key can understand.
+                </p>
+
+                <div class="surface">
+                    <img src="../img/encryption.png"
+                    alt="Digital encryption and data protection">
+                    <p>Encryption protects information by turning
+                        readable data into unreadable ciphertext.</p>
+                </div>
+
+                <div class="surface">
+                    <h3>How encryption works</h3>
+                    <p>Plaintext - Encryption + Key - Ciphertext</p>
+                    <p>Ciphertext - Description + Key - Plaintext</p>
+                </div>
+
+                <h2>Two types of encryption</h2>
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Symmetric</th>
+                                <th>Asummetric</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>One shared secret key</td>
+                                <td>Public key and private key</td>
+                            </tr>
+                            <tr>
+                                <td>Fast</td>
+                                <td>Slower</td>
+                            </tr>
+                            <tr>
+                                <td>Used for large amounts of data</td>
+                                <td>Used for key exchange and signatures</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    Modern systems comibe both types of encryption. Asymetric cryptography
+                    helps establish a shared key, and symmetric encryption helps to protect data. 
+                </p>
+
+                <div class="callout">
+                    <h3 class="callout__title">Mailbox analogy</h3>
+                    <p>
+                        Any person can put a letter into a mailbox using the public key,
+                        but only the owner can open it and read information with the private key.
+                    </p>
+                </div>
+
+                <div class="surface">
+                    <h3>Quick tips</h3>
+                    <ul>
+                        <li>Encryption protects data in transit and storage.</li>
+                        <li>Keep private keys actually private</li>
+                    </ul>
+                </div>
+
+                <p class="text-muted">
+                    Source: <a href="https://ssd.eff.org/">EFF Surveillance Self-Defence</a>
+                </p>
+
+                <div class="cluster">
+                    <a class="btn btn--secondary" href="intro.html">
+                        Secure Communication
+                    </a>
+                    <a class="btn btn--primary" href="https-tls.html">
+                        HTTPS amd TLS 
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>
+

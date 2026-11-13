@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Veronika Pavlova">
+        <title>Email security</title>
+        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section class="section">
+
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Email security</li>
+                </ul>
+
+                <h1>Email security</h1>
+
+                <p class="lead">
+                    Usual email is similar to a postcard. It is usually 
+                    encrypted during transfer, but providers may still be able to
+                    read the content.
+                </p>
+
+                <div class="surface">
+                    <h3>Postcard vs sealed letter</h3>
+                    <h3>Normal email: like a postcard</h3>
+                    <p>End-to-end encrypted email:like a sealed letter.</p>
+                </div>
+
+                <div class="surface">
+                    <img src="../img/email-security.png">
+                    alt="Email security illustration">
+                    <p>Secure email methods help protect messages from
+                        unauthorized access.</p>
+                </div>
+
+                <h2>Email security methods</h2>
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Methods</th>
+                                <th>What it does</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TLS</td>
+                                <td>Encrypts between servers, but providers can still read.</td>
+                            </tr>
+                            <tr>
+                                <td>PGP</td>
+                                <td>Only the recipient can decrypt the message.</td>
+                            </tr>
+                            <tr>
+                                <td>S/MIME</td>
+                                <td>Encryption and signatures using certificates.</td>
+                            </tr>
+                            <tr>
+                                <td>SPF / DKIM / DMARC</td>
+                                <td>Helps verify the sender's domain.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    Since February 2024, Gmail and Yahoo have intoduced
+                    stricter email authentication requirements for bulk senders.
+                </p>
+
+                <div class="callout">
+                    <h3 class="callout__title">Example</h3>
+                    <p>
+                        Sending a scan of your ID throigh normal email
+                        may leave readable copies on multiple services.
+                        A secure upload portal is a safer option.
+                    </p>
+                </div>
+
+                <div class="surface">
+                    <h3>Quick tips</h3>
+                    <ul>
+                        <li>Check the real sender address.</li>
+                        <li>Do not email passwords or identity documents.</li>
+                        <li>Use encrypted email for sensitive information.</li>
+                    </ul>
+                </div>
+
+                <p class="text-muted">
+                    Source:<a href="https://support.google.com/transparencyreport/answer/7381230?hl=en">Google Transparency Report, Email Encryption FAQs</a>
+                </p>
+
+                <div class="cluster">
+                    <a class="btn btn--secondary" href="end-to-end-messaging.html">
+                        End-to-end messaging
+                    </a>
+                    <a class="btn btn--primary" href="public-wifi.html">
+                        Public Wi-Fi risks
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>

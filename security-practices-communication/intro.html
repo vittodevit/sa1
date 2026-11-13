@@ -3,48 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width", initial-scale="1.0">
+    <meta name="author" content="Veronika Pavlova">
     <title>Secure Communication</title>
-    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h2>Cybersecurity & Digital Privacy</h2>
-
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Common Threats</a>
-            <a href="#">Authentication</a>
-            <a href="#">Malware</a>
-            <a href="#">Social Engineering</a>
-            <a href="#">Privacy</a>
-            <a href="intro.html" class="active">Secure Communication</a>
-            <a href="#">Famous Incidents</a>
-            <a href="#">Good Security Practices</a>
-            <a href="#">Risks of AI</a>
+    <header class="site-header">
+        <nav class="container site-nav__inner">
+            <a class="brand" href="index.html">
+                Cybersecurity & Digital Privacy
+            </a>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="index.html">Home</a></li>
+                <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <p class="breadcrumb">SECURE COMMUNICATION</p>
+    <main class="container">
+        
+        <section class="section">
+
+            <ul class="breadcrumbs">
+                <li>Secure Communication</li>
+            </ul>
 
         <h1>Secure Communication</h1>
-        <p>Every message passes through machines we do not control, such as routers, internet provides and 
-            servers. Secure communication helps protect our information</p>
-            <div class="diagram">
-                Phone -> Router -> Provider -> Server -> Friend
-                <p>Secure connection</p>
+
+        <p class="lead">
+            All messages pass through devices that we do not control, 
+        for instance routers, internet providers and servers.
+    Secure communication helps keep our information safe from any changes and being read by others. 
+    </p>
+
+            <div class="surface">
+                <h3>How a message travels</h3>
+                <p>Phone - Router - Provider - Server - Friend</p>
+                <p>Encryption helps protect the message on its journey.</p>
             </div>
 
-            <h2>Three goals</h2>
+            <h2>Three goals of secure communication</h2>
 
-            <table>
-                <tr>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
                     <th>Goals</th>
                     <th>Meaning</th>
                     <th>Example</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>Confidintiality</td>
                     <td>Only the receiver can read it</td>
@@ -60,48 +73,66 @@
                     <td>It really comes from the sender</td>
                     <td>A message really from your bank</td>
                 </tr>
-            </table>
+                </tbody>
+                </table>
+            </div>
+            
 
-            <h2>explore the topics</h2>
+            <h2>Explore the topics</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>Encryption basics</h3>
-                    <p>The tool behind everything.</p>
-                    <a href="encryption-basics.html">Read more -></a>
-                </div>
+            <div class="grid grid--3">
+                
+                <a class="topic-card" href="encryption-basics.html">
+                    <span class="topic-card__index">01</span>
+                    <h3 class="topic-card__title">Encryption basics</h3>
+                    <p class="topic-card__text">The tool behind everything.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
 
-                <div class="card">
-                    <h3>HTTPS and TLS</h3>
-                    <p>What the padlock means.</p>
-                    <a href="https-tls.html">Read more -></a>
-                </div>
+                <a class="topic-card" href="https-tls.html">
+                    <span class="topic-card__index">02</span>
+                    <h3 class="topic-card__title">HTTPS and TLS</h3>
+                    <p class="topic-card__text">What the padlock means.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
 
-                <div class="card">
-                    <h3>End-to-end messaging</h3>
-                    <p>Chats only you can read.</p>
-                    <a href="end-to-end-messaging.html">Read more -></a>
-                </div>
+                <a class="topic-card" href="end-to-end-messaginh.html">
+                    <span class="topic-card__index">03</span>
+                    <h3 class="topic-card__title">End-to-end messaging</h3>
+                    <p class="topic-card__text">Chats only you can read.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
 
-                <div class="card">
-                    <h3>Email security</h3>
-                    <p>Why email is like a postcard.</p>
-                    <a href="email-security.html">Read more -></a>
-                </div>
+                <a class="topic-card" href="email-security.html">
+                    <span class="topic-card__index">04</span>
+                    <h3 class="topic-card__title">Email security</h3>
+                    <p class="topic-card__text">Why email is like a postcard.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
 
-                <div class="card">
-                    <h3>Signatires & certificates</h3>
-                    <p>Proving who sent it.</p>
-                    <a href="digital-signatures.html">Read more -></a>
-                </div>
+                <a class="topic-card" href="public-wifi.html">
+                    <span class="topic-card__index">05</span>
+                    <h3 class="topic-card__title">Public Wi-Fi risks</h3>
+                    <p class="topic-card__text">Evil twins and fake login.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
+
+                <a class="topic-card" href="digital-signatures.html">
+                    <span class="topic-card__index">06</span>
+                    <h3 class="topic-card__title">Digital signatures and certificates</h3>
+                    <p class="topic-card__text">Proving who sent it.</p>
+                    <span class="topic-card__cta">Read more</span>
+                </a>
+
             </div>
 
-            <p class="sources">Sources</p>
+            <p class="text-muted">Sources</p>
 
-            <div class="page-links">
-                <span></span>
-                <a href="encryption-basics.html">Encryption basics -></a>
-            </div>
+            <a class="btn btn--primary" href="encryption-basics.html">
+                Encryption basics
+            </a>
+
+            </section>
     </main>
 </body>
 </html>
