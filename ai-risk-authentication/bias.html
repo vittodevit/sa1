@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro Munera Pineda">
+    <title>Bias & Discrimination in AI - Cybersecurity Project</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shared.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="container site-nav__inner">
+                <a href="../index.html" class="brand">
+                    <span class="brand__mark">3</span>
+                    Cybersecurity & AI
+                </a>
+                <ul class="site-nav__links">
+                    <li><a href="../index.html" class="site-nav__link">Home</a></li>
+                    <li><a href="passwords.html" class="site-nav__link">Passwords</a></li>
+                    <li><a href="profiling.html" class="site-nav__link">Data Profiling</a></li>
+                    <li><a href="disinformation.html" class="site-nav__link">Disinformation</a></li>
+                    <li><a href="bias.html" class="site-nav__link">Bias in AI</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container section">
+        <article>
+            
+            <header class="section__header">
+                <span class="eyebrow">AI Risks</span>
+                <h2 class="section__title">Bias & Discrimination in AI Systems</h2>
+                <p class="lead">Artificial Intelligence is often perceived as perfectly logical and objective. However, AI systems are created by humans and trained on human data. If the data contains prejudices, the AI will learn, automate, and even amplify those biases at a massive scale.</p>
+            </header>
+
+            <section class="stack">
+                <h3>Where Does AI Bias Come From?</h3>
+                <p>Bias doesn't mean the computer is "evil"; it means the system produces systematically unfair outcomes. This usually happens in three stages:</p>
+                
+                <div class="grid grid--3">
+                    <div class="surface">
+                        <h4>1. Biased Data</h4>
+                        <p class="text-sm">AI learns from historical data. If a company historically hired mostly men, an AI trained on those resumes will learn that being male is a "positive" trait for a job.</p>
+                    </div>
+                    <div class="surface">
+                        <h4>2. Flawed Algorithms</h4>
+                        <p class="text-sm">Sometimes the way the AI is programmed to learn creates bias. It might prioritize a certain feature (like a zip code) that indirectly targets a specific demographic.</p>
+                    </div>
+                    <div class="surface">
+                        <h4>3. Human Oversight</h4>
+                        <p class="text-sm">If the humans testing the AI share the same biases, they might not notice the discriminatory outcomes until it is too late.</p>
+                    </div>
+                </div>
+
+                <div class="callout callout--warning">
+                    <h4 class="callout__title">Bias in Security Systems</h4>
+                    <p>In cybersecurity and law enforcement, bias can have severe consequences. Facial recognition systems, for example, have been shown to have higher error rates for women and people with darker skin tones. If security systems rely on biased AI, they might unfairly flag innocent people as suspicious, while failing to recognize actual threats.</p>
+                </div>
+            </section>
+
+            <section class="stack">
+                <h3>The Feedback Loop: How Bias Grows</h3>
+                <p>One of the most dangerous aspects of AI bias is the "feedback loop." AI doesn't just observe the world; it acts on it, and then learns from the results of its own actions.</p>
+                <p>For example, if predictive policing algorithms send more police to a specific neighborhood (based on biased historical arrest data), more arrests will happen there. The AI then uses this new data to say, "Look, crime is going up there," and sends even more police. The algorithm creates the very reality it claims to predict.</p>
+                
+                <div class="stat-grid">
+                    <div class="stat">
+                        <span class="stat__value">34%</span>
+                        <span class="stat__label">Higher error rate in facial recognition for darker-skinned women</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value">1 in 5</span>
+                        <span class="stat__label">Companies admit their AI has shown bias in hiring processes</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stack">
+                <h3>A Famous Real-World Example</h3>
+                <p>In 2018, Amazon had to scrap an AI recruiting tool it had been developing. The AI was trained on 10 years of resumes submitted to the company, which were predominantly from men.</p>
+                <p>Because of this biased data, the AI learned that male candidates were preferable. It began penalizing resumes that included the word "women's" (such as "women's chess club captain") and downgraded graduates of two women's colleges. This is a perfect example of how AI can automate human prejudice without anyone explicitly programming it to do so.</p>
+            </section>
+
+            <section class="stack">
+                <div class="callout callout--success">
+                    <h4 class="callout__title">How Do We Fix It?</h4>
+                    <p>Solving AI bias requires constant vigilance and human intervention:</p>
+                    <ul>
+                        <li><strong>Diverse Training Data:</strong> Ensuring the data used to train AI represents all groups equally and accurately.</li>
+                        <li><strong>Algorithmic Auditing:</strong> Regularly testing AI systems to see if they produce different outcomes for different demographics.</li>
+                        <li><strong>Human-in-the-loop:</strong> Keeping human oversight in high-stakes decisions (like hiring or medical diagnoses). AI should assist humans, not replace their judgment entirely.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__main">
+            <div class="site-footer__brand">
+                <span class="brand__copy">Cybersecurity & AI</span>
+                <p class="site-footer__text">Software Atelier 1 - Group 3 Project.</p>
+            </div>
+            <div class="site-footer__text">
+                <p>&copy; 2026 Università della Svizzera italiana (USI).</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
