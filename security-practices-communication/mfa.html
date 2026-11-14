@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tugrul Yildirim">
+        <title>Multi-factor authentication</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/shared.css">
+    </head>
+
+    <body>
+
+        <header class="site-header">
+            <nav class="container site-nav__inner">
+                <a class="brand" href="index.html">Cybersecurity & Digital Privacy</a>
+                <ul class="site-nav__links">
+                    <li><a class="site-nav__link" href="index.html">Home</a></li>
+                    <li><a class="site-nav__link" href="security-practices.html">Good Security Practices</a></li>
+                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section class="section stack">
+
+                <ul class="breadcrumbs">
+                    <li><a href="security-practices.html">Good Security Practices</a></li>
+                    <li aria-current="page">Multi-factor authentication</li>
+                </ul>
+
+                <h1>Multi-factor authentication</h1>
+
+                <p class="lead">
+                    Even if someone steals your password, a second factor stops them. A 2023 Microsoft study found 
+                    that MFA lowered the risk of an account being hacked by 99.22%.
+                </p>
+
+                <div class="surface">
+                    <img src="../img/mfa.png" alt="Multi-factor authentication factors">
+                    <p>MFA combines multiple independent categories of verification to secure accounts.</p>
+                </div>
+
+                <h2>Three kinds of factors</h2>
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Something you know</th>
+                                <th>Something you have</th>
+                                <th>Something you are</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Password, PIN</td>
+                                <td>Phone, security key</td>
+                                <td>Fingerprint, face</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>From weakest to strongest</h2>
+
+                <ol>
+                    <li><strong>SMS code:</strong> better than nothing, but can be stolen by SIM swapping.</li>
+                    <li><strong>Authenticator app code:</strong> generates secure codes directly on your device.</li>
+                    <li><strong>Push notification with number matching:</strong> interactive approval on your phone.</li>
+                    <li><strong>Passkey or security key:</strong> phishing-resistant because nothing is typed into fake sites.</li>
+                </ol>
+
+                <div class="callout">
+                    <h3 class="callout__title">Real example: Uber, 2022</h3>
+                    <p>
+                        An attacker with a stolen password sent push notification after push notification until an employee 
+                        accepted one ("MFA fatigue"), allowing entry into internal systems. Never approve a login you didn't start.
+                    </p>
+                </div>
+
+                <div class="surface">
+                    <h3>Quick tips</h3>
+                    <ul>
+                        <li>Turn on MFA for your email today.</li>
+                        <li>Prefer an app or passkey over SMS.</li>
+                        <li>Never approve a login you didn't start.</li>
+                    </ul>
+                </div>
+
+                <p class="text-muted">
+                    Source: <a href="https://arxiv.org/abs/2305.00945" target="_blank" rel="noopener">Microsoft Research (2023)</a>; FIDO Alliance; Appsecco
+                </p>
+
+                <div class="cluster">
+                    <a class="btn btn--secondary" href="password-hygiene.html">
+                        Password hygiene
+                    </a>
+                    <a class="btn btn--primary" href="software-updates.html">
+                        Software updates
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>
