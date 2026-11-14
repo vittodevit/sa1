@@ -88,44 +88,65 @@
 
             <div class="callout callout--danger">
                 <h3 class="callout__title">Real example: Linus Tech Tips (2023)</h3>
-                <p>In March 2023, an employee opened malware disguised as a sponsorship offer and attackers took over the Linus Tech Tips YouTube channel. 
-                The malware stole session cookies, letting the hackers access the account without entering the password or a new 2FA code and stream cryptocurrency scam videos.</p>
+                <p>In March 2023, an employee opened malware disguised as a sponsorship offer and attackers took over
+                    the Linus Tech Tips YouTube channel.
+                    The malware stole session cookies, letting the hackers access the account without entering the
+                    password or a new 2FA code and stream cryptocurrency scam videos.</p>
             </div>
 
             <h2>How websites protect sessions</h2>
             <p>Websites can use cookie settings to help protect session information.</p>
 
             <div class="table-wrap">
-            <table class="data-table">
-                <caption>Cookie settings that protect sessions</caption>
-                <thead>
-                    <tr>
-                        <th>Setting</th>
-                        <th>What it does</th>
-                    </tr>
-                </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Secure</strong></td>
-                    <td>Sends the cookie only over HTTPS.</td>
-                </tr>
-                <tr>
-                    <td><strong>HttpOnly</strong></td>
-                    <td>Stops page scripts from directly reading the cookie.</td>
-                </tr>
-                <tr>
-                    <td><strong>SameSite</strong></td>
-                    <td>Controls whether the cookie is sent with requests from other websites.</td>
-                </tr>
-              </tbody>
-            </table>
-              </div>    
-            
-        
-        
+                <table class="data-table">
+                    <caption>Cookie settings that protect sessions</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Setting</th>
+                            <th scope="col">What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Secure</strong></td>
+                            <td>Sends the cookie only over HTTPS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HttpOnly</strong></td>
+                            <td>Stops page scripts from directly reading the cookie.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SameSite</strong></td>
+                            <td>Controls whether the cookie is sent with requests from other websites.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
+            <p>Websites can also use these protections to keep sessions safer:</p>
+            <ul>
+                <li><strong>Session expiration:</strong> Ends the session after a period of inactivity.</li>
+                <li><strong>New session ID after login:</strong> Replaces the old ID  so it can’t be reused for the new session.</li>
+                <li><strong>Real logout:</strong> Ends the session on the website’s side as well as clearing the cookie in your browser. </li>
+                <li><strong>Asking for the password again:</strong> Requires you to confirm your password before important changes such as changing your email.</li>
+                </ul>
 
+                <div class="callout callout--success">
+    <h3 class="callout__title">Keep your sessions safe</h3>
+    <ul>
+        <li>Log out when you use a shared computer.</li>
+        <li>Don’t select “Remember me” on public devices.</li>
+        <li>Check active sessions or devices in your account settings, and log out of any you don’t recognize.</li>
+    </ul>
+</div>
 
+<h2>Sources</h2>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">MDN, “Using HTTP cookies”</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Authentication/Session_management">MDN, “Session management”</a></li>
+    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP, “Testing for Cookies Attributes”</a></li>
+    <li><a href="https://thatsnonsense.com/?p=22593">“How crooks hacked Linus Tech Tips”</a></li>
+</ul>
 
         </div>
     </main>
