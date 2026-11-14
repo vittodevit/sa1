@@ -44,8 +44,9 @@
                 compromised, it could give someone access to other services you use.</p>
 
             <h2>What is single sign-on?</h2>
-            <p>Single sign-on means logging in once through a trusted service to access several other services. 
-    Social login is a familiar example, you use a button such as "Sign in with Google" to sign in to another website.</p>
+            <p>Single sign-on means logging in once through a trusted service to access several other services.
+                Social login is a familiar example, you use a button such as "Sign in with Google" to sign in to another
+                website.</p>
             <div class="callout">
                 <h3 class="callout__title">Example: SWITCH edu-ID at USI</h3>
                 <p> At USI, a SWITCH edu-ID account gives access to services including iCorsi and the library. These
@@ -55,27 +56,61 @@
             <p>Here's what happens when you choose the button:</p>
 
             <ol class="timeline">
-            <li class="timeline__item">
-                <p class="timeline__time">Step 1</p>
-                <h3 class="timeline__title">"You click "Sign in with Google"</h3>
-            </li>
-        <li class="timeline__item">
-            <p class="timeline__time">Step 2</p>
-            <h3 class="timeline__title">The website sends you to Google to log in.</h3>
-        </li>
-        <li class="timeline__item">
-            <p class="timeline__time">Step 3</p>
-            <h3 class="timeline__title">Google asks you if you want to share details like your name and email.</h3>
-            </li>   
-            <li class="timeline__item">
-                <p class="timeline__time">Step 4</p>
-                <h3 class="timeline__title">Google confirms your identity, and the website logs you in without seeing your Google password.</h3>
-            </li>
-        </ol>
-       
-       
-       
-       
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 1</p>
+                    <h3 class="timeline__title">You click "Sign in with Google"</h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 2</p>
+                    <h3 class="timeline__title">The website sends you to Google to log in.</h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 3</p>
+                    <h3 class="timeline__title">Google asks you if you want to share details like your name and email.
+                    </h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 4</p>
+                    <h3 class="timeline__title">Google confirms your identity, and the website logs you in without
+                        seeing your Google password.</h3>
+                </li>
+            </ol>
+            <h2>Advantages and risks</h2>
+            <p>Single sign-on is convenient, but relying on one account also creates risks.</p>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Advantages and risks of single sign-on</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Advantages</th>
+                            <th scope="col">Risks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fewer passwords to remember.</td>
+                            <td>If your main account is stolen, attackers may access connected sites.</td>
+                        </tr>
+                        <tr>
+                            <td>The website never sees your main account password.</td>
+                            <td>If the identity provider is unavailable, you may not be able to log in.</td>
+                        </tr>
+                        <tr>
+                            <td>Two-factor authentication on your main account can help protect connected sites.</td>
+                            <td>The identity provider may see which services you use.</td>    
+                        </tr>
+                        <tr>
+                            <td>Signing up is faster.</td>
+                            <td>A website may request more personal data than it needs.</td>
+                        </tr>
+                     </tbody>
+                    </table>
+            </div>
+
+
+
+
         </div>
     </main>
 
