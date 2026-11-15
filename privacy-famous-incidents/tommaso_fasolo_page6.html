@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tommaso">
+    <meta name="description" content="Encryption">
+    <meta name="date" content="06.11.2026">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        table{
+            border-collapse: collapse;
+            max-width: fit-content;
+        }
+        th, td{
+            border: 1px solid white;
+            text-align: center;
+            padding: 2px;
+        }
+    </style>
+    </head>
+    
+    <body>
+
+        <h1>Cybersecurity & Privacy </h1>
+          <a href="">Home</a>
+
+        <h2>Encryption</h2>
+
+        <div>
+
+            <h3>What is cryptography?</h3>
+                <div>
+                    <p>Cryptography is the science and practice of protecting information by transforming it into a form that unauthorized people cannot understand or use.</p>
+                    <p>It uses mathematical techniques and algorithms to secure digital information, communications, and systems. Cryptography is broader than encryption: it also includes techniques for verifying that information has not been altered, confirming identities, and creating digital signatures.</p>
+                    <p><b>Encryption is one of the main tools within cryptography.</b> It converts readable information into an unreadable form so that only someone with the appropriate key can recover the original information.</p>
+                </div>
+
+            <h3>What encryption is and why it is used</h3>
+                <div>
+                    <p>Encryption is the process of converting readable information, called <b>plaintext</b>, into an unreadable format, called <b>ciphertext</b>, using an encryption algorithm and a key.</p>
+                    <p>The original information can be recovered through decryption, which uses the appropriate key and algorithm to transform the ciphertext back into plaintext.</p>
+                    <p>Encryption is used to protect information when it is stored or transmitted. For example, it can protect:</p>
+                    <ul>
+                        <li><b>Personal information:</b><br>names, addresses, identity documents, and private messages.</li>
+                        <li><b>Financial information:</b><br>banking credentials, payment details, and transaction records.</li>
+                        <li><b>Business information:</b><br>confidential documents, company databases, and intellectual property.</li>
+                        <li><b>Communications:</b><br>messages, emails, and data exchanged between devices and online services.</li>
+                    </ul>
+                    <p>The main purpose of encryption is to preserve <b>confidentiality</b>: even if an unauthorized person obtains the encrypted data, they should not be able to understand its contents without the required key.</p>
+                </div>
+
+            <h3>How encryption protects information</h3>
+                <div>
+                    <p>Encryption protects information by making its contents unreadable to anyone who does not possess the correct decryption key.</p>
+                    <p>A simplified process works as follows:</p>
+                    <ol>
+                        <li>The sender or device starts with readable information (plaintext).</li>
+                        <li>An encryption algorithm uses a cryptographic key to transform the plaintext into ciphertext.</li>
+                        <li>The ciphertext is stored or transmitted. Someone who intercepts it should only see unreadable data.</li>
+                        <li>The intended recipient uses the appropriate decryption key to recover the original information.</li>
+                    </ol>
+                    <p>For example, if you send a confidential message through a properly encrypted connection, someone monitoring the network may be able to capture the transmitted data, but should not be able to read the message itself.</p>
+                    <p>Encryption is especially important when information travels across networks that cannot be fully trusted, such as public Wi-Fi or the internet.</p>
+                    <h4>What are encryption keys?</h4>
+                    <p>An encryption key is a value used by a cryptographic algorithm to encrypt or decrypt information. The algorithm defines the mathematical process; the key determines how that process is applied to the particular data.</p>
+                    <p>Keys are essential because encryption is only useful if access to the corresponding decryption key is properly controlled.</p>
+                    <ul>
+                        <li><b>Encryption key:</b><br>the key used to transform plaintext into ciphertext.</li>
+                        <li><b>Decryption key:</b><br>the key used to recover plaintext from ciphertext.</li>
+                    </ul>
+                    <p>Depending on the encryption system, these may be the same key or two mathematically related keys.</p>
+                    <p><b>Key security is critical:</b> if an attacker obtains the key, they may be able to decrypt the protected information. Keys should therefore be generated securely, stored safely, shared only with authorized parties, and replaced when necessary.</p>
+                </div>
+
+            <h3>Symmetric encryption</h3>
+                <div>
+                    <p>Symmetric encryption is a method in which the same secret key is used to encrypt and decrypt information.</p>
+                    <p>The sender and recipient must both have access to the same key. The key must be shared securely before they can communicate confidentially.</p>
+                    <ol>
+                        <li>The sender and recipient agree on a secret key.</li>
+                        <li>The sender uses that key to encrypt the plaintext.</li>
+                        <li>The encrypted ciphertext is sent to the recipient.</li>
+                        <li>The recipient uses the same secret key to decrypt the ciphertext and recover the message.</li>
+                    </ol>
+                    <p><b>Advantages:</b></p>
+                    <ul>
+                        <li>It is generally very fast and efficient.</li>
+                        <li>It is suitable for encrypting large amounts of data.</li>
+                        <li>It is widely used for protecting files, databases, and network traffic.</li>
+                    </ul>
+                    <p><b>Limitations:</b></p>
+                    <ul>
+                        <li>The secret key must be shared securely.</li>
+                        <li>If the key is stolen, an attacker may be able to decrypt information protected with it.</li>
+                        <li>Managing separate secret keys for many users can become difficult.</li>
+                    </ul>
+                    <p>A widely used symmetric encryption algorithm is <b>AES (Advanced Encryption Standard)</b>.</p>
+                </div>
+
+            <h3>Asymmetric encryption</h3>
+                <div>
+                    <p>Asymmetric encryption, also called public-key encryption, uses a pair of mathematically related keys:</p>
+                    <ul>
+                        <li><b>Public key:</b><br>can be shared openly with other people.</li>
+                        <li><b>Private key:</b><br>must be kept secret by its owner.</li>
+                    </ul>
+                    <p>In a common encryption use, someone encrypts a message using the recipient's public key. Only the corresponding private key can decrypt that message.</p>
+                    <ol>
+                        <li>The recipient creates a public and private key pair.</li>
+                        <li>The recipient shares the public key but keeps the private key secret.</li>
+                        <li>The sender encrypts the message using the recipient's public key.</li>
+                        <li>The recipient uses their private key to decrypt the message.</li>
+                    </ol>
+                    <p><b>Advantages:</b></p>
+                    <ul>
+                        <li>It avoids the need to share a single secret key in advance.</li>
+                        <li>It can support secure key establishment and digital signatures.</li>
+                        <li>Public keys can be distributed widely while private keys remain under their owner's control.</li>
+                    </ul>
+                    <p><b>Limitations:</b></p>
+                    <ul>
+                        <li>It is generally slower and more computationally demanding than symmetric encryption.</li>
+                        <li>Public keys must be reliably associated with the correct people or organizations.</li>
+                        <li>Private keys must be strongly protected.</li>
+                    </ul>
+                    <p>Examples of asymmetric cryptographic algorithms include <b>RSA</b> and elliptic-curve cryptography (ECC).</p>
+                </div>
+
+            <h3>Symmetric vs asymmetric encryption</h3>
+                <div>
+                    <p>Both methods protect information, but they manage keys differently and are suited to different tasks.</p>
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Symmetric encryption</th>
+                            <th>Asymmetric encryption</th>
+                        </tr>
+                        <tr>
+                            <td>Keys used</td>
+                            <td>One shared secret key</td>
+                            <td>A public key and a private key</td>
+                        </tr>
+                        <tr>
+                            <td>Encryption and decryption</td>
+                            <td>Same key is used for both</td>
+                            <td>Different, mathematically related keys are used</td>
+                        </tr>
+                        <tr>
+                            <td>Speed</td>
+                            <td>Generally faster</td>
+                            <td>Generally slower</td>
+                        </tr>
+                        <tr>
+                            <td>Key distribution</td>
+                            <td>Secret key must be shared securely</td>
+                            <td>Public key can be shared openly</td>
+                        </tr>
+                        <tr>
+                            <td>Common uses</td>
+                            <td>Encrypting files and large amounts of data</td>
+                            <td>Key establishment, digital signatures, and identity-related functions</td>
+                        </tr>
+                        <tr>
+                            <td>Examples</td>
+                            <td>AES</td>
+                            <td>RSA, elliptic-curve cryptography</td>
+                        </tr>
+                    </table>
+                    <p>In practice, modern secure systems often combine both approaches. Asymmetric cryptography can help establish or exchange a symmetric session key, and symmetric encryption can then protect the main data because it is more efficient for large data transfers.</p>
+                </div>
+
+            <h3>What is end-to-end encryption?</h3>
+                <div>
+                    <p>End-to-end encryption (E2EE) is a <b>communication security model</b> in which a message is encrypted on the sender's device and can only be decrypted on the intended recipient's device or devices.</p>
+                    <p>Intermediate systems, such as the messaging service's servers or network providers, transport the encrypted data but should not be able to read the message contents because they do not possess the necessary decryption keys.</p>
+                    <p><b>Important:</b> end-to-end encryption is not a third category of encryption equivalent to symmetric or asymmetric encryption. Symmetric and asymmetric encryption describe how cryptographic keys are used. End-to-end encryption describes <b>where encryption and decryption take place and who is able to access the message</b>. An E2EE system can use both symmetric and asymmetric cryptography as parts of its design.</p>
+                </div>
+
+            <h3>How end-to-end encryption works in everyday communications</h3>
+                <div>
+                    <p>End-to-end encryption is commonly used in digital communications, especially messaging and voice or video calls.</p>
+                    <p>A simplified example of an encrypted chat works as follows:</p>
+                    <ol>
+                        <li>You write a message on your phone.</li>
+                        <li>Your messaging application encrypts the message on your device using cryptographic keys.</li>
+                        <li>The encrypted message travels through the service's servers and across the internet.</li>
+                        <li>The recipient's device receives the ciphertext.</li>
+                        <li>The recipient's device uses the appropriate key to decrypt the message and display the original text.</li>
+                    </ol>
+                    <p>The service provider can deliver the message, but in a properly implemented E2EE system it cannot read the message contents while they are in transit or stored on its servers in encrypted form.</p>
+                    <h4>Everyday examples</h4>
+                    <ul>
+                        <li><b>Private messaging:</b><br>Some messaging applications use end-to-end encryption so that only the participants in a conversation can read its messages.</li>
+                        <li><b>Voice and video calls:</b><br>E2EE can protect the content of calls so that intermediaries cannot listen to the conversation.</li>
+                        <li><b>Group chats:</b><br>End-to-end encryption can protect messages shared among group members, although the system must manage keys for multiple participants.</li>
+                        <li><b>Shared media and files:</b><br>Photos, videos, documents, and other attachments can also be encrypted before being sent.</li>
+                    </ul>
+                    <p>Examples of services that offer end-to-end encrypted communication features include Signal and WhatsApp. The exact protection depends on the service, the feature being used, and its settings.</p>
+                </div>
+
+            <h3>What end-to-end encryption does not protect</h3>
+                <div>
+                    <p>End-to-end encryption provides strong protection for message contents, but it does not make every aspect of communication private or secure.</p>
+                    <ul>
+                        <li><b>Metadata:</b><br>Information such as the time a message was sent, the accounts involved, or the frequency of communication may still be visible to the service or other systems.</li>
+                        <li><b>Compromised devices:</b><br>If a sender's or recipient's device is infected with malware or accessed by another person, messages may be read after decryption.</li>
+                        <li><b>Screenshots and forwarding:</b><br>A recipient can copy, photograph, forward, or otherwise disclose a message they can read.</li>
+                        <li><b>Cloud backups:</b><br>Backups may have different protection from messages in the application. Their encryption depends on the service and the backup settings.</li>
+                        <li><b>Identity verification:</b><br>Users may still communicate with an impersonator if they do not verify who they are talking to.</li>
+                    </ul>
+                    <p>For these reasons, E2EE should be combined with device security, strong authentication, software updates, and careful handling of sensitive information.</p>
+                </div>
+
+            <h3>Key differences to remember</h3>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Concept</th>
+                            <th>What it describes</th>
+                            <th>Main purpose</th>
+                        </tr>
+                        <tr>
+                            <td>Cryptography</td>
+                            <td>The broader field of mathematical techniques for securing information</td>
+                            <td>Confidentiality, integrity, authentication, and digital signatures</td>
+                        </tr>
+                        <tr>
+                            <td>Encryption</td>
+                            <td>Transforming plaintext into ciphertext using an algorithm and key</td>
+                            <td>Keeping information confidential</td>
+                        </tr>
+                        <tr>
+                            <td>Symmetric encryption</td>
+                            <td>Encryption and decryption using the same secret key</td>
+                            <td>Efficient protection of data</td>
+                        </tr>
+                        <tr>
+                            <td>Asymmetric encryption</td>
+                            <td>Use of a related public and private key pair</td>
+                            <td>Secure key establishment and other public-key functions</td>
+                        </tr>
+                        <tr>
+                            <td>End-to-end encryption</td>
+                            <td>A communication model where only the communicating endpoints can decrypt message contents</td>
+                            <td>Preventing intermediaries from reading communications</td>
+                        </tr>
+                    </table>
+                    <p>The key distinction is that symmetric and asymmetric encryption are two cryptographic approaches, while end-to-end encryption is a way of designing secure communication between users.</p>
+                </div>
+
+        </div>
+
+        <br>
+
+        <footer class="site-footer">
+        <div class="container site-footer__main">
+        <div class="site-footer__brand">
+            <span class="brand__copy">
+              CyberAware
+              <span class="brand__sub">USI · Software Atelier I</span>
+            </span>
+            <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..</p>
+        </div>
+
+    </body>
+
+</html>
