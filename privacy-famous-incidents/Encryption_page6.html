@@ -5,7 +5,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="author" content="Tommaso">
-    <meta name="description" content="Encryption">
+    <meta name="title" content="Encryption">
     <meta name="date" content="06.11.2026">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/shared.css">
@@ -19,13 +19,47 @@
             text-align: center;
             padding: 2px;
         }
+        .site-nav__inner h2{
+            font-size: 2.4rem;
+        }
     </style>
     </head>
     
     <body>
 
+        <header class="site-header">
+            <div class="site-nav__inner">
+                <h2>Digital Privacy</h2>
+
+                <nav>
+                    <ul class="site-nav__links">
+                        <li><a class="site-nav__link" href="../../index.html">Home</a></li>
+                        <li><a class="site-nav__link" href="#">Common Threats</a></li>
+                        <li><a class="site-nav__link" href="#">Authentication</a></li>
+                        <li><a class="site-nav__link" href="#">Malware</a></li>
+                        <li><a class="site-nav__link" href="#">Social Engineering</a></li>
+                        <li><a class="site-nav__link" href="#">Privacy</a></li>
+                        <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
+                        <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
+                        <li><a class="site-nav__link" href="#">Risks of AI</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <!-- Breadcrumb: helps readers understand where this page sits. -->
+            <nav aria-label="Breadcrumb">
+            <ol class="breadcrumbs">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="Digital_privacy.html">Digital Privacy</a></li>
+                <li><span aria-current="page">Encryption</span></li>
+            </ol>
+            </nav>
+        
+
         <h1>Cybersecurity & Privacy </h1>
-          <a href="">Home</a>
 
         <h2>Encryption</h2>
 
@@ -254,16 +288,45 @@
         </div>
 
         <br>
+        </main>
 
         <footer class="site-footer">
-        <div class="container site-footer__main">
-        <div class="site-footer__brand">
-            <span class="brand__copy">
-              CyberAware
-              <span class="brand__sub">USI · Software Atelier I</span>
-            </span>
-            <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..</p>
-        </div>
+    <div class="container site-footer__main">
+      <!-- Left column: logo and a short description. -->
+      <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware 
+            <br>
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+        <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+      </div>
+
+      <!-- Middle column: the same modules as the main navigation. -->
+      <div>
+        <h2 class="site-footer__title">Explore</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+          <li><a class="site-footer__link" href="1">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="2">Malware</a></li>
+                    <li><a class="site-footer__link" href="3">Online Privacy</a></li>
+                   <li><a class="site-footer__link" href="4">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="5">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="6">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="7">Risks Brought by AI</a></li>
+                    <li><a class="site-footer__link" href="8">Authentication</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: information about the project and the group. -->
+      <div>
+        <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier 1</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
     </body>
 
