@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tommaso">
+    <meta name="title" content="VPNs">
+    <meta name="date" content="06.11.2026">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        table{
+            border-collapse: collapse;
+            max-width: fit-content;
+        }
+        th, td{
+            border: 1px solid white;
+            text-align: center;
+            padding: 2px;
+        }
+        .site-nav__inner h2{
+            font-size: 2.4rem;
+        }
+    </style>
+    </head>
+    
+    <body>
+        
+        <header class="site-header">
+            <div class="site-nav__inner">
+                <h2>Digital Privacy</h2>
+
+                <nav>
+                    <ul class="site-nav__links">
+                        <li><a class="site-nav__link" href="../../index.html">Home</a></li>
+                        <li><a class="site-nav__link" href="#">Common Threats</a></li>
+                        <li><a class="site-nav__link" href="#">Authentication</a></li>
+                        <li><a class="site-nav__link" href="#">Malware</a></li>
+                        <li><a class="site-nav__link" href="#">Social Engineering</a></li>
+                        <li><a class="site-nav__link" href="#">Privacy</a></li>
+                        <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
+                        <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
+                        <li><a class="site-nav__link" href="#">Risks of AI</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <!-- Breadcrumb: helps readers understand where this page sits. -->
+            <nav aria-label="Breadcrumb">
+            <ol class="breadcrumbs">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="Digital_privacy.html">Digital Privacy</a></li>
+                <li><span aria-current="page">VPNs</span></li>
+            </ol>
+            </nav>
+        
+
+        <h1>Cybersecurity & Privacy </h1>
+        
+        <h2>VPNs</h2>
+
+        <div>
+
+            <h3>VPN's definition</h3>
+                <div>
+                    <p>A VPN (virtual private network) is software and a network service that creates an encrypted connection between your device and a VPN server.<br>It improves privacy and security on the path between you and that server, and it makes websites see the VPN server’s IP address rather than yours (but it is <b>not anonymity software</b> and does not make unlawful conduct lawful).</p>
+                </div>
+                
+            <h3>What a VPN is</h3>
+                <div>  
+                    <p>A VPN is a “virtual private network”: it creates a private-looking communications channel across a public network such as your home broadband, mobile data, hotel Wi‑Fi, or office network.</p>
+                    <p>It is used for two broad purposes:</p>
+                    <ul>
+                        <li><b>Personal privacy/security:</b><br>protecting traffic on untrusted Wi‑Fi, reducing what an ISP can observe, and hiding your IP address from websites.</li>
+                        <li><b>Organizational access:</b><br>allowing employees to connect securely to a company network, internal applications, or remote systems.</li>
+                    </ul>
+                    <p>In practice, “VPN” usually means a commercial consumer VPN service, but the same technology is also used by employers, governments, and IT departments for secure remote access.</p>
+                </div> 
+
+            <h3>How it works</h3>
+                <div> 
+                    <p>When you activate a VPN, its app establishes an authenticated, encrypted connection (a “tunnel”) from your device to a server operated by the VPN provider.</p>
+                    <ol>
+                        <li>Your device encrypts traffic before it leaves your network.</li>
+                        <li>Your ISP, internet service provider, or the operator of public Wi‑Fi sees an encrypted connection to the VPN server, rather than the individual destinations you visit.</li>
+                        <li>The VPN server decrypts the traffic and forwards it to the website or service.</li>
+                        <li>The destination sees the VPN server’s IP address, not your home or mobile IP address.</li>
+                        <li>Replies return through the same encrypted tunnel to your device.</li>
+                    </ol>
+                    <p>Modern VPNs rely on cryptographic protocols such as WireGuard, OpenVPN, and IKEv2/IPsec.<br> Encryption is intended to provide confidentiality, integrity, and authentication of the connection.</p>
+                </div> 
+                        
+            <h3>What it potects</h3>
+                <div>
+                    <p>A VPN can meaningfully reduce certain risks:</p>
+                    <ul>
+                        <li><b>Local-network snooping:</b><br>It makes it much harder for someone on the same café, hotel, or airport Wi‑Fi to observe the contents of your unencrypted traffic.</li>
+                        <li><b>ISP visibility of destinations:</b><br>Your ISP can generally see that you use a VPN and how much data you transfer, but not which individual sites you visit through the tunnel.</li>
+                        <li><b>IP-based location exposure:</b><br>Websites normally see the VPN server’s IP address, which can make your apparent location different from your real one.</li>
+                        <li><b>Some censorship or geo-restrisctions:</b><br>By appearing to connect from another country, a VPN may allow access to services that restrict access by IP location; whether this complies with the service’s terms is a separate issue.</li>
+                    </ul>
+                </div>
+
+            <h3>Important limitations</h3>
+                <div>
+                    <h4>It is not anonymity</h4>
+                        <p>A VPN changes the IP address seen by websites, but it does not erase your digital identity.<br>If you sign in to Google, Facebook, a shopping account, or a streaming service, that company can still associate activity with your account.</p>
+                        <p>Other tracking methods continue to work, including cookies, tracking pixels, browser and device fingerprinting, mobile advertising identifiers, and GPS/location permissions.</p>
+                    <h4>The provider becomes a trust point</h4>
+                        <p>Your traffic is encrypted to the VPN server, but the VPN provider can see the destination of your traffic after decrypting it.<br> A provider with weak security, poor privacy practices, intrusive logging, advertising injection, malware, or data-selling practices can undermine the privacy you expected.</p>
+                        <p>A “no-logs” claim is only as strong as the provider’s actual architecture, audit practices, jurisdiction, and history.<br> If a provider retains identifying information, authorities in its jurisdiction may be able to compel disclosure of what it holds.</p>
+                    <h4>It does not stop malware or phishing</h4>
+                        <p>A VPN does not inspect every malicious link, prevent you from installing malware, or stop you from entering a password into a fraudulent website.<br> It protects the transport of traffic; it is not a substitute for antivirus, updates, password managers, multi-factor authentication, or careful browsing.</p>
+                    <h4>It can reduce speed and reliability</h4>
+                        <p>Because traffic takes an additional route through a VPN server and must be encrypted and decrypted, latency and throughput can suffer.<br> The effect varies with distance to the server, server load, protocol, and the quality of your underlying connection.</p>
+                    <h4>It may not cover everything</h4>
+                        <p>Some VPN configurations use “split tunneling,” sending selected apps or destinations outside the encrypted tunnel.<br> Also, only traffic actually routed through the VPN is protected; DNS requests, system updates, or particular applications may behave differently depending on the setup.</p>
+                </div>
+
+            <h3>Common misconceptions</h3>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Misconception</th>
+                            <th>Reality</th>
+                        </tr>
+                        <tr>
+                            <td>"A VPN makes me anonymous."</td>
+                            <td>It hides your IP address from destinations and encrypts traffic in transit, but accounts, cookies, fingerprinting, GPS, and the VPN provider itself can still identify or correlate activity.</td>
+                        </tr>
+                        <tr>
+                            <td>"A VPN makes illegal activity legal."</td>
+                            <td>It does not.<br> Copyright infringement, fraud, harassment, hacking, and other unlawful acts remain unlawful; a VPN may merely make attribution harder.</td>
+                        </tr>
+                        <tr>
+                            <td>"A VPN prevents all tracking."</td>
+                            <td>It does not prevent cookies, logged-in accounts, fingerprinting, ad IDs, or other tracking techniques.</td>
+                        </tr>
+                        <tr>
+                            <td>"A VPN guarantees safety on public Wi-Fi."</td>
+                            <td>It protects traffic routed through it, but does not protect against phishing, malicious downloads, compromised devices, or fake Wi‑Fi networks designed to steal credentials.</td>
+                        </tr>
+                         <tr>
+                            <td>"A VPN always bypasses every restriction."</td>
+                            <td>Services can detect VPN IPs, require payment methods or identity checks, enforce account-country rules, or block known VPN address ranges.</td>
+                        </tr>
+                         <tr>
+                            <td>"Free VPNs are equivalent to paid ones."</td>
+                            <td>Free services may monetize through ads, data collection, limited servers, or weak privacy practices; the business model matters.</td>
+                        </tr>
+                    </table>
+                </div>
+
+            <h3>Legal status: the key principle</h3>
+                <div>
+                    <p>In most countries, <b>using a VPN is legal</b>.<br> The legal question is usually not "Did you use a VPN?" but "What did you do while using it?" A VPN does not create an exemption from criminal law, copyright law, sanctions, data-protection rules, gambling rules, or a website's terms of service.</p>
+                    <p>There are three distinct legal layers:</p>
+                    <ul>
+                        <li><b>Use of the technology:</b><br>Legal in many jurisdictions, including Switzerland, the EU, the US, the UK, Canada, and Australia.</li>
+                        <li><b>The activity conducted through it:</b><br>Illegal conduct remains illegal, whether or not a VPN was used.</li>
+                        <li><b>Circumvention of state controls:</b><br>In some countries, using an unapproved VPN (or using one to evade censorship) can itself be restricted or penalized.</li>
+                    </ul>
+                </div>
+            
+            <h3>How rules differe by country</h3>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Jurisdiction</th>
+                            <th>General position</th>
+                            <th>Important nuance</th>
+                        </tr>
+                        <tr>
+                            <td>Switzerland</td>
+                            <td>VPN use is legal for personal and business purposes.</td>
+                            <td>Swiss ISPs retain certain connection metadata for six months; a VPN can conceal destinations from the ISP, but the fact and timing of a VPN connection may still be recorded.<br> Bypassing blocks on unlicensed gambling sites can create legal exposure.</td>
+                        </tr>
+                         <tr>
+                            <td>European Union / UK / US / Canada / Australia</td>
+                            <td>VPNs are generally lawful and widely used as cybersecurity tools.</td>
+                            <td>Laws still apply to the underlying conduct; streaming platforms may prohibit VPN use in their terms.</td>
+                        </tr>
+                         <tr>
+                            <td>China</td>
+                            <td>Only government-approved VPN services are lawful; unauthorized VPN use can lead to warnings, fines, device confiscation, or detention in serious cases.</td>
+                            <td>The restriction concerns unapproved international connections and circumvention tools, not merely the abstract existence of VPN technology.</td>
+                        </tr>
+                         <tr>
+                            <td>Russia</td>
+                            <td>VPN technology is not categorically banned, but providers must comply with blocking requirements; services that refuse can be blocked.</td>
+                            <td>Since 2024, sharing information about circumvention tools can also be restricted, and corporate use is subject to specific conditions.</td>
+                        </tr>
+                         <tr>
+                            <td>Iran, North Korea, and some other states</td>
+                            <td>VPN use may be prohibited, tightly controlled, or criminalized.</td>
+                            <td>Enforcement and the precise legal status can be opaque and change quickly; travelers should verify current local rules before departure.</td>
+                        </tr>
+                    </table>
+                </div>
+
+            <h3>Practical guidance</h3>
+                <div>
+                    <p>For someone in Switzerland, a VPN is legal and can be useful on public Wi-Fi or when you want to reduce the destinations visible to your ISP.<br> But it will not make you anonymous, will not override Swiss law, and does not remove the contractual or legal consequences of using it to evade restrictions.</p>
+                    <p>When choosing one, prioritize:</p>
+                    <ul>
+                        <li>A clear, specific privacy policy and a credible no-logs approach.</li>
+                        <li>Independent security audits and transparent ownership/jurisdiction.</li>
+                        <li>Modern protocols such as WireGuard or OpenVPN, rather than obsolete or obscure protocols.</li>
+                        <li>A kill switch, DNS-leak protection, and clear handling of IPv6 and WebRTC.</li>
+                        <li>Avoidance of free services with vague data-sharing or advertising practices.</li>
+                    </ul>
+                </div>
+
+        </div>
+
+        <br>
+        </main>
+
+        <footer class="site-footer">
+    <div class="container site-footer__main">
+      <!-- Left column: logo and a short description. -->
+      <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware 
+            <br>
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+        <p class="site-footer__text">Stay private, use a VPN.</p>
+      </div>
+
+      <!-- Middle column: the same modules as the main navigation. -->
+      <div>
+        <h2 class="site-footer__title">Explore</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+          <li><a class="site-footer__link" href="1">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="2">Malware</a></li>
+                    <li><a class="site-footer__link" href="3">Online Privacy</a></li>
+                   <li><a class="site-footer__link" href="4">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="5">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="6">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="7">Risks Brought by AI</a></li>
+                    <li><a class="site-footer__link" href="8">Authentication</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: information about the project and the group. -->
+      <div>
+        <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier 1</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+    </body>
+
+</html>
