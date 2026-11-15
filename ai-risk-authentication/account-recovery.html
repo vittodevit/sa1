@@ -42,43 +42,86 @@
                 If an attacker can misuse it they may access your account without knowing your password.
                 That makes account recovery a possible back door into your account. </p>
 
-                <h2>How a password reset works</h2>
-                <p>Here's what usually happens when you reset a password:</p>
-                
-                <ol class="timeline">
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 1</p>
-                        <h3 class="timeline__title">You click "Forgot password?"</h3>
-                    </li>
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 2</p>
-                        <h3 class="timeline__title">You enter your email address or phone number.</h3>
-                    </li>
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 3</p>
-                        <h3 class="timeline__title">The website sends you a reset link or code.</h3>
-                    </li>
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 4</p>
-                        <h3 class="timeline__title">You use it to choose a new password and regain access.</h3>
-                    </li>
-                </ol>
+            <h2>How a password reset works</h2>
+            <p>Here's what usually happens when you reset a password:</p>
 
-                <p>Whoever controls the email account or phone number used for recovery may be able to reset your password.</p>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 1</p>
+                    <h3 class="timeline__title">You click "Forgot password?"</h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 2</p>
+                    <h3 class="timeline__title">You enter your email address or phone number.</h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 3</p>
+                    <h3 class="timeline__title">The website sends you a reset link or code.</h3>
+                </li>
+                <li class="timeline__item">
+                    <p class="timeline__time">Step 4</p>
+                    <h3 class="timeline__title">You use it to choose a new password and regain access.</h3>
+                </li>
+            </ol>
 
-                <h2>Why recovery is a weak point</h2>
-                <p>Password recovery can create another way for attackers to take over an account.</p>
-                <ul>
-                    <li><strong>Security questions:</strong> Answers about your birthday or where you were born may be easy to guess or find online.</li>
-                    <li><strong>SMS codes and SIM swapping:</strong> An attacker may trick your phone company into moving your number to their SIM card, so they receive your reset codes.</li>
-                    <li><strong>The recovery email:</strong> If someone gets into your email account they may use it to reset passwords for your other accounts.</li>
-                </ul>
+            <p>Whoever controls the email account or phone number used for recovery may be able to reset your password.
+            </p>
 
-                <div class="callout callout--danger">
-                    <h3 class="callout__title">Real example: Sarah Palin (2008)</h3>
-                    <p>During the 2008 election campaign a student reset Sarah Palin's Yahoo email password using the "Forgot password?" process instead of guessing her password.
-                        He answered security questions using information he found online including her birthday, ZIP code and where she met her husband.</p>
-               </div>
+            <h2>Why recovery is a weak point</h2>
+            <p>Password recovery can create another way for attackers to take over an account.</p>
+            <ul>
+                <li><strong>Security questions:</strong> Answers about your birthday or where you were born may be easy
+                    to guess or find online.</li>
+                <li><strong>SMS codes and SIM swapping:</strong> An attacker may trick your phone company into moving
+                    your number to their SIM card, so they receive your reset codes.</li>
+                <li><strong>The recovery email:</strong> If someone gets into your email account they may use it to
+                    reset passwords for your other accounts.</li>
+            </ul>
+
+            <div class="callout callout--danger">
+                <h3 class="callout__title">Real example: Sarah Palin (2008)</h3>
+                <p>During the 2008 election campaign a student reset Sarah Palin's Yahoo email password using the
+                    "Forgot password?" process instead of guessing her password.
+                    He answered security questions using information he found online including her birthday, ZIP code
+                    and where she met her husband.</p>
+            </div>
+
+            <h2>How websites make recovery safer</h2>
+            <p>Websites can use these practices to make password resets harder to misuse.</p>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Safer password reset practices</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Good practice</th>
+                            <th scope="col">Why it helps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reset links expire quickly and work only once.</td>
+                            <td>Old or stolen links become useless.</td>
+                        </tr>
+                        <tr>
+                            <td>Show the same message whether or not an account exists.</td>
+                            <td>Attackers can't check which email addresses have accounts.</td>
+                        </tr>
+                        <tr>
+                            <td>Send an email after every password change.</td>
+                            <td>You can quickly spot a change you didn't make.</td>
+                        </tr>
+                        <tr>
+                            <td>Log out other <a href="sessions-cookies.html">sessions </a>after a reset.</td>
+                            <td>This can remove an attacker who was already signed in.</td>
+                        </tr>
+                        <tr>
+                            <td>Don't use security questions.</td>
+                            <td>The answers may be easy to find or guess.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
 
