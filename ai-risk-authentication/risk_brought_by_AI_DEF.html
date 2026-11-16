@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An introduction to the risks brought by artificial intelligence to cybersecurity and digital privacy.">
+  <title>Risk Brought by AI | Cybersecurity and Digital Privacy</title>
+  <!-- Load base styles first, then shared components. -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+
+  <header class="container section">
+    <p class="eyebrow">Cybersecurity and Digital Privacy</p>
+    <h1>Risk Brought by AI</h1>
+    <p class="lead">
+      How artificial intelligence can introduce new threats,
+      amplify existing attacks and affect the protection
+      of personal information.
+    </p>
+  </header>
+
+  <div class="container">
+  <nav id="menu" class="surface" aria-label="Contents">
+    <h2 class="card__title">Contents</h2>
+
+    <ul class="stack stack--sm">
+      <li><a href="#introduction">Understanding AI risks</a></li>
+      <li><a href="#attacks">How AI can support cyberattacks</a></li>
+      <li><a href="#privacy">Personal data and privacy</a></li>
+      <li><a href="#trust">Identity, information and trust</a></li>
+      <li><a href="#vulnerabilities">Vulnerabilities in AI systems</a></li>
+      <li><a href="#reliability">Reliability and human oversight</a></li>
+      <li><a href="#protection">Reducing the risks</a></li>
+      <li><a href="#subtopics">Explore the subtopics</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <main class="container section stack stack--lg">
+
+    <section id="introduction" class="surface">
+      <h2>Understanding AI risks</h2>
+      <p>
+        Artificial intelligence refers to computer systems that
+        perform tasks such as recognising patterns, making predictions
+        and generating content. Generative AI can produce text,
+        images, audio and code in response to instructions.
+        These capabilities have useful applications, but they can
+        also introduce risks to cybersecurity and digital privacy.
+      </p>
+      <p>
+        AI-related risks can arise in different ways. An attacker
+        may deliberately use AI to support a scam. A legitimate user
+        may accidentally share confidential information with an
+        AI service. An AI system may also produce an incorrect
+        answer or be manipulated through malicious input.
+      </p>
+       <p>
+        It is therefore important to distinguish between the misuse
+        of AI, weaknesses within AI systems and mistakes made when
+        people rely on their outputs. The consequences depend on
+        the information involved, the system's capabilities and
+        the permissions it has been given.
+      </p>
+    </section>
+
+    <section id="attacks" class="surface">
+      <h2>How AI can support cyberattacks</h2>
+      <p>
+        AI can help attackers create convincing messages more quickly.
+        Instead of writing every fraudulent email manually, an attacker
+        may generate many variations, translate them into different
+        languages and adapt them to specific audiences.
+        This can increase the scale and personalisation of phishing.
+      </p>
+      <p>
+        Personal information published online can make these messages
+        more persuasive. References to a person's university,
+        workplace or interests may make a fraudulent request appear
+        familiar. Correct grammar and a professional tone are not
+        reliable evidence that a message is genuine.
+      </p>
+
+      <h3>An example of an AI-assisted scam</h3>
+      <p>
+        A student receives an email that appears to come from
+        university support. It mentions the start of the semester
+        and asks the student to verify their account through a link.
+        The message looks professional, but the link leads to
+        a fake login page designed to collect credentials.
+        AI may help write the message, while the underlying attack
+        remains a phishing attempt.
+      </p>
+      <p>
+        AI can also assist with generating or explaining code,
+        including code that could be misused. However, generated
+        code may contain errors, and an AI tool does not automatically
+        make an attacker capable of compromising any system.
+        Successful attacks still depend on factors such as
+        vulnerabilities, access and technical knowledge.
+      </p>
+    </section>
+
+    <section id="privacy" class="surface">
+      <h2>Personal data and privacy</h2>
+      <p>
+        When someone enters information into an AI service,
+        that information is processed by the system.
+        Depending on the service and its settings, conversations
+        may be stored or made available for additional processing.
+        Users should understand how a service handles information
+        before submitting sensitive content.
+      </p>
+      <p>
+        Uploading a document can disclose more than expected.
+        A file may contain names, contact details, private messages
+        or confidential organisational information.
+        Removing a person's name may not fully protect their
+        identity if other details still make them recognisable.
+      </p>
+
+      <h3>Profiling and inference</h3>
+      <p>
+        AI can identify patterns across large amounts of data.
+        Combining browsing activity, purchases and location records
+        may allow a system to infer interests, routines or sensitive
+        characteristics. These inferences can affect privacy even
+        when users never directly provided the inferred information.
+        They may also be inaccurate.
+      </p>
+
+      <h3>Surveillance and identification</h3>
+      <p>
+        Facial recognition and other automated analysis tools
+        can help identify or track people across images and video.
+        Their use raises questions about consent, proportionality,
+        access to collected data and the consequences of incorrect
+        identification.
+      </p>
+    </section>
+
+    <section id="trust" class="surface">
+      <h2>Identity, information and trust</h2>
+      <p>
+        AI-generated audio, images and video can imitate real people.
+        Such manipulated or synthetic media are often called
+        deepfakes. They may be used to impersonate a colleague,
+        relative or public figure and make a false request
+        appear authentic.
+      </p>
+      <p>
+        For example, a voice message that sounds like a family member
+        might urgently request money. Recognising the voice alone
+        is not enough to confirm the request. Contacting the person
+        through a previously known number provides a separate
+        way to check what happened.
+      </p>
+      <p>
+        AI can also produce misleading articles, fabricated images
+        and large numbers of social media posts. Repeated exposure
+        can make an unsupported claim seem widely accepted.
+        Evaluating the original source, context and independent
+        evidence is more reliable than judging whether content
+        looks polished.
+      </p>
+      <p>
+        Not all AI-generated content is deceptive. The risk arises
+        when synthetic content is presented in a misleading way
+        or used to impersonate someone without their consent.
+      </p>
+    </section>
+
+    <section id="vulnerabilities" class="surface">
+      <h2>Vulnerabilities in AI systems</h2>
+      <p>
+        AI systems can themselves become targets of attacks.
+        Their behaviour depends on training data, incoming
+        instructions, external information and the tools
+        they are allowed to use.
+      </p>
+
+      <h3>Prompt injection</h3>
+      <p>
+        Prompt injection occurs when malicious instructions
+        in input or external content attempt to redirect an
+        AI system away from its intended task.
+        For example, a document being summarised could contain
+        instructions telling the system to ignore the user's
+        request or reveal information.
+      </p>
+      <p>
+        The potential impact is greater when the AI system
+        can access private documents or perform actions.
+        Separating untrusted content from instructions
+        and restricting tool permissions can help limit
+        the consequences of manipulation.
+      </p>
+
+      <h3>Data poisoning and backdoors</h3>
+      <p>
+        Data poisoning involves deliberately modifying data
+        used to train or update a model in order to influence
+        its behaviour. A backdoor is a hidden behaviour that
+        may be activated by a particular trigger.
+        Such attacks can undermine reliability even when
+        the system appears to behave normally in other situations.
+      </p>
+    </section>
+
+    <section id="reliability" class="surface">
+      <h2>Reliability and human oversight</h2>
+      <p>
+        AI-generated answers can be fluent and confident
+        while still being incorrect. A system may invent facts,
+        references or explanations. These outputs are often
+        described as hallucinations.
+        Confidence in the wording should not be confused
+        with evidence of accuracy.
+      </p>
+      <p>
+        In cybersecurity, incorrect advice could lead someone
+        to overlook a threat or apply an unsafe configuration.
+        Important conclusions should be checked against
+        reliable documentation and appropriate testing.
+      </p>
+
+      <h3>Bias and unfair decisions</h3>
+      <p>
+        An AI system may perform differently across groups
+        because of its training data, design or deployment
+        conditions. A security system could incorrectly flag
+        legitimate activity as suspicious or fail to recognise
+        certain users accurately.
+      </p>
+      <p>
+        Human oversight should include reviewing significant
+        decisions, investigating mistakes and providing
+        a way for affected users to challenge incorrect outcomes.
+        Simply placing a person near an automated process
+        does not guarantee meaningful review.
+      </p>
+    </section>
+
+    <section id="protection" class="surface">
+      <h2>Reducing the risks</h2>
+      <p>
+        Managing AI risks requires both responsible user behaviour
+        and careful system design. The safeguards should reflect
+        the sensitivity of the information and the possible
+        consequences of an error or misuse.
+      </p>
+      <ul>
+        <li>
+          <strong>Limit sensitive inputs:</strong>
+          avoid submitting passwords, confidential documents
+          or unnecessary personal information.
+        </li>
+        <li>
+          <strong>Verify unusual requests:</strong>
+          confirm requests for money, credentials or sensitive
+          actions through an independent, trusted channel.
+        </li>
+        <li>
+          <strong>Check important outputs:</strong>
+          verify factual claims and review generated code
+          before relying on it.
+        </li>
+        <li>
+          <strong>Restrict permissions:</strong>
+          give AI systems only the data and tools needed
+          for their intended tasks.
+        </li>
+        <li>
+          <strong>Review consequential actions:</strong>
+          require meaningful human approval before actions
+          with significant security or privacy consequences.
+        </li>
+         <li>
+          <strong>Monitor and improve:</strong>
+          investigate errors, suspicious behaviour and
+          unexpected outputs, then adjust safeguards.
+        </li>
+      </ul>
+      <p>
+        No single measure removes every AI-related risk.
+        Combining data protection, access controls,
+        verification and human judgement helps reduce
+        both deliberate misuse and accidental harm.
+      </p>
+    </section>
+
+      <h2>Explore the subtopics</h2>
+      <div class="table-wrap" role="region" aria-label="AI risk subtopics" tabindex="0">
+      <table id="subtopics" class="data-table">
+        <caption>Ten research areas concerning AI risks.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Subtopic</th>
+            <th scope="col">Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <a href="deepfakes.html">
+                Deepfakes and Identity Impersonation
+              </a>
+            </th>
+            <td>
+              How synthetic voices and videos can impersonate
+              real people, enable fraud and undermine
+              identity verification.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-cyberattacks.html">
+                AI-Assisted Malware and Cyberattacks
+              </a>
+            </th>
+            <td>
+              How attackers can use AI to assist with writing
+              malicious code and automating parts of cyberattacks,
+              including the limitations of these tools.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-chatbot-privacy.html">
+                Sensitive Data Shared with AI Chatbots
+              </a>
+            </th>
+            <td>
+              How entering personal, academic or confidential
+              information into AI services can expose sensitive
+              data, and how users can reduce these risks.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-surveillance.html">
+                AI-Powered Surveillance and Facial Recognition
+              </a>
+            </th>
+            <td>
+              How AI enables large-scale monitoring and
+              identification, raising concerns about consent,
+              anonymity and the misuse of personal information.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-data-profiling.html">
+                Personal Data Profiling and Inference
+              </a>
+            </th>
+            <td>
+              How AI can combine seemingly harmless data
+              to infer sensitive information about people,
+              such as their habits, interests or health.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-disinformation.html">
+                AI-Generated Disinformation
+              </a>
+            </th>
+            <td>
+              How AI-generated text, images and videos can
+              spread false information, manipulate audiences
+              and weaken trust in digital content.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-bias.html">
+                Bias and Discrimination in AI Security Systems
+              </a>
+            </th>
+            <td>
+              How biased AI systems can unfairly flag users
+              as suspicious or deny legitimate access,
+              and why testing and human oversight matter.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="prompt-injection.html">
+                Prompt Injection and AI System Manipulation
+              </a>
+            </th>
+            <td>
+              How malicious instructions hidden in user inputs
+              or external content can redirect AI systems,
+              potentially causing information leaks
+              or unauthorised actions.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="data-poisoning.html">
+                Data Poisoning and AI Model Backdoors
+              </a>
+            </th>
+            <td>
+              How tampering with training data can influence
+              an AI system's behaviour, reduce its reliability
+              or introduce hidden vulnerabilities.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <a href="ai-hallucinations.html">
+                AI Hallucinations and Overreliance in Cybersecurity
+              </a>
+            </th>
+            <td>
+              How incorrect AI-generated advice or analysis
+              can lead to unsafe decisions, and why security
+              recommendations require independent verification.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+  
+    <!-- Sources supporting the information on this page -->
+    <section id="sources" class="surface">
+    <h2>Sources</h2>
+    <p>
+     The following references provide further information and
+     support the concepts explained on this page.
+    </p>
+    <ul class="stack stack--sm">
+    <li>
+      <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">
+        NIST — Generative Artificial Intelligence Profile
+        (NIST AI 600-1)
+     </a>
+     <p>
+        Risks associated with generative AI, including
+        hallucinations, harmful bias, privacy, misleading
+        content and human overreliance.
+     </p>
+     </li>
+     <li>
+      <a href="https://genai.owasp.org/llm-top-10/">
+        OWASP — Top 10 for Large Language Model Applications
+      </a>
+      <p>
+        Security vulnerabilities in AI applications, including
+        prompt injection, sensitive information disclosure,
+        data and model poisoning, and excessive permissions.
+      </p>
+     </li>
+     <li>
+     <a href="https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat">
+        NCSC — The Near-Term Impact of AI on the Cyber Threat
+     </a>
+      <p>
+        A 2024 assessment of how AI can assist cybercriminals,
+        improve phishing messages and support malicious
+        activities, while still having technical limitations.
+      </p>
+     </li>
+     <li>
+      <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/">
+        ICO — Guidance on AI and Data Protection
+      </a>
+      <p>
+        Personal data protection in AI systems, fairness,
+        accuracy, data minimisation and safeguards
+        for automated decisions.
+      </p>
+     </li>
+   </ul>
+ </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container section--tight">
+  <p class="site-footer__text">Cybersecurity and Digital Privacy · Risk Brought by AI</p>
+  </div>
+</footer>
+
+</body>
+</html>
