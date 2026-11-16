@@ -2,6 +2,7 @@
 <html lang="en">
     <head> 
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Francesco Taddei">
         <title>Privacy-Focused Browsers</title>
         <link rel="stylesheet" href="../css/styles.css">
@@ -47,7 +48,7 @@
                 <li><a class="site-nav__link" href="../index.html">Home</a></li>
                 <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
                 <li><a class="site-nav__link" href="Digital_privacy_index.html">Articles</a></li>
-                <li><a class="site-nav__link" href="credits.html"> Credits</a></li> 
+                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
             </ul>
         </nav>
     </header>
@@ -56,23 +57,26 @@
     <h1>Privacy-Focused Browsers</h1>
     
     <h2>Conventional vs Privacy-Focused Browsers</h2>
-    <p>TODO privacy browsers</p>
+    <p>When we visit a website, hidden tracking code can make our browser send dozens or even hundreds of additional requests to third-party companies, each carrying information about our browser and settings. Conventional browsers are designed mainly for speed and convenience, and by default they let most of this happen. Private or incognito mode does not solve the problem: it mainly keeps browsing history off our own device, and Chrome's incognito mode offers no protection against trackers or fingerprinting. Privacy-focused browsers, by contrast, block trackers automatically and defend against fingerprinting. According to the EFF, they do this by making a user's fingerprint less unique, less consistent, or both.</p>
 
 
     <h2>Tor Browser</h2>
-    <p>TODO tor</p>
+    <p>Tor Browser is a free browser developed by the Tor Project, a nonprofit organisation that promotes human rights through privacy technology. It sends traffic through three random relays operated by thousands of volunteers, wrapping it in three layers of encryption that are removed one at a time; this is why the technique is called onion routing. The entry relay knows the user's IP address but not the website being visited, the middle relay knows neither, and the exit relay knows the website but not the user. The website itself sees only the exit relay. As a result, the internet provider or local network can only see that someone is using Tor, not which sites they visit. Tor Browser also deletes tracking cookies at the end of every session and makes all its users look the same, so that trackers cannot single out one person from the crowd. It does have limitations: it is slower than ordinary browsers; it protects only traffic inside the browser (the Tails operating system is needed to route all traffic through Tor); the final step to the website depends on HTTPS; and logging into a personal account, such as Google, immediately reveals who the user is.</p>
 
     <h2>Brave</h2>
-    <p>TODO brave</p>
+    <p>Brave is a browser built on Chromium, the same engine that powers Google Chrome. Its built-in Shields feature blocks ads and trackers by default. To counter fingerprinting, Brave uses a technique it calls "farbling": it adds small random changes to the information trackers rely on, such as canvas graphics, WebGL, audio and the list of available cameras and microphones. Each time Brave starts, it generates a secret random key and combines it with the name of each website. As a result, a site sees the same values throughout a session, different sites see different values, and the same site sees new values in the next session. Trackers therefore cannot link a user's visits across sites, while ordinary websites continue to work. Brave argues that this approach is more effective than making all users identical, which it considers to work well only on popular sites. Users can choose between three protection levels: off, default and maximum, the last of which offers stronger protection but may break some websites. Brave itself acknowledges that its default level may not stop a determined, targeted attack, and recommends Tor Browser for that situation. Unlike Tor, Brave does not hide the user's IP address.</p>
 
-    <h2>Tor vs Brave?</h2>
-    <p>TODO comparison</p>
+    <h2>Tor vs Brave</h2>
+    <p>Tor and Brave protect privacy in different ways. Tor makes all its users look identical and hides their IP address, offering strong anonymity at the cost of speed. Brave randomises fingerprinting data and blocks trackers while remaining fast, which makes it better suited to everyday browsing. In short, Tor is the stronger choice for anonymity, while Brave offers a practical balance between privacy and convenience.</p>
 
     
 
     <h2>Sources</h2>
-    <p>TODO sources</p>
-
+    <ul>
+  <li><a href="https://protonvpn.com/blog/what-is-tor-browser">Proton VPN, blog</a></li>
+  <li><a href="https://brave.com/privacy-updates-4/">Brave, blog</a></li>
+  <li><a href="https://coveryourtracks.eff.org/learn">Electronic Frontier Foundation (EFF)</a></li>
+</ul>
 
 
     <div class="page-links">
