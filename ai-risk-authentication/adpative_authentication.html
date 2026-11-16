@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Giulio Finocchiaro">
+    <title>Adaptive Authentication</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shared.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">
+                    CyberAware
+                </span>
+            </a>
+
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="../index.html">Home</a></li>
+                <li><a class="site-nav__link" href="#">Common Threats</a></li>
+                <li><a class="site-nav__link" href="#">Malware</a></li>
+                <li><a class="site-nav__link" href="#">Privacy</a></li>
+                <li><a class="site-nav__link" href="#">Famous Incidents</a></li>
+                <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
+                <li><a class="site-nav__link" href="#">Secure Communication</a></li>
+                <li><a class="site-nav__link" href="adpative_authentication.html">Authentication</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section section--tight">
+            <div class="container container--narrow">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumbs">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="passwords.html">Authentication</a></li>
+                        <li><span aria-current="page">Adaptive Authentication</span></li>
+                    </ol>
+                </nav>
+
+                <p class="eyebrow">Authentication · AI Risks</p>
+                <h1>Adaptive Authentication</h1>
+                <p class="lead">
+                    Not every login deserves the same level of suspicion. Adaptive authentication, also called
+                    risk-based authentication, looks at the context of each attempt and asks for extra proof only
+                    when something looks unusual.
+                </p>
+                <div class="cluster">
+                    <span class="badge badge--accent">Risk-based login</span>
+                    <span class="text-sm text-muted">By Giulio Finocchiaro</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--flush-top">
+            <div class="container grid grid--sidebar">
+                <aside class="surface stack stack--sm">
+                    <p class="eyebrow">On this page</p>
+                    <a href="#overview">Overview</a>
+                    <a href="#signals">Risk signals</a>
+                    <a href="#levels">Levels of friction</a>
+                    <a href="#ai">Where AI fits in</a>
+                    <a href="#example">A login in practice</a>
+                    <a href="#practices">Best practices</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#resources">Resources</a>
+                </aside>
+
+                <div class="stack stack--lg">
+                    <article class="surface" id="overview">
+                        <h2>From static rules to risk-based decisions</h2>
+                        <p>
+                            Traditional login flows treat every attempt the same way: type your password, then confirm a
+                            one-time code, every single time. This is predictable for users and attackers alike.
+                            Adaptive
+                            authentication changes the question from <em>"what is your password?"</em> to
+                            <em>"does this login look like you?"</em>.
+                        </p>
+                        <p>
+                            Instead of always applying the strongest check, the system evaluates
+                            <strong>signals</strong>
+                            about the request, compares them with what it knows about the account, and calculates a risk
+                            score. The higher the score, the stronger the challenge.
+                        </p>
+                        <div class="grid grid--3">
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="text-sm text-muted">Step 01</p>
+                                    <h3 class="card__title">Collect context</h3>
+                                    <p class="card__text">Device, browser, network, location and the time of the request
+                                        are gathered silently, before the user types anything.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="text-sm text-muted">Step 02</p>
+                                    <h3 class="card__title">Score the risk</h3>
+                                    <p class="card__text">A model compares those signals with the account's normal
+                                        behaviour and with threat intelligence about stolen credentials or malicious
+                                        IPs.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="text-sm text-muted">Step 03</p>
+                                    <h3 class="card__title">Step up if needed</h3>
+                                    <p class="card__text">A familiar laptop may log in with a passkey. A new device in
+                                        another country triggers a code, a biometric check or a block.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="surface" id="signals">
+                        <h2>What the risk engine looks at</h2>
+                        <p>
+                            No single signal proves who is logging in. The strength of adaptive authentication comes
+                            from
+                            combining several weak signals into one decision.
+                        </p>
+                        <div class="table-wrap">
+                            <table class="data-table">
+                                <caption>Common risk signals and how they are interpreted</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Signal</th>
+                                        <th scope="col">Examples</th>
+                                        <th scope="col">Typical response</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Device</strong></td>
+                                        <td>Known laptop, new phone, browser fingerprint, missing security patch</td>
+                                        <td><span class="status status--warning">Extra check</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Network and location</strong></td>
+                                        <td>Home Wi-Fi, corporate VPN, foreign IP, impossible travel between two
+                                            countries</td>
+                                        <td><span class="status status--danger">Step-up or block</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Time and behaviour</strong></td>
+                                        <td>Login at 3 a.m., unusual typing rhythm, mouse movement, navigation pattern
+                                        </td>
+                                        <td><span class="status status--warning">Extra check</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Threat intelligence</strong></td>
+                                        <td>Credentials found in a breach, IP on a botnet list, request from a known
+                                            attack tool</td>
+                                        <td><span class="status status--danger">Step-up or block</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Established session</strong></td>
+                                        <td>Trusted device, recent successful verification, consistent activity</td>
+                                        <td><span class="status status--success">Allow</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-muted">
+                            Signals are combined, not judged individually: a new device alone may only require a code,
+                            while a new device in a new country at an unusual hour should require much more.
+                        </p>
+                    </article>
+
+                    <article class="surface" id="levels">
+                        <h2>Three levels of friction</h2>
+                        <div class="table-wrap">
+                            <table class="data-table">
+                                <caption>Risk level and the authentication challenge</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Risk level</th>
+                                        <th scope="col">What the system sees</th>
+                                        <th scope="col">Challenge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="status status--success">Low</span></td>
+                                        <td>Trusted device, usual location and normal working hours</td>
+                                        <td>Password or passkey. No interruption.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status--warning">Medium</span></td>
+                                        <td>New device or an unusual time, but no other warning signs</td>
+                                        <td>A push notification or a one-time code.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status--danger">High</span></td>
+                                        <td>Impossible travel, leaked credentials or automated attack patterns</td>
+                                        <td>Phishing-resistant factor, manual verification or an outright block.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="callout">
+                            <p class="callout__title">Why the weakest factor is never enough</p>
+                            <p>SMS codes can be intercepted and push notifications can be approved by mistake. When the
+                                risk is high, the challenge should use a factor that cannot be phished, such as a
+                                hardware security key or a passkey bound to the device.</p>
+                        </div>
+                    </article>
+                    <article class="surface" id="ai">
+                        <h2>Where AI fits in</h2>
+                        <p>
+                            Rule-based systems can compare a device to a list, but they struggle with the long tail of
+                            "normal". Machine learning models learn each user's routine, including
+                            <strong>behavioural biometrics</strong> such as typing speed, swipe gestures and the way
+                            someone navigates a page.
+                        </p>
+                        <p>
+                            This makes it possible to detect a stolen session even after a correct password: the
+                            attacker
+                            may have the credentials, but not the victim's habits. The model continuously re-scores the
+                            session instead of trusting it forever after the first login.
+                        </p>
+
+                        <div class="callout callout--warning">
+                            <p class="callout__title">When the model gets it wrong</p>
+                            <p>A false positive locks out a legitimate user, often at the worst possible moment. A false
+                                negative lets an attacker in with a normal-looking session. Models can also drift as
+                                devices and habits change, and they can inherit bias if the training data
+                                under-represents some groups of users. Adaptive systems therefore need monitoring,
+                                fallback paths and human support, not just a score.</p>
+                        </div>
+
+                        <p class="text-muted">
+                            Behavioural biometrics and location data are personal data. Under the GDPR they need a
+                            lawful
+                            basis, clear notice and a limited retention period. A system that scores users in secret,
+                            without an explanation or an appeal process, trades one security problem for another.
+                        </p>
+                    </article>
+
+                    <article class="surface" id="example">
+                        <h2>A login in practice</h2>
+                        <ol class="timeline">
+                            <li class="timeline__item">
+                                <p class="timeline__time">09:02 · Known device</p>
+                                <h3 class="timeline__title">Low risk</h3>
+                                <p class="timeline__text">The user opens the banking app on the phone used every day, on
+                                    the home Wi-Fi network. The passkey unlocks the session without any extra prompt.
+                                </p>
+                            </li>
+                            <li class="timeline__item">
+                                <p class="timeline__time">09:05 · New context</p>
+                                <h3 class="timeline__title">Score rises</h3>
+                                <p class="timeline__text">A second login arrives from a laptop never seen before, in a
+                                    different country, ten minutes later. The combination is physically impossible, so
+                                    the risk score jumps to high.</p>
+                            </li>
+                            <li class="timeline__item">
+                                <p class="timeline__time">09:06 · Step-up challenge</p>
+                                <h3 class="timeline__title">Extra proof required</h3>
+                                <p class="timeline__text">The session is paused and the user is asked to confirm with a
+                                    hardware key or a biometric check on the trusted phone. A one-time code alone would
+                                    not be enough at this level.</p>
+                            </li>
+                            <li class="timeline__item">
+                                <p class="timeline__time">09:07 · Continuous monitoring</p>
+                                <h3 class="timeline__title">Trust is earned again</h3>
+                                <p class="timeline__text">After verification, the new device is added to the trusted
+                                    list but the session keeps being scored. A sudden change in behaviour would trigger
+                                    another check.</p>
+                            </li>
+                        </ol>
+                    </article>
+
+                    <article class="surface" id="why">
+                        <h2>Why it matters</h2>
+                        <p>
+                            Adaptive authentication does not replace multi-factor authentication; it decides when MFA is
+                            necessary and how strong it must be. Used well, it keeps accounts safer without forcing
+                            users
+                            through the same heavy flow at every login.
+                        </p>
+                        <div class="stat-grid">
+                            <div class="stat">
+                                <span class="stat__value">99.9%</span>
+                                <span class="stat__label">Of account compromise attacks are blocked by MFA</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__value">90%</span>
+                                <span class="stat__label">Of targeted attacks are stopped by on-device prompts</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__value">81%</span>
+                                <span class="stat__label">Of hacking breaches involve weak or stolen passwords</span>
+                            </div>
+                        </div>
+                        <p class="text-muted">
+                            Sources: Microsoft, Google Security Blog and Verizon Data Breach Investigations Report.
+                        </p>
+                    </article>
+
+                    <article class="surface" id="practices">
+                        <h2>Best practices</h2>
+                        <div class="callout callout--success">
+                            <p class="callout__title">Building a sound adaptive flow</p>
+                            <ul>
+                                <li><strong>Prefer phishing-resistant factors:</strong> passkeys and hardware keys
+                                    should be the default for high-risk decisions, not SMS codes.</li>
+                                <li><strong>Combine independent signals:</strong> never let a single device or IP decide
+                                    the outcome on its own.</li>
+                                <li><strong>Explain the challenge:</strong> tell users why extra verification is
+                                    requested, so the prompt does not look like a scam.</li>
+                                <li><strong>Always keep a fallback:</strong> account recovery must work when a device is
+                                    lost, a number changes or a model is wrong.</li>
+                                <li><strong>Monitor fairness and drift:</strong> review false positives and error rates
+                                    across user groups, and retrain the model when behaviour changes.</li>
+                                <li><strong>Log and limit data:</strong> collect only what the decision needs, and
+                                    delete it when it is no longer useful.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="surface" id="faq">
+                        <h2>Frequently asked questions</h2>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3 class="card__title">Is adaptive authentication the same as MFA?</h3>
+                                <p class="card__text">No. MFA is the set of factors used to prove identity. Adaptive
+                                    authentication is the decision layer that chooses which factors to request, and
+                                    when, based on the risk of the attempt.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3 class="card__title">Does behavioural biometrics record what I type?</h3>
+                                <p class="card__text">Well-designed systems do not store the content of what you type.
+                                    They measure rhythm and patterns, such as typing speed or mouse movement, and keep
+                                    only the features needed to compare your behaviour with your usual routine.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="surface" id="resources">
+                        <h2>Useful resources</h2>
+                        <p>
+                            For the technical requirements behind authenticators and risk-based flows, see
+                            <a href="https://pages.nist.gov/800-63-4/sp800-63b.html" target="_blank"
+                                rel="noopener noreferrer">NIST SP 800-63B</a>.
+                            For practical guidance on turning on MFA, visit
+                            <a href="https://www.cisa.gov/mfa" target="_blank" rel="noopener noreferrer">CISA</a>,
+                            and for passkey standards consult the
+                            <a href="https://fidoalliance.org/" target="_blank" rel="noopener noreferrer">FIDO
+                                Alliance</a>.
+                        </p>
+                    </article>
+
+                    <div class="callout callout--danger">
+                        <p class="callout__title">Not a replacement for security habits</p>
+                        <p>
+                            Adaptive authentication reduces friction, but it cannot compensate for reused passwords,
+                            missing updates or a user who approves every prompt without reading it.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container site-footer__main">
+            <div class="site-footer__brand">
+                <span class="brand__copy">
+                    CyberAware
+                    <span class="brand__sub">USI - Software Atelier I</span>
+                </span>
+                <p class="site-footer__text">One click can compromise everything. Awareness can protect it all.</p>
+            </div>
+
+            <div>
+                <h2 class="site-footer__title">Modules</h2>
+                <ul class="site-footer__list site-footer__list--grid">
+                    <li><a class="site-footer__link" href="#">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="#">Malware</a></li>
+                    <li><a class="site-footer__link" href="#">Privacy</a></li>
+                    <li><a class="site-footer__link" href="#">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="#">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="#">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="adpative_authentication.html">Authentication</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="site-footer__title">Project</h2>
+                <ul class="site-footer__list">
+                    <li><span class="site-footer__text">Software Atelier I</span></li>
+                    <li><span class="site-footer__text">Group 3</span></li>
+                    <li><span class="site-footer__text">USI 2026/27</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
