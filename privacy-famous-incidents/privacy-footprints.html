@@ -6,29 +6,51 @@
         <title>Digital Footprints, Cookies and Trackers</title>
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/shared.css">
+        <style>
+            /* Navbar CSS customizations taken from main index page */
+/* navbar underline animation */
+    .site-nav__link {
+        position: relative;
+        text-decoration: none;
+        }
+
+    .site-nav__link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--accent-text);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .22s ease;
+        }
+
+    .site-nav__link:hover::after,
+    .site-nav__link:focus-visible::after,
+    .site-nav__link.is-active::after {
+        transform: scaleX(1);
+        }
+        </style>
 
     </head>
 
     <body>
-        <header class="site-header">
-    <div class="site-nav__inner">
-        <h2>Cybersecurity and Digital Privacy</h2>
-
-        <nav>
+        <!-- Shared header taken from main index page-->
+<header class="site-header">
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">CyberAware</span>
+            </a>
             <ul class="site-nav__links">
                 <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="#">Common Threats</a></li>
-                <li><a class="site-nav__link" href="#">Authentication</a></li>
-                <li><a class="site-nav__link" href="#">Malware</a></li>
-                <li><a class="site-nav__link" href="#">Social Engineering</a></li>
-                <li><a class="site-nav__link" href="privacy-intro.html">Privacy</a></li>
-                <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
-                <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
-                <li><a class="site-nav__link" href="#">Risks of AI</a></li>
+                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+                <li><a class="site-nav__link" href="Digital_privacy_index.html">Articles</a></li>
+                <li><a class="site-nav__link" href="credits.html"> Credits</a></li> 
             </ul>
         </nav>
-    </div>
-</header>
+    </header>
 <main>
     <p class="breadcrumbs">CYBERSECURITY / PRIVACY</p>
     <h1>Digital Footprints, Cookies and Trackers</h1>
@@ -65,6 +87,45 @@
 
 
 </main>
+<!-- Shared footer: project identity, modules and project information. -->
+  <footer class="site-footer">
+    <div class="container site-footer__main">
+      <!-- Left column: logo and a short description. -->
+      <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware 
+            <br>
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+        <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+      </div>
+
+      <!-- Middle column: the same modules as the main navigation. -->
+      <div>
+        <h2 class="site-footer__title">Explore Privacy</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+                    <li><a class="site-footer__link" href="privacy-intro.html">Introduction</a></li>
+                    <li><a class="site-footer__link" href="privacy-footprints.html">Footprints, Cookies & Trackers</a></li>
+                    <li><a class="site-footer__link" href="privacy-data-brokers.html">Data Brokers, Mining & Selling</a></li>
+                    <li><a class="site-footer__link" href="Privacy_laws_and_regulations_page4.html">Privacy Laws & Regulations</a></li>
+                   <li><a class="site-footer__link" href="VPNs_page5.html">VPNs</a></li>
+                    <li><a class="site-footer__link" href="Encryption_page6.html">Cryptography & Encryption</a></li>
+                    <li><a class="site-footer__link" href="privacy-browsers.html">Privacy Focused Browsers</a></li>
+                    <li><a class="site-footer__link" href="Social_networks_page8.html">Social Networks & Privacy</a></li>
+                    <li><a class="site-footer__link" href="The_Privacy_Dilemma.html">The Privacy Dilemma</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: information about the project and the group. -->
+      <div>
+        <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier I</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
     </body>
 
