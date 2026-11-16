@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Giulio Finocchiaro">
+  <title>Biometric Authentication</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/shared.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="container site-nav__inner" aria-label="Main navigation">
+      <a class="brand" href="../index.html">
+        <span class="brand__copy">
+          CyberAware
+        </span>
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a class="site-nav__link" href="../index.html">Home</a></li>
+        <li><a class="site-nav__link" href="#">Common Threats</a></li>
+        <li><a class="site-nav__link" href="#">Malware</a></li>
+        <li><a class="site-nav__link" href="#">Privacy</a></li>
+        <li><a class="site-nav__link" href="#">Famous Incidents</a></li>
+        <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
+        <li><a class="site-nav__link" href="#">Secure Communication</a></li>
+        <li><a class="site-nav__link" href="#">Authentication</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section section--tight">
+      <div class="container container--narrow">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="passwords.html">Authentication</a></li>
+            <li><span aria-current="page">Biometric Authentication</span></li>
+          </ol>
+        </nav>
+
+        <p class="eyebrow">Authentication · Biometrics</p>
+        <h1>Biometric Authentication</h1>
+        <p class="lead">
+          Fingerprints, faces and irises are unique enough to tell people apart, but turning a body
+          characteristic into a login requires more than a camera or a sensor. Reliability, spoofing and
+          privacy decide whether a biometric system is safe to use.
+        </p>
+        <div class="cluster">
+          <span class="badge badge--accent">Identity factors</span>
+          <span class="text-sm text-muted">By Giulio Finocchiaro</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top">
+      <div class="container grid grid--sidebar">
+        <aside class="surface stack stack--sm">
+          <p class="eyebrow">On this page</p>
+          <a href="#overview">Overview</a>
+          <a href="#modalities">What can be measured</a>
+          <a href="#matching">How matching works</a>
+          <a href="#reliability">Reliability and spoofing</a>
+          <a href="#privacy">Privacy and law</a>
+          <a href="#practices">Best practices</a>
+          <a href="#faq">FAQ</a>
+          <a href="#resources">Resources</a>
+        </aside>
+
+        <div class="stack stack--lg">
+          <article class="surface" id="overview">
+            <h2>Something you are, not something you know</h2>
+            <p>
+              Passwords and tokens are <strong>something you know</strong> or <strong>something you
+                have</strong>. Biometrics are <strong>something you are</strong>: a physical or behavioural
+              trait that is measured, converted into a template and compared with a stored reference.
+            </p>
+            <p>
+              This makes biometrics convenient. There is nothing to remember and nothing to carry.
+              It also makes them different from every other factor: a password can be changed after a
+              breach, a fingerprint cannot. That single property drives most of the security and privacy
+              questions around biometric authentication.
+            </p>
+
+            <figure class="stack stack--sm">
+              <img src="../img/biometrics-face-login.jpg" width="1280" height="853" loading="lazy" decoding="async"
+                alt="A person using facial recognition to log in through a laptop camera">
+              <figcaption class="text-sm text-muted">
+                Face login on a laptop. The camera captures the face, but the useful output is a template,
+                not a photograph. Photo: <a
+                  href="https://commons.wikimedia.org/wiki/File:Facial_login_as_password_using_laptop_camera.jpg"
+                  target="_blank" rel="noopener noreferrer">Intel Free Press</a>,
+                <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener noreferrer">CC
+                  BY-SA 2.0</a>, via Wikimedia Commons.
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="surface" id="modalities">
+            <h2>What can be measured</h2>
+            <p>
+              A biometric system is built around one or more <strong>modalities</strong>. Each has a
+              different sensor, a different error profile and a different privacy cost.
+            </p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <caption>Common biometric modalities</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Modality</th>
+                    <th scope="col">What is measured</th>
+                    <th scope="col">Strengths</th>
+                    <th scope="col">Weaknesses</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Fingerprint</strong></td>
+                    <td>Ridges and minutiae on a fingertip</td>
+                    <td>Small sensors, fast, well understood</td>
+                    <td>Latent prints left on surfaces; difficult for manual workers</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Face</strong></td>
+                    <td>Facial geometry and texture</td>
+                    <td>Works at a distance, no contact</td>
+                    <td>Changes with age, lighting and pose; deepfake attacks</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Iris</strong></td>
+                    <td>Pattern of the iris</td>
+                    <td>Very high accuracy, hard to imitate</td>
+                    <td>Needs cooperation and a good camera; expensive</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Voice</strong></td>
+                    <td>Vocal tract and speaking style</td>
+                    <td>Works over the phone</td>
+                    <td>Affected by illness and noise; synthetic voice attacks</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Behaviour</strong></td>
+                    <td>Typing rhythm, gait, gestures</td>
+                    <td>Continuous and invisible</td>
+                    <td>Changes over time; weaker on its own</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="surface" id="matching">
+            <h2>How matching works</h2>
+            <p>
+              A biometric system never compares two images directly. It extracts a <strong>template</strong>,
+              a compact mathematical representation of the relevant features, and compares templates with a
+              matching algorithm.
+            </p>
+
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__time">Step 01 · Enrolment</p>
+                <h3 class="timeline__title">The reference is created</h3>
+                <p class="timeline__text">The sensor captures one or more samples, quality checks are applied and a
+                  reference template is stored. Poor samples should be rejected here, not at login.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 02 · Capture</p>
+                <h3 class="timeline__title">A new sample arrives</h3>
+                <p class="timeline__text">At login the sensor captures a fresh sample. Liveness detection checks that it
+                  comes from a real person and not from a photo, a mask or a replay.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 03 · Score</p>
+                <h3 class="timeline__title">Templates are compared</h3>
+                <p class="timeline__text">The algorithm produces a similarity score. It is not a yes or no answer: it is
+                  a number that must be interpreted against a threshold.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 04 · Decision</p>
+                <h3 class="timeline__title">The threshold decides</h3>
+                <p class="timeline__text">A low threshold accepts more people but also more impostors. A high threshold
+                  does the opposite. Every deployment chooses where to sit on that trade-off.</p>
+              </li>
+            </ol>
+
+            <div class="callout">
+              <p class="callout__title">1:1 and 1:N are not the same problem</p>
+              <p>Verification asks "is this person who they claim to be?" and compares one template with one reference.
+                Identification asks "who is this person?" and searches a whole database. The second is much harder and
+                has much higher privacy stakes.</p>
+            </div>
+          </article>
+
+          <article class="surface" id="reliability">
+            <h2>Reliability and spoofing</h2>
+            <p>
+              Two error rates matter. The <strong>false acceptance rate</strong> (FAR) measures impostors
+              wrongly accepted; the <strong>false rejection rate</strong> (FRR) measures legitimate users
+              wrongly rejected. Lowering one usually raises the other.
+            </p>
+
+            <div class="callout callout--warning">
+              <p class="callout__title">Accuracy is not evenly distributed</p>
+              <p>Error rates change with age, skin tone, gender, lighting, camera quality and pose. Studies by NIST have
+                repeatedly found that some face recognition algorithms perform worse for particular demographic groups.
+                A system that works well on average can still fail systematically for some users.</p>
+            </div>
+
+            <p>
+              A second problem is <strong>presentation attacks</strong>: a printed photo, a silicone
+              finger, a replay video or a synthetic face. Good systems add liveness detection, depth
+              sensing or challenge-response steps, but each addition costs money and can exclude users.
+            </p>
+
+            <figure class="stack stack--sm">
+              <img src="../img/biometrics-iris-scan.jpg" width="1280" height="850" loading="lazy" decoding="async"
+                alt="A person having their iris scanned at a biometric data collection camp in Kolkata">
+              <figcaption class="text-sm text-muted">
+                Iris enrolment at an Aadhaar biometric camp in Kolkata. Large-scale biometric databases
+                make template protection and consent essential. Photo: <a
+                  href="https://commons.wikimedia.org/wiki/File:Iris_Scan_-_Biometric_Data_Collection_-_Aadhaar_-_Kolkata_2015-03-18_3653.JPG"
+                  target="_blank" rel="noopener noreferrer">Biswarup Ganguly</a>,
+                <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY
+                  3.0</a>, via Wikimedia Commons.
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="surface" id="privacy">
+            <h2>Privacy and law</h2>
+            <p>
+              Biometric data is sensitive by nature. Unlike a password, it cannot be reissued, and it
+              often reveals more than the authentication decision needs. A fingerprint template is not a
+              fingerprint, but it is still uniquely linked to a person and must be protected as personal
+              data.
+            </p>
+            <p>
+              Under the GDPR, biometric data used to uniquely identify someone is a
+              <strong>special category</strong> of personal data. Processing it generally requires explicit
+              consent or another specific legal basis, plus a data protection impact assessment. The same
+              logic appears in the EU AI Act and in several national laws.
+            </p>
+
+            <div class="callout callout--danger">
+              <p class="callout__title">Templates are not anonymous</p>
+              <p>Hashing or encrypting a template is not enough if the system can still compare it with new samples.
+                Central databases also create a single target: one breach can expose a trait that users cannot change.
+                On-device matching avoids sending raw biometrics to a server and is often the safer design.</p>
+            </div>
+
+            <p>
+              There is also <strong>function creep</strong>: data collected for one purpose, such as
+              unlocking a phone, can later be reused for attendance tracking, payments or surveillance.
+              Clear limits on purpose, retention and access are part of the security of the system, not an
+              afterthought.
+            </p>
+          </article>
+
+          <article class="surface" id="practices">
+            <h2>Best practices</h2>
+            <div class="callout callout--success">
+              <p class="callout__title">Designing a biometric flow that deserves trust</p>
+              <ul>
+                <li><strong>Keep biometrics on the device:</strong> match locally and send only a signed result or a
+                  derived key, never the raw template.</li>
+                <li><strong>Test liveness, not just similarity:</strong> presentation attack detection should be
+                  evaluated against photos, masks, replays and synthetic media.</li>
+                <li><strong>Offer a fallback:</strong> users with injuries, disabilities or changed appearance need
+                  another way in.</li>
+                <li><strong>Measure error rates by group:</strong> report FAR and FRR across demographics, not only on
+                  the average user.</li>
+                <li><strong>Minimise and delete:</strong> collect the minimum quality needed and set a retention period
+                  for every template.</li>
+                <li><strong>Be transparent:</strong> tell users what is captured, where it is stored and how they can
+                  withdraw consent.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="surface" id="faq">
+            <h2>Frequently asked questions</h2>
+            <div class="card">
+              <div class="card__body">
+                <h3 class="card__title">Can a stolen fingerprint be used to log in?</h3>
+                <p class="card__text">A raw fingerprint image is not enough if the system checks liveness. A copied or
+                  synthetic finger can still succeed against weak sensors, which is why presentation attack detection
+                  matters more than the fingerprint itself.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3 class="card__title">Is face recognition on my phone the same as police face recognition?</h3>
+                <p class="card__text">No. Unlocking a phone is usually a 1:1 match performed on the device, with the
+                  template stored locally. Police systems often perform 1:N searches against large databases, with very
+                  different accuracy, legal and privacy implications.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface" id="resources">
+            <h2>Useful resources</h2>
+            <ul>
+              <li><a href="https://pages.nist.gov/frvt/" target="_blank" rel="noopener noreferrer">NIST, Face
+                  Recognition Vendor Test (FRVT)</a></li>
+              <li><a href="https://www.iso.org/standard/53227.html" target="_blank" rel="noopener noreferrer">ISO/IEC
+                  30107, Biometric presentation attack detection</a></li>
+              <li><a
+                  href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052022-use-face-recognition-technology-area_en"
+                  target="_blank" rel="noopener noreferrer">EDPB, Guidelines 05/2022 on face recognition technology</a>
+              </li>
+              <li><a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank" rel="noopener noreferrer">GDPR, Article 9:
+                  special categories of personal data</a></li>
+            </ul>
+          </article>
+
+          <div class="callout callout--danger">
+            <p class="callout__title">Biometrics are identifiers, not secrets</p>
+            <p>
+              A fingerprint can be photographed, a face can be reconstructed and a voice can be cloned.
+              Biometrics should be paired with another factor, protected by liveness checks and never
+              treated as something that can be reset after a leak.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__main">
+      <div class="site-footer__brand">
+        <span class="brand__copy">
+          CyberAware
+          <span class="brand__sub">USI - Software Atelier I</span>
+        </span>
+        <p class="site-footer__text">One click can compromise everything. Awareness can protect it all.</p>
+      </div>
+
+      <div>
+        <h2 class="site-footer__title">Modules</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+          <li><a class="site-footer__link" href="#">Common Threats</a></li>
+          <li><a class="site-footer__link" href="#">Malware</a></li>
+          <li><a class="site-footer__link" href="#">Privacy</a></li>
+          <li><a class="site-footer__link" href="#">Famous Incidents</a></li>
+          <li><a class="site-footer__link" href="#">Good Security Practices</a></li>
+          <li><a class="site-footer__link" href="#">Secure Communication</a></li>
+          <li><a class="site-footer__link" href="passwords.html">Authentication</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="site-footer__title">Project</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier I</span></li>
+          <li><span class="site-footer__text">Group 3</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
