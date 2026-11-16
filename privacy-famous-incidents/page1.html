@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,18 +14,20 @@
 <body>
 
     <header class="site-header">
-        <div class="site-nav__inner">
-            <h2>Famous Incidents</h2>
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">
+                    CyberAware
+                </span>
+            </a>
 
-            <nav>
-                <ul class="site-nav__links">
-                    <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                    <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
-                    <li><a class="site-nav__link" href="#">Digital Privacy</a></li>
-                    <li><a class="site-nav__link" href="#">Cybersecurity</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="../index.html">home</a></li>
+                <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+                <li><a class="site-nav__link" href="index.html">articles</a></li>
+                <li><a class="site-nav__link" href="../credits.html">credits</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="container">
@@ -32,7 +35,7 @@
         <nav aria-label="Breadcrumb">
             <ol class="breadcrumbs">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="page1.html">Famous Incidents</a></li>
+                <li><a href="index.html">Famous Incidents</a></li>
                 <li><span aria-current="page">Introduction and the Earliest Famous Incidents</span></li>
             </ol>
         </nav>
@@ -76,7 +79,7 @@
                     In the early years of computing, computers were mainly used by researchers, universities, and
                     government institutions. As computer networks started to develop, new security risks appeared.
                     Some of the earliest incidents were not created to cause serious damage, but they showed that
-                    computer systems could be affected by programs spreading between machines.
+                    computer systems could be affected by programs moving between machines.
                 </p>
             </div>
         </section>
@@ -118,6 +121,29 @@
             </div>
         </section>
 
+        <section class="section section--tight">
+            <div class="container container--narrow">
+                <h2 class="section__title">Sources</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.ibm.com/think/topics/malware-history" target="_blank" rel="noopener noreferrer">
+                            IBM – The History of Malware
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.fbi.gov/history/cases-and-criminals/morris-worm" target="_blank" rel="noopener noreferrer">
+                            FBI – Morris Worm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://st.llnl.gov/news/look-back/1988-morris-worm-internets-first-cyberattack" target="_blank" rel="noopener noreferrer">
+                            Lawrence Livermore National Laboratory – The 1988 Morris Worm
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <div class="page-links">
             <a href="page2.html">Next: Evolution of Cybersecurity Incidents</a>
         </div>
@@ -128,26 +154,36 @@
         <div class="container site-footer__main">
 
             <div class="site-footer__brand">
-                <p class="brand__copy">CyberAware</p>
-                <p class="brand__sub">USI · Software Atelier I</p>
-                <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+                <span class="brand__copy">
+                    CyberAware
+                    <br><br>
+                    <span class="brand__sub">USI · Software Atelier I</span>
+                </span>
+
+                <p class="site-footer__text">
+                    Stay curious. Stay informed. Stay secure.
+                </p>
             </div>
 
             <div>
-                <h3 class="site-footer__title">Explore</h3>
-                <ul class="site-footer__list site-footer__list--grid">
-                    <li><a class="site-footer__link" href="../index.html">Home</a></li>
-                    <li><a class="site-footer__link" href="page1.html">Famous Incidents</a></li>
-                    <li><a class="site-footer__link" href="#">Digital Privacy</a></li>
-                    <li><a class="site-footer__link" href="#">Cybersecurity</a></li>
+                <h2 class="site-footer__title">Explore</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="../index.html#topics">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Malware</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Online Privacy</a></li>
+                    <li><a class="site-footer__link" href="index.html">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Risks Brought by AI</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Authentication</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="site-footer__title">Group 3 - CyberSecurity</h3>
+                <h2 class="site-footer__title">Project</h2>
                 <ul class="site-footer__list">
-                    <li class="site-footer__text">Software Atelier 1</li>
-                    <li class="site-footer__text">USI 2026/27</li>
+                    <li><span class="site-footer__text">Software Atelier I</span></li>
+                    <li><span class="site-footer__text">Group 3</span></li>
                 </ul>
             </div>
 

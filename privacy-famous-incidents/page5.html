@@ -14,18 +14,20 @@
 <body>
 
     <header class="site-header">
-        <div class="site-nav__inner">
-            <h2>Famous Incidents</h2>
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">
+                    CyberAware
+                </span>
+            </a>
 
-            <nav>
-                <ul class="site-nav__links">
-                    <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                    <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
-                    <li><a class="site-nav__link" href="#">Digital Privacy</a></li>
-                    <li><a class="site-nav__link" href="#">Cybersecurity</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="../index.html">home</a></li>
+                <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+                <li><a class="site-nav__link" href="index.html">articles</a></li>
+                <li><a class="site-nav__link" href="../credits.html">credits</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="container">
@@ -33,7 +35,7 @@
         <nav aria-label="Breadcrumb">
             <ol class="breadcrumbs">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="page1.html">Famous Incidents</a></li>
+                <li><a href="index.html">Famous Incidents</a></li>
                 <li><span aria-current="page">Cyberespionage and Cyber Sabotage</span></li>
             </ol>
         </nav>
@@ -211,6 +213,30 @@
             </div>
         </section>
 
+        <section class="section section--tight">
+            <div class="container container--narrow">
+                <h2 class="section__title">Sources</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://www.mdpi.com/1999-5903/4/4/971" target="_blank">
+                            Bencsáth et al. – The Cousins of Stuxnet: Duqu, Flame, and Gauss
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.usenix.org/system/files/conference/leet12/leet12-final11.pdf" target="_blank">
+                            Chien, O'Murchu and Falliere – W32.Duqu: The Precursor to the Next Stuxnet
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Threat%20Landscape%20Published.pdf" target="_blank">
+                            ENISA – Threat Landscape: Responding to the Evolving Threat Environment
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <div class="page-links">
             <a href="../page4.html">Previous: Page 4</a>
             <a href="../page6.html">Next: Page 6</a>
@@ -222,26 +248,36 @@
         <div class="container site-footer__main">
 
             <div class="site-footer__brand">
-                <p class="brand__copy">CyberAware</p>
-                <p class="brand__sub">USI · Software Atelier I</p>
-                <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+                <span class="brand__copy">
+                    CyberAware
+                    <br><br>
+                    <span class="brand__sub">USI · Software Atelier I</span>
+                </span>
+
+                <p class="site-footer__text">
+                    Stay curious. Stay informed. Stay secure.
+                </p>
             </div>
 
             <div>
-                <h3 class="site-footer__title">Explore</h3>
-                <ul class="site-footer__list site-footer__list--grid">
-                    <li><a class="site-footer__link" href="../index.html">Home</a></li>
-                    <li><a class="site-footer__link" href="page1.html">Famous Incidents</a></li>
-                    <li><a class="site-footer__link" href="#">Digital Privacy</a></li>
-                    <li><a class="site-footer__link" href="#">Cybersecurity</a></li>
+                <h2 class="site-footer__title">Explore</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="../index.html#topics">Common Threats</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Malware</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Online Privacy</a></li>
+                    <li><a class="site-footer__link" href="index.html">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Risks Brought by AI</a></li>
+                    <li><a class="site-footer__link" href="../index.html#topics">Authentication</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="site-footer__title">Group 3 - CyberSecurity</h3>
+                <h2 class="site-footer__title">Project</h2>
                 <ul class="site-footer__list">
-                    <li class="site-footer__text">Software Atelier 1</li>
-                    <li class="site-footer__text">USI 2026/27</li>
+                    <li><span class="site-footer__text">Software Atelier I</span></li>
+                    <li><span class="site-footer__text">Group 3</span></li>
                 </ul>
             </div>
 
