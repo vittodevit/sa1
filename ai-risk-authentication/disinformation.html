@@ -11,83 +11,82 @@
 <body>
 
     <header class="site-header">
-        <nav class="site-nav">
-            <div class="container site-nav__inner">
-                <a href="../index.html" class="brand">
-                    <span class="brand__mark">3</span>
-                    Cybersecurity & AI
-                </a>
-                <ul class="site-nav__links">
-                    <li><a href="../index.html" class="site-nav__link">Home</a></li>
-                    <li><a href="passwords.html" class="site-nav__link">Passwords</a></li>
-                    <li><a href="profiling.html" class="site-nav__link">Data Profiling</a></li>
-                    <li><a href="disinformation.html" class="site-nav__link">Disinformation</a></li>
-                    <li><a href="bias.html" class="site-nav__link">Bias in AI</a></li>
-                </ul>
-            </div>
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">
+                    CyberAware
+                </span>
+            </a>
+
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="../index.html">home</a></li>
+                <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+                <li><a class="site-nav__link" href="#">articles</a></li>
+                <li><a class="site-nav__link" href="../credits.html">credits</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="container section">
-        <article>
+        <article class="stack">
             
             <header class="section__header">
                 <span class="eyebrow">AI Risks</span>
-                <h2 class="section__title">AI-Generated Disinformation</h2>
+                <h1 class="section__title">AI-Generated Disinformation</h1>
                 <p class="lead">The rapid advancement of Artificial Intelligence has made it easier than ever to create and spread false information. AI can now generate highly convincing text, images, audio, and video at a scale that threatens to overwhelm our ability to distinguish fact from fiction.</p>
             </header>
 
-            <section class="stack">
-                <h3>How AI is Changing the Threat Landscape</h3>
+            <section>
+                <h2>How AI is Changing the Threat Landscape</h2>
                 <p>Generative AI tools have lowered the barrier to entry for malicious actors. Creating a fake news article or a deepfake video no longer requires a team of experts; it can be done in seconds by anyone with an internet connection.</p>
                 
                 <div class="grid grid--3">
                     <div class="surface">
-                        <h4>Fake Text (LLMs)</h4>
+                        <h3>Fake Text (LLMs)</h3>
                         <p class="text-sm">Large Language Models can write thousands of convincing fake articles, social media posts, and reviews in seconds, flooding the internet with propaganda.</p>
                     </div>
                     <div class="surface">
-                        <h4>Deepfakes (Video/Audio)</h4>
+                        <h3>Deepfakes (Video/Audio)</h3>
                         <p class="text-sm">AI can clone a person's face and voice. Scammers use this to impersonate CEOs, politicians, or family members to demand money or spread lies.</p>
                     </div>
                     <div class="surface">
-                        <h4>Bot Networks</h4>
+                        <h3>Bot Networks</h3>
                         <p class="text-sm">AI-powered bots can create fake accounts, post automatically, and interact with each other to make a false narrative appear trending and popular.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="stack">
-                <h3>Real-World Examples</h3>
+            <section>
+                <h2>Real-World Examples</h2>
                 <p>AI disinformation is not a future problem; it is already happening and influencing the real world. Here are some notable cases:</p>
                 
                 <ul class="timeline">
                     <li class="timeline__item">
                         <span class="timeline__time">March 2023</span>
-                        <h4 class="timeline__title">The Pope in a Puffer Jacket</h4>
+                        <h3 class="timeline__title">The Pope in a Puffer Jacket</h3>
                         <p class="timeline__text">An AI-generated image of Pope Francis wearing a stylish white puffer jacket went viral. Many people believed it was real, showing how easily AI can blur the lines between reality and fiction.</p>
                     </li>
                     <li class="timeline__item">
                         <span class="timeline__time">2024 Elections</span>
-                        <h4 class="timeline__title">Robocalls Impersonating Politicians</h4>
+                        <h3 class="timeline__title">Robocalls Impersonating Politicians</h3>
                         <p class="timeline__text">During the US primaries, an AI-generated audio clip mimicked President Joe Biden's voice, telling voters to stay home. This highlighted the severe danger of AI in manipulating democratic processes.</p>
                     </li>
                     <li class="timeline__item">
                         <span class="timeline__time">Ongoing</span>
-                        <h4 class="timeline__title">Financial Scams via Voice Cloning</h4>
+                        <h3 class="timeline__title">Financial Scams via Voice Cloning</h3>
                         <p class="timeline__text">Scammers use short clips of a person's voice from social media to clone it, calling their relatives to urgently demand money for a fake emergency.</p>
                     </li>
                 </ul>
             </section>
 
-            <section class="stack">
+            <section>
                 <div class="callout callout--warning">
-                    <h4 class="callout__title">The "Liar's Dividend"</h4>
+                    <h3 class="callout__title">The "Liar's Dividend"</h3>
                     <p>This is one of the most dangerous consequences of AI. Because deepfakes exist, people can now dismiss <strong>real</strong> evidence as "fake news" or AI-generated. For example, a corrupt politician caught on video saying something incriminating might claim it's a deepfake, making it harder to hold people accountable for their actions.</p>
                 </div>
 
-                <div class="callout callout--success">
-                    <h4 class="callout__title">How to Protect Yourself from Disinformation</h4>
+                <div class="callout callout--success" style="margin-top: var(--space-2);">
+                    <h3 class="callout__title">How to Protect Yourself from Disinformation</h3>
                     <p>As AI gets better at lying, human critical thinking becomes our best defense. Follow these steps:</p>
                     <ul>
                         <li><strong>Lateral Reading:</strong> Don't just trust the website you are on. Open new tabs and search for the same claim on reputable fact-checking sites (like Snopes or Reuters Fact Check).</li>
@@ -98,17 +97,45 @@
                 </div>
             </section>
 
+            <section class="surface stack">
+                <h2>References</h2>
+                <ul class="text-sm text-muted">
+                    <li>BBC News. (2023). <em>Pope Francis deepfake: The fake image of the Pope in a white puffer jacket</em>.</li>
+                    <li>Reuters. (2024). <em>Fake Biden robocall tells New Hampshire Democrats not to vote</em>.</li>
+                    <li>Chesney, R., & Citron, D. (2019). <em>Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security</em>.</li>
+                    <li>First Draft News. <em>Essential Guide to Responsible Reporting in an Age of Information Disorder</em>.</li>
+                </ul>
+            </section>
+
         </article>
     </main>
 
     <footer class="site-footer">
         <div class="container site-footer__main">
             <div class="site-footer__brand">
-                <span class="brand__copy">Cybersecurity & AI</span>
-                <p class="site-footer__text">Software Atelier 1 - Group 3 Project.</p>
+                <span class="brand__copy">
+                    CyberAware
+                    <span class="brand__sub">USI · Software Atelier I</span>
+                </span>
+                <p class="site-footer__text">One click can compromise everything. Awareness can protect it all.</p>
             </div>
-            <div class="site-footer__text">
-                <p>&copy; 2026 Università della Svizzera italiana (USI).</p>
+
+            <div>
+                <h2 class="site-footer__title">My Topics</h2>
+                <ul class="site-footer__list site-footer__list--grid">
+                    <li><a class="site-footer__link" href="passwords.html">Passwords & Passphrases</a></li>
+                    <li><a class="site-footer__link" href="profiling.html">Data Profiling</a></li>
+                    <li><a class="site-footer__link" href="disinformation.html">AI Disinformation</a></li>
+                    <li><a class="site-footer__link" href="bias.html">Bias in AI</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+                <ul class="site-footer__list">
+                    <li><span class="site-footer__text">Software Atelier 1</span></li>
+                    <li><span class="site-footer__text">USI 2026/27</span></li>
+                </ul>
             </div>
         </div>
     </footer>
