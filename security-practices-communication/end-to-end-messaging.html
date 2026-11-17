@@ -9,14 +9,48 @@
         <link rel="stylesheet" href="../css/shared.css">
     </head>
 
+    <style>
+        /* navbar underline animation */
+        .site-nav__link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .site-nav__link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-text);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .22s ease;
+        }
+
+        .site-nav__link:hover::after,
+        .site-nav__link:focus-visible::after,
+        .site-nav__link.is-active::after {
+            transform: scaleX(1);
+        }
+    </style>
+
     <body>
 
         <header class="site-header">
-            <nav class="container site-nav__inner">
-                <a class="brand" href="../index.html">Cybersecurity & Digital Privacy</a>
+            <nav class="container site-nav__inner" aria-label="Main navigation">
+                <a class="brand" href="../index.html">
+                    <span class="brand__copy">
+                        CyberAware
+                    </span>
+                </a>
+
                 <ul class="site-nav__links">
-                    <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                    <li><a class="site-nav__link" href="intro.html">Secure Communication</a></li>
+                    <li><a class="site-nav__link" href="../index.html">home</a></li>
+                    <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+                    <li><a class="site-nav__link" href="intro.html">articles</a></li>
+                    <li><a class="site-nav__link" href="../credits.html">credits</a></li>
                 </ul>
             </nav>
         </header>
@@ -123,5 +157,39 @@
             </section>
             
         </main>
+
+        <footer class="site-footer">
+            <div class="container site-footer__main">
+                <div class="site-footer__brand">
+                    <span class="brand__copy">
+                        CyberAware
+                        <span class="brand__sub">USI · Software Atelier I</span>
+                    </span>
+                    <p class="site-footer__text">One click can compromise everything. Awareness can protect it all.</p>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__title">Modules</h2>
+                    <ul class="site-footer__list site-footer__list--grid">
+                        <li><a class="site-footer__link" href="../index.html#topics">Common Threats</a></li>
+                        <li><a class="site-footer__link" href="../index.html#topics">Malware</a></li>
+                        <li><a class="site-footer__link" href="../index.html#topics">Privacy</a></li>
+                        <li><a class="site-footer__link" href="../index.html#topics">Famous Incidents</a></li>
+                        <li><a class="site-footer__link" href="../index.html#topics">Good Security Practices</a></li>
+                        <li><a class="site-footer__link" href="intro.html">Secure Communication</a></li>
+                        <li><a class="site-footer__link" href="../index.html#topics">Authentication</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+                    <ul class="site-footer__list">
+                        <li><span class="site-footer__text">Software Atelier 1</span></li>
+                        <li><span class="site-footer__text">USI 2026/27</span></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
     </body>
 </html>
