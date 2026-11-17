@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Francesco Taddei">
+        <title>What is Digital Privacy?</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/shared.css">
+        <style>
+            /* Navbar CSS customizations taken from main index page */
+/* navbar underline animation */
+    .site-nav__link {
+        position: relative;
+        text-decoration: none;
+        }
+
+    .site-nav__link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--accent-text);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .22s ease;
+        }
+
+    .site-nav__link:hover::after,
+    .site-nav__link:focus-visible::after,
+    .site-nav__link.is-active::after {
+        transform: scaleX(1);
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Shared header taken from main index page-->
+<header class="site-header">
+        <nav class="container site-nav__inner" aria-label="Main navigation">
+            <a class="brand" href="../index.html">
+                <span class="brand__copy">CyberAware</span>
+            </a>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__link" href="../index.html">Home</a></li>
+                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+                <li><a class="site-nav__link" href="index.html">Articles</a></li>
+                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
+            </ul>
+        </nav>
+    </header>
+<main>
+    <p class="breadcrumbs">CYBERSECURITY / PRIVACY / Introduction to Digital Privacy</p>
+    <h1>What is Digital Privacy?</h1>
+    
+    <h2>Introduction</h2>
+    <p>Every day we share a large amount of personal information online without realising it.
+        This section of the website looks at digital privacy: what it means, how we are tracked on the web, who collects and sells our data, which laws protect us, 
+        and which tools can help us keep our information under control.</p>
+
+
+    <h2>Why Privacy Matters</h2>
+    <p>Digital privacy concerns how our personal information, communications and online behaviour are collected, used and shared, and how much control we have over them. While privacy was once understood mainly as the right to be left alone, today it is above all about control over personal data. It has three components: individual privacy, which protects details such as health or financial records; information privacy, which ensures that data is collected and processed lawfully and ethically; and communication privacy, which keeps our messages confidential. Privacy is closely linked to cybersecurity, but the two are not the same: cybersecurity protects data and systems from attacks, whereas privacy is about who may use our data and for what purpose. Without good security, privacy cannot be guaranteed. Privacy also matters for society as a whole, because it protects freedom of thought and expression, which are essential in a democracy. It is a recognised right, protected by Article 12 of the Universal Declaration of Human Rights, Article 8 of the European Convention on Human Rights and Article 13 of the Swiss Federal Constitution.</p>
+
+    <h2>Privacy, Security and Anonymity</h2>
+    <p>These three ideas are related but different. Privacy means keeping your actions to yourself: when you send a private message, your friend knows it comes from you, but only they can read it. Anonymity means hiding your identity but not your actions, for example by posting on a forum under a pseudonym. Security is the set of precautions that keep you safe. Good security usually supports privacy, but it can conflict with anonymity: login records help to detect suspicious access, yet they make anonymous logins impossible. Full anonymity is very hard to achieve, because a single moment without protection can be enough to reveal who you are.</p>
+
+    <h2>What is Personal Data?</h2>
+    <p>Under the EU General Data Protection Regulation (GDPR), personal data is any information relating to an identified or identifiable living person. Some information identifies a person directly, such as a full name, a passport number, a photo of a face or a fingerprint. Other information does so only when combined with other data: an IP address, a cookie identifier, location data or an email address containing a name. In the 2016 Breyer case, the Court of Justice of the European Union confirmed that even dynamic IP addresses can be personal data. Personal data is not the same as private data: a name listed in a public business directory is still personal data. The GDPR also defines special categories of sensitive data, including health information, ethnic origin, political opinions, religious beliefs, trade union membership, biometric and genetic data, and sexual orientation. Processing these categories is forbidden by default, except in specific cases such as explicit consent. Finally, pseudonymised data, in which names are replaced by codes, still counts as personal data; only data that can no longer reasonably be linked to a person is truly anonymous</p>
+
+    <h2>Who Collects Our Data?</h2>
+    <p>Our data is collected by many different actors: companies that want to show us targeted advertising, data brokers that build and sell profiles, and governments, which may gather information for national security or public safety, for example through mass metadata collection or requests to technology companies. When data is not protected, the consequences can be serious, ranging from identity theft and financial loss to phishing, online harassment and stalking, and a single large breach can expose the information of millions of people at once. Once information has been shared, we lose control over it. The following pages explain how this collection happens and what we can do about it.</p>
+
+    <h2>Sources</h2>
+    
+    <ul>
+  <li><a href="https://digitalprivacy.ieee.org/publications/topics/what-is-digital-privacy-and-its-importance">IEEE Digital Privacy</a></li>
+  <li><a href="https://proton.me/blog/anonymity-vs-privacy">Proton, blog</a></li>
+  <li><a href="https://www.legiscope.com/blog/what-is-personal-data-gdpr.html">Legiscope, blog</a></li>
+  </ul>
+
+
+
+    <div class="page-links">
+            <span></span>
+            <a href="privacy-footprints.html">Next: Digital Footprints, Cookies and Trackers</a>
+        </div>
+
+
+
+    
+
+
+</main>
+<!-- Shared footer: project identity, modules and project information. -->
+  <footer class="site-footer">
+    <div class="container site-footer__main">
+      <!-- Left column: logo and a short description. -->
+      <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware 
+            <br>
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+        <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+      </div>
+
+      <!-- Middle column: the same modules as the main navigation. -->
+      <div>
+        <h2 class="site-footer__title">Explore Privacy</h2>
+        <ul class="site-footer__list site-footer__list--grid">
+                    <li><a class="site-footer__link" href="privacy-intro.html">Introduction</a></li>
+                    <li><a class="site-footer__link" href="privacy-footprints.html">Footprints, Cookies & Trackers</a></li>
+                    <li><a class="site-footer__link" href="privacy-data-brokers.html">Data Brokers, Mining & Selling</a></li>
+                    <li><a class="site-footer__link" href="privacy-laws-and-regulations.html">Privacy Laws & Regulations</a></li>
+                   <li><a class="site-footer__link" href="vpns.html">VPNs</a></li>
+                    <li><a class="site-footer__link" href="encryption.html">Cryptography & Encryption</a></li>
+                    <li><a class="site-footer__link" href="privacy-browsers.html">Privacy Focused Browsers</a></li>
+                    <li><a class="site-footer__link" href="social-networks.html">Social Networks & Privacy</a></li>
+                    <li><a class="site-footer__link" href="the-privacy-dilemma.html">The Privacy Dilemma</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: information about the project and the group. -->
+      <div>
+        <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+        <ul class="site-footer__list">
+          <li><span class="site-footer__text">Software Atelier I</span></li>
+          <li><span class="site-footer__text">USI 2026/27</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    </body>
+
+</html>

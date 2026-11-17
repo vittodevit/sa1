@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Adam Balice">
+  <title>Man-in-the-Middle attack</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/shared.css">
+</head>
+
+
+
+<body>
+  
+  <!-- Shared header: logo on the left, main navigation on the right. -->
+   <header class="site-header">
+    <nav class="container site-nav__inner" aria-label="Main navigation">
+      <a class="brand" href="../index.html">
+        <span class="brand__copy">
+          CyberAware
+        </span>
+      </a>
+
+      <ul class="site-nav__links">
+        <li><a class="site-nav__link" href="../index.html">Home</a></li>
+        <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+        <li><a class="site-nav__link" href="index.html">Articles</a></li>
+        <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Page content -->
+  <main id="main">
+    <div class="container container--narrow section">
+
+      <header class="section__header">
+        <p class="eyebrow">Cybersecurity · Common Threats</p>
+      </header>
+      
+      
+      <h1>Man-in-the-Middle (MitM) attack</h1> 
+      
+      <p class="lead">To fully understand this concept we must explain:</p>
+      
+      <div class="cluster">
+        <span class="badge badge--accent"><a href="#MitM-def" style="text-decoration: none;">What is a Man-in-the-Middle (MitM) attack?</a></span>
+        <span class="badge badge--accent"><a href="#ARP-Spoof" style="text-decoration: none;">What is ARP Spoofing?</a></span>
+        <span class="badge badge--accent"><a href="#HTTPS" style="text-decoration: none;">Brief overview on HTTPS</a></span>
+        <span class="badge badge--accent"><a href="#CA" style="text-decoration: none;">Certificate Authorities explained</a></span>
+        <span class="badge badge--accent"><a href="#Vulnerab" style="text-decoration: none;">Remaining vulnerabilities</a></span>
+      </div>
+
+      <br>
+      <section class="surface" id="MitM-def">
+
+        <img
+            src="../img/mitm.png"
+            alt="Icon representing the Man in the Middle attack"
+            width="250"
+            loading="lazy">
+
+        <h2>MitM attack brief general defintion</h2>
+        <p>A Man-in-the-Middle (MitM) attack is an interception technique wherein a malicious actor secretly positions themselves between two communicating entities—such as a client computer and a remote server or local router—to eavesdrop on or manipulate the data exchange. In a successful MitM operation, all network packets transmitted between the legitimate endpoints pass directly through the attacker’s machine first, which then forwards them to their intended destination. Consequently, the communication appears completely uninterrupted, and neither party is aware that the channel has been compromised.</p>
+      </section>
+      
+      <br>
+      <section class="surface" id="ARP-Spoof">
+        <h2>ARP Spoofing</h2>
+        <p>One of the earliest practical methods for executing a network interception is ARP spoofing (or ARP poisoning). Local networks, such as open Wi-Fi networks, fundamentally operate on an implicit model of trust. An attacker connected to such a network can broadcast false announcements declaring their own machine to be the network router. Because the surrounding client computers and the actual router accept this declaration without verification, they begin routing all their packets to the attacker's computer first, which subsequently forwards the traffic to its legitimate destination. Historically (approximately 10 to 15 years prior to the widespread adoption of web encryption), this technique was particularly devastating because network traffic—including emails, websites, and passwords—was transmitted in unencrypted plain text. Provided the attacker possessed a sufficiently fast computer and network card, they could inspect the entirety of the local network's traffic and extract sensitive credentials directly.</p>
+      </section>
+
+      <br>
+      <section class="surface" id="HTTPS">
+        <h2>HTTPS to counter ARP Spoofing</h2>
+        <p>To neutralize the threat of plain-text eavesdropping resulting from attacks such as ARP spoofing, web communications rely on HTTPS, which combines the Hypertext Transfer Protocol (HTTP) with SSL (Secure Sockets Layer) or its standardized successor, TLS (Transport Layer Security).
+          <br>
+          HTTPS and TLS is explained in another webpage in our website,  visit this page pressing <span class="badge badge--accent"><a href="../secure-communication/https-tls.html" style="text-decoration: none;">HERE</a></span> 
+        </p>
+      </section>
+
+      <br>
+      <section class="surface" id="CA">
+        
+        <img
+        src="../img/ca.png"
+        alt="Icon representing the Certificate Authorities"
+        width="250"
+        loading="lazy">
+
+        <h2>Certificate Authorities (CAs)</h2>
+        <p>To prevent an attacker from substituting public keys during the initial handshake, the TLS ecosystem relies on <b>signed certificates</b> issued by trusted third-party organizations known as <b>Certificate Authorities (CAs)</b>.
+          <br>
+          When an administrator sets up a secure web server, they generate a public and private key pair and transmit the key information over a known secure channel to a CA. The CA verifies the identity of the applicant and confirms that the keys genuinely belong to that specific server and domain. Once verified, the CA mathematically signs the server's public key using the CA's own closely guarded private key.
+          <br>
+          When a user connects to the server, the server presents its public key accompanied by the CA's digital signature. If a MitM attacker alters even a single bit (a single 1 or 0) of the server's public key, the mathematical verification of the signature fails. Furthermore, because the attacker does not possess the CA's private key, they cannot forge a valid signature for their own replacement key. Any attempt to interfere triggers a prominent browser security warning, alerting the user that the connection is compromised. To validate these signatures without fetching CA keys over an insecure connection, operating systems and web browsers come pre-installed with a root list of trusted CAs and their corresponding public keys, establishing a complete network of trust.
+        </p>
+      </section>
+
+      <br>
+      <section class="surface" id="Vulnerab">
+        <h2>Possible remaining vulnerabilities of the CA system</h2>
+        <h3>Compromise of a Certificate Authority:</h3>
+        <br>
+        <p>
+          If an attacker or state actor coerces a CA or steals its private keys, they can mint fraudulent yet cryptographically valid certificates for any domain.
+        </p>
+        <br>
+        <h3>Manipulation of the Local Trusted Root Store:</h3>
+        <br>
+        <p>If an unauthorized entity inserts itself into the pre-installed list of trusted CAs on a user's device, it can dynamically generate and sign fraudulent certificates on the fly, intercepting all encrypted traffic from that machine without triggering browser warnings.</p>
+      </section>
+
+      
+      <div><div>
+            <h3>Sources</h3>
+            <p><a href="https://www.youtube.com/watch?v=-enHfpHMBo4">Computerphile YouTube video explaining Man-in-the-Middle attacks</a></p>
+            <p><a href="https://www.youtube.com/watch?v=0TLDTodL7Lc">Computerphile YouTube video explaining TLS and brifly hovering on HTTPS</a></p>
+           </div></div>
+    </div>
+  </main>
+  <!--Footer-->
+  <div class="component-list__demo">
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+         <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br>
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
+
+          </p>
+        </div>
+
+        <!-- Middle column: the same modules as the main navigation. -->
+         <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li><a class="site-footer__link" href="...">Common Threats</a></li>
+            <li><a class="site-footer__link" href="...">Malware</a></li>
+            <li><a class="site-footer__link" href="...">Privacy</a></li>
+            <li><a class="site-footer__link" href="...">Famous Incidents</a></li>
+            <li><a class="site-footer__link" href="...">Good Security Practices</a></li>
+            <li><a class="site-footer__link" href="...">Secure Communication</a></li>
+            <li><a class="site-footer__link" href="...">Authentication</a></li>
+          </ul>
+        </div>
+
+        <!-- Right column: information about the project and the group. -->
+         <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
