@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mohammadreza Ravasizadeh and Gjorgji Zlatevski">
+    <meta name="generator" content="OpenAI ChatGPT (AI-assisted draft)">
+    <title>Safe file sharing | Cybersecurity &amp; Digital Privacy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        /* The shared navbar stays usable on narrow screens. */
+        .site-nav__inner,
+        .site-nav__links {
+            flex-wrap: wrap;
+        }
+
+        .practical-page {
+            overflow-wrap: anywhere;
+        }
+
+        main .btn {
+            white-space: normal;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: var(--space-2);
+            top: -6rem;
+        }
+
+        .skip-link:focus {
+            top: var(--space-2);
+            z-index: 100;
+            background: var(--color-bg);
+            padding: var(--space-2);
+        }
+
+        @media (max-width: 700px) {
+            .site-nav__links {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+  <nav class="container site-nav__inner" aria-label="Main navigation">
+    <a class="brand" href="../index.html">
+      <span class="brand__copy">
+        CyberAware
+      </span>
+    </a>
+
+    <ul class="site-nav__links">
+      <li><a class="site-nav__link" href="../index.html">home</a></li>
+      <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+      <li><a class="site-nav__link" href="security-practices.html">articles</a></li>
+      <li><a class="site-nav__link" href="../credits.html">credits</a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="main" class="container section stack practical-page">
+        <nav aria-label="Breadcrumb">
+            <ul class="breadcrumbs">
+                <li><a href="security-practices.html">Good Security Practices</a></li>
+                <li aria-current="page">Safe file sharing</li>
+            </ul>
+        </nav>
+        <article class="stack">
+            <h1>Safe file sharing</h1>
+            <p class="lead">A document link is an access decision. Check who can open the file, what they can do with it, and when that access should end.</p>
+            <div class="surface stack stack--sm">
+                <img src="../img/safe-file-sharing.png" alt="A laptop showing a shared document, two recipients and a padlock shield." width="1536" height="1024">
+                <p>Choose who can access your files before sharing them.</p>
+            </div>
+            <section class="stack" aria-labelledby="sharing-review">
+                <h2 id="sharing-review">Before you send the link</h2>
+                <ol class="stack">
+                    <li><strong>Choose the audience.</strong> For a group assignment, invite the named accounts that need the document. A link that works for anyone who receives it can reach people outside your group.</li>
+                    <li><strong>Choose what they can do.</strong> Give editing access to co-authors. Someone checking the finished work may only need viewing or commenting access.</li>
+                    <li><strong>Check the folder as well.</strong> A document can inherit access from its parent folder. Use a separate restricted folder when the audience should be smaller.</li>
+                    <li><strong>Review access after the task.</strong> Remove invitations and broad links that are no longer needed. Keep the final submission available to the people who must assess it.</li>
+                </ol>
+            </section>
+            <aside class="callout" aria-labelledby="sharing-example">
+                <h2 class="callout__title" id="sharing-example">Example: sending a group report</h2>
+                <p>You want two classmates to revise a report and a tutor to read it. Invite the classmates as editors and the tutor as a viewer. Before sending the link, check the access list rather than assuming that copying a link makes it private.</p>
+            </aside>
+            <section class="surface stack" aria-labelledby="sharing-limits">
+                <h2 id="sharing-limits">Removing access cannot recall every copy</h2>
+                <p>A recipient may already have downloaded the file or captured its contents. Restrictions on downloading and copying cannot prevent every form of redistribution. Share only the information the recipient actually needs.</p>
+                <p>Encryption protects data in transit or storage; it does not decide whether the person you invited should see the document. See <a href="encryption-basic.html">encryption basics</a> for that separate topic.</p>
+            </section>
+            <details class="surface">
+                <summary>Why can a classmate still see the document?</summary>
+                <p>Check whether access comes through a shared folder, a group membership or another sharing link. Removing one individual invitation may leave another route to the file.</p>
+            </details>
+            <section class="stack text-muted" aria-labelledby="sharing-sources">
+                <h2 id="sharing-sources">Sources</h2>
+                <p>Google Drive is the example here; options vary by service and school account.</p>
+                <ul>
+                    <li><a href="https://support.google.com/drive/answer/2494822">Google Drive: share files and choose access roles</a></li>
+                    <li><a href="https://support.google.com/drive/answer/7166529">Google Drive: manage file and folder access</a></li>
+                    <li><a href="https://support.google.com/a/users/answer/13004062">Google Workspace: sharing restrictions and their limits</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="cluster" aria-label="Previous and next page">
+            <a class="btn btn--secondary" rel="prev" href="online-meetings.html">Online meeting security</a>
+            <a class="btn btn--primary" rel="next" href="browser-extensions.html">Browser extension permissions</a>
+        </nav>
+    </main>
+<footer class="site-footer">
+  <div class="container site-footer__main">
+    <!-- Left column: logo and a short description. -->
+    <div class="site-footer__brand">
+      <span class="brand__copy">
+        CyberAware
+        <span class="brand__sub">USI · Software Atelier I</span>
+      </span>
+      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all.
+      </p>
+    </div>
+
+    <!-- Middle column: the same modules as the main navigation. -->
+    <div>
+      <h2 class="site-footer__title">Explore</h2>
+      <ul class="site-footer__list site-footer__list--grid">
+        <li><a class="site-footer__link" href="../index.html#topics">Common Threats</a></li>
+        <li><a class="site-footer__link" href="../index.html#topics">Malware</a></li>
+        <li><a class="site-footer__link" href="../privacy-famous-incidents/Digital_privacy_index.html">Privacy</a></li>
+        <li><a class="site-footer__link" href="../privacy-famous-incidents/Famous_incidents_index.html">Famous Incidents</a></li>
+        <li><a class="site-footer__link" href="security-practices.html">Good Security Practices</a></li>
+        <li><a class="site-footer__link" href="intro.html">Secure Communication</a></li>
+        <li><a class="site-footer__link" href="../ai-risk-authentication/Authentication_DEF.html">Authentication</a></li>
+      </ul>
+    </div>
+
+    <!-- Right column: information about the project and the group. -->
+    <div>
+      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+      <ul class="site-footer__list">
+        <li><span class="site-footer__text">Software Atelier 1</span></li>
+        <li><span class="site-footer__text">USI 2026/27</span></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
