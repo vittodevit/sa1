@@ -28,7 +28,7 @@ See [here](docs/main.pdf)
   - Mohammadreza Ravasizadeh
   - Gjorgji Zlatevski ([zlatevskii](https://github.com/zlatevskii))
 - *Matteo Mignone*: risk brought by AI, authentication
-  - Alejandro Munera Pineda
+  - Alejandro Munera Pineda ([aleskko](https://github.com/aleskko))
   - Giulio Finocchiaro
   - Sezer Uygül
   - Atakan Kyuchukov ([kaankyuchuk](https://github.com/kaankyuchuk))
