@@ -5,49 +5,72 @@
     <head>
     <meta charset="UTF-8">
     <meta name="author" content="Tommaso">
-    <meta name="title" content="Social networks">
+    <title>Social networks</title>
     <meta name="date" content="06.11.2026">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/shared.css">
     <style>
-      table{
+        table{
           border-collapse: collapse;
           max-width: fit-content;
-      }
-      th, td{
-          border: 1px solid white;
-          text-align: center;
-          padding: 2px;
-      }
-      .site-nav__inner h2{
+        }
+        th, td{
+            border: 1px solid white;
+            text-align: center;
+            padding: 2px;
+        }
+        .site-nav__inner h2{
             font-size: 2.4rem;
+        }
+        .site-nav__link {
+            position: relative;
+            text-decoration: none;
+        }
+        .site-nav__link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-text);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .22s ease;
+        }
+        .site-nav__link:hover::after,
+        .site-nav__link:focus-visible::after,
+        .site-nav__link.is-active::after {
+            transform: scaleX(1);
         }
     </style>
     </head>
     
     <body>
 
-        <header class="site-header">
-            <div class="site-nav__inner">
-                <h2>Digital Privacy</h2>
+         <!-- Navbar demo: the preview modifier keeps it in the page flow. -->
+              <div class="component-list__demo">
+                <header class="site-header site-header--preview">
+                  <nav class="container site-nav__inner" aria-label="Main navigation">
+                    <a class="brand" href="...">
+                      <span class="brand__copy">
+                        CyberAware
+                      </span>
+                    </a>
 
-                <nav>
                     <ul class="site-nav__links">
-                        <li><a class="site-nav__link" href="../../index.html">Home</a></li>
-                        <li><a class="site-nav__link" href="#">Common Threats</a></li>
-                        <li><a class="site-nav__link" href="#">Authentication</a></li>
-                        <li><a class="site-nav__link" href="#">Malware</a></li>
-                        <li><a class="site-nav__link" href="#">Social Engineering</a></li>
-                        <li><a class="site-nav__link" href="#">Privacy</a></li>
-                        <li><a class="site-nav__link" href="page1.html">Famous Incidents</a></li>
-                        <li><a class="site-nav__link" href="#">Good Security Practices</a></li>
-                        <li><a class="site-nav__link" href="#">Risks of AI</a></li>
+                      <li><a class="site-nav__link" href="../index.html">home</a></li>
+                      <li><a class="site-nav__link" href="../index.html#topics">topics</a></li>
+                      <li><a class="site-nav__link" href="Digital_privacy_index.html">articles</a></li>
+                      <li><a class="site-nav__link" href="...">credits</a></li>
                     </ul>
-                </nav>
-            </div>
-        </header>
+                  </nav>
+                </header>
+              </div>
+            
+              <br>
 
-        <main class="container">
+        <main id="main" class="container">
 
             <!-- Breadcrumb: helps readers understand where this page sits. -->
             <nav aria-label="Breadcrumb">
@@ -671,7 +694,16 @@
         </div>
 
         <br>
+
+        <div style="text-align: right;">
+             <a href="The_Privacy_Dilemma.html">Next: →</a>
+        </div>
+
+        <br> 
+
         </main>
+
+
 
         <footer class="site-footer">
     <div class="container site-footer__main">
@@ -691,11 +723,10 @@
         <ul class="site-footer__list site-footer__list--grid">
           <li><a class="site-footer__link" href="1">Common Threats</a></li>
                     <li><a class="site-footer__link" href="2">Malware</a></li>
-                    <li><a class="site-footer__link" href="3">Online Privacy</a></li>
-                   <li><a class="site-footer__link" href="4">Famous Incidents</a></li>
+                    <li><a class="site-footer__link" href="Digital_privacy_index.html">Privacy</a></li>
+                   <li><a class="site-footer__link" href="Famous_incidents_index.html">Famous Incidents</a></li>
                     <li><a class="site-footer__link" href="5">Good Security Practices</a></li>
                     <li><a class="site-footer__link" href="6">Secure Communication</a></li>
-                    <li><a class="site-footer__link" href="7">Risks Brought by AI</a></li>
                     <li><a class="site-footer__link" href="8">Authentication</a></li>
         </ul>
       </div>

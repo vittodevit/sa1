@@ -13,6 +13,10 @@
     gap: 0.1rem;
     }
 
+    .page-links {
+        margin-left: auto;
+    }
+
     /* Navbar CSS customizations taken from main index page */
    /* navbar underline animation */
        .site-nav__link {
@@ -39,6 +43,21 @@
             transform: scaleX(1);
         }
 
+        main a{
+            text-decoration-color: transparent;
+            transition: color .2s ease, text-color .2s ease, opacity .2s ease;
+        }
+
+        main a:hover{
+            color: var(--accent-text);
+            text-decoration-color:currentColor;
+        }
+
+        main a:active{
+            opacity: 0.4;
+        }
+
+
 </style>
 </head>
 
@@ -53,7 +72,7 @@
 <!-- Shared header taken from main index page-->
 <header class="site-header">
         <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="index.html">
+            <a class="brand" href="../index.html">
                 <span class="brand__copy">CyberAware</span>
             </a>
             <ul class="site-nav__links">
@@ -74,6 +93,7 @@
 
         <!-- Breadcrumb: helps readers understand where this page sits. -->
         <nav aria-label="Breadcrumb">
+            <br>
           <ol class="breadcrumbs">
             <li><a href="../index.html">Home</a></li>
             <li><a href="Digital_privacy_index.html">Digital Privacy</a></li>
@@ -112,6 +132,7 @@
           <a href="#Ilus_choice">The illusion of choice</a>
           <a href="#priv_vs_nsec">Privacy vs. National Security</a>
           <a href="#right_balance">Finding the right balance</a>
+          <a href="#sources">Sources</a>
         </aside>
 
         <!-- First section-->
@@ -258,7 +279,7 @@
         
         <!-- Callout from CSS-->
                 <div class="callout callout--success">
-                  <p class="callout__title"><a href="https://hudoc.echr.coe.int/eng?i=001-98473">
+                  <p class="callout__title"><a href="https://www.echr.coe.int/documents/d/echr/fs_mass_surveillance_eng">
                 European Court of Human Rights </a> </p>
 
                   <p> National security is recognised as a legitimate reason for certain surveillance measures, 
@@ -323,7 +344,7 @@
     </div>
     </section>
 
-        <!-- Fourth and last section-->
+        <!-- Fourth section -->
         <section class="section section--tight" id="right_balance">
             <div class="container container--narrow">
                 <h2 class="section__title">Finding the right balance</h2>
@@ -345,12 +366,52 @@
                 </p>
             </div>
         </section>
+
+        <!-- Fifth and last section-->
+         <div class="section section--tight" id="sources">
+             <div class="container container--narrow">
+              
+                <div class="metric">
+                  <span class="metric__value">Sources</span> 
+                  <div class="metric__label">
+                    <ul>
+                        <li> Pew Research Center (2023) -
+                            <a href="https://www.pewresearch.org/internet/2023/10/18/how-americans-view-data-privacy">
+                                How Americans View Data Privacy
+                            </a>
+                        </li>
+
+                        <li> Federal Trade Commission (2022) –
+                            <a href="https://www.ftc.gov/reports/bringing-dark-patterns-light">
+                                Bringing Dark Patterns to Light
+                            </a>
+                        </li>
+
+                        <li> European Court of Human Rights (2024) –
+                            <a href="https://www.echr.coe.int/documents/d/echr/fs_mass_surveillance_eng">
+                                Mass Surveillance
+                            </a>
+                        </li>
+
+                        <li> Identity Management Institute (2019) –
+                            <a href="https://identitymanagementinstitute.org/6-reasons-why-data-privacy-is-dead/">
+                                6 Reasons Why Data Privacy is Dead
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+              </div>
+            </div>
     
 
-    <br>
+    
     </div>
     </div>
     </div>
+    <div> <a href="Social_networks_page8.html"> &larr; Previous: Social Networks & Privacy </a>
+        </div>
+    <br> 
     </main>
 
 
@@ -368,22 +429,20 @@
             <br>
             <span class="brand__sub">USI · Software Atelier I</span>
           </span>
-        <p class="site-footer__text">Stay curious. Stay informed. Stay secure.</p>
+        <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..</p>
       </div>
 
       <!-- Middle column: the same modules as the main navigation. -->
       <div>
-        <h2 class="site-footer__title">Explore Privacy</h2>
+        <h2 class="site-footer__title">Explore </h2>
         <ul class="site-footer__list site-footer__list--grid">
-                    <li><a class="site-footer__link" href="privacy-intro.html">Introduction</a></li>
-                    <li><a class="site-footer__link" href="privacy-footprints.html">Footprints, Cookies & Trackers</a></li>
-                    <li><a class="site-footer__link" href="privacy-data-brokers.html">Data Brokers, Mining & Selling</a></li>
-                    <li><a class="site-footer__link" href="Privacy_laws_and_regulations_page4.html">Privacy Laws & Regulations</a></li>
-                   <li><a class="site-footer__link" href="VPNs_page5.html">VPNs</a></li>
-                    <li><a class="site-footer__link" href="Encryption_page6.html">Cryptography & Encryption</a></li>
-                    <li><a class="site-footer__link" href="privacy-browsers.html">Privacy Focused Browsers</a></li>
-                    <li><a class="site-footer__link" href="Social_networks_page8.html">Social Networks & Privacy</a></li>
-                    <li><a class="site-footer__link" href="The_Privacy_Dilemma.html">The Privacy Dilemma</a></li>
+                    <li><a class="site-footer__link" href=".html">Common Threats</a></li>
+                    <li><a class="site-footer__link" href=".html">Malware</a></li>
+                    <li><a class="site-footer__link" href="Digital_privacy_index.html">Privacy</a></li>
+                    <li><a class="site-footer__link" href="Famous_incidents_index.html">Famous Incidents</a></li>
+                   <li><a class="site-footer__link" href=".html">Good Security Practices</a></li>
+                    <li><a class="site-footer__link" href=".html">Secure Communication</a></li>
+                    <li><a class="site-footer__link" href=".html">Authentication</a></li>
         </ul>
       </div>
 
@@ -391,7 +450,7 @@
       <div>
         <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
         <ul class="site-footer__list">
-          <li><span class="site-footer__text">Software Atelier I</span></li>
+          <li><span class="site-footer__text">Software Atelier 1</span></li>
           <li><span class="site-footer__text">USI 2026/27</span></li>
         </ul>
       </div>
