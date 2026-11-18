@@ -525,6 +525,27 @@ decoration is what lets the same card sit in a grid, a stack or a sidebar.
     white-space: nowrap;
 }
 
+/* Animated underline: hidden by default, scaled in on hover, keyboard focus
+   or the active state. Uses the accent so it matches links elsewhere. */
+.site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-text);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+}
+
+.site-nav__link:hover::after,
+.site-nav__link:focus-visible::after,
+.site-nav__link.is-active::after {
+    transform: scaleX(1);
+}
+
 /* Optional header actions (for example a documentation button). flex: none
    prevents the actions from being squeezed by long navigation lists. */
 .site-nav__actions {
@@ -1190,4 +1211,95 @@ decoration is what lets the same card sit in a grid, a stack or a sidebar.
     --callout-color: var(--color-danger);
     --callout-text: var(--color-danger-text);
     --callout-bg: var(--color-danger-soft);
+}
+
+/*
+   12. Site-wide polish consolidated from former per-page styles.
+   Every rule here used to be hand-copied into individual pages; it now lives
+   in one place so all pages behave identically.
+*/
+
+/* Anchors landed underneath the sticky header; this offset fixes that. */
+[id] {
+    scroll-margin-top: 7rem;
+}
+
+/* Topic cards react to the pointer/keyboard like the other interactive
+   surfaces, and long titles never break out of their column. */
+.topic-card {
+    min-width: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.topic-card:hover {
+    background-color: rgb(70 143 161 / 16%);
+    border-color: var(--accent-border);
+}
+
+.topic-card__title {
+    overflow-wrap: anywhere;
+}
+
+/* Compact card variants used by the dense index pages (home, AI risks,
+   authentication). The ids are stable anchors in those pages. */
+#topics .topic-card,
+#subtopics .topic-card {
+    min-height: 11.5rem;
+    padding: 1rem;
+    gap: 0.55rem;
+}
+
+#topics .topic-card__title,
+#subtopics .topic-card__title {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#topics .topic-card::after,
+#subtopics .topic-card::after {
+    font-size: 3.5rem;
+}
+
+#topics .topic-card__text,
+#subtopics .topic-card__text {
+    margin: 0;
+    font-size: var(--text-xs);
+    line-height: 1.45;
+}
+
+/* Skip link: invisible until focused via keyboard, then shown top-left. */
+.skip-link {
+    position: absolute;
+    left: var(--space-2);
+    top: -6rem;
+}
+
+.skip-link:focus {
+    top: var(--space-2);
+    z-index: 100;
+    background: var(--color-bg);
+    padding: var(--space-2);
+}
+
+/* Long button labels wrap instead of forcing horizontal scrolling. */
+main .btn {
+    white-space: normal;
+}
+
+/* On narrow screens the navigation wraps instead of being clipped. */
+@media (max-width: 700px) {
+    .site-nav__inner,
+    .site-nav__links {
+        flex-wrap: wrap;
+    }
+
+    .site-nav__links {
+        margin-left: 0;
+    }
+}
+
+/* Box titles inside .surface cards sit one step below section titles so the
+   cards keep their compact look even when the heading level is h2. */
+.surface h2 {
+    font-size: var(--text-2xl);
 }

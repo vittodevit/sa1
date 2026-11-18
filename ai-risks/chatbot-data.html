@@ -1,204 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Yhoshua Filianoti">
-    <title>Sensitive Data Shared with AI Chatbots - Cybersecurity Project</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/shared.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Yhoshua Filianoti" />
+    <title>Sensitive Data Shared with AI Chatbots</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="container section">
+    <main id="main" class="container">
+      <section class="section stack">
         <nav aria-label="Breadcrumb">
-            <ol class="breadcrumbs">
-                <li><a href="../index.html">Home</a></li>
-                <li><span>AI Risks</span></li>
-                <li><span aria-current="page">Sensitive Data in Chatbots</span></li>
-            </ol>
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Risk Brought by AI</a></li>
+            <li aria-current="page">Sensitive Data Shared with AI Chatbots</li>
+          </ul>
         </nav>
-
         <article class="stack stack--lg">
+          <header class="section__header">
+            <h1>Sensitive Data Shared with AI Chatbots</h1>
+            <p class="lead">
+              Chatbots such as ChatGPT or Gemini have become part of how we study and work, yet
+              everything we type is transmitted to the provider's servers. Once personal or
+              confidential information has been submitted, we lose control over it.
+            </p>
+          </header>
 
-            <header class="section__header">
-                <span class="eyebrow">AI Risks</span>
-                <h2 class="section__title">Sensitive Data Shared with AI Chatbots</h2>
-                <p class="lead">
-                    Chatbots such as ChatGPT or Gemini have become part of how we study and work, yet everything we type is transmitted to the provider's servers.
-                    Once personal or confidential information has been submitted, we lose control over it.
+          <section class="stack" id="what-happens">
+            <h2>What happens to what you type?</h2>
+
+            <div class="grid grid--3">
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">Stored on servers</h3>
+                  <p class="card__text">
+                    Conversations are retained by the provider, often for long periods. A software
+                    bug or a data breach is enough to expose them.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">Used for training</h3>
+                  <p class="card__text">
+                    Many services use conversations to train future models. This can usually be
+                    disabled in the settings, although few users do so. Information absorbed during
+                    training is extremely difficult to remove afterwards.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">Read by people</h3>
+                  <p class="card__text">
+                    A share of conversations is reviewed by staff for quality control and abuse
+                    detection. A conversation with a chatbot is therefore less private than it
+                    appears.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="stack" id="never-share">
+            <h2>What you should never share</h2>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <caption>Data that should never go into a chatbot</caption>
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Example</th>
+                    <th>Risk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Passwords and codes</td>
+                    <td>Your e-mail password, a 2FA code</td>
+                    <td><span class="status status--danger">High</span></td>
+                  </tr>
+                  <tr>
+                    <td>ID and bank details</td>
+                    <td>Passport number, IBAN</td>
+                    <td><span class="status status--danger">High</span></td>
+                  </tr>
+                  <tr>
+                    <td>Health information</td>
+                    <td>A medical report with your name on it</td>
+                    <td><span class="status status--danger">High</span></td>
+                  </tr>
+                  <tr>
+                    <td>Other people's data</td>
+                    <td>A friend's address, a classmate's grades</td>
+                    <td><span class="status status--warning">Medium</span></td>
+                  </tr>
+                  <tr>
+                    <td>Unpublished work or code</td>
+                    <td>Code from your company</td>
+                    <td><span class="status status--warning">Medium</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="stack" id="real-cases">
+            <h2>Real cases</h2>
+
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__time">March 2023</p>
+                <h3 class="timeline__title">A bug shows other users' chats</h3>
+                <p class="timeline__text">
+                  A bug in an open-source library used by ChatGPT allowed some users to see the
+                  titles of other people's conversations. Payment details of a small number of
+                  subscribers were exposed as well.
                 </p>
-            </header>
+              </li>
 
-            <section class="stack" id="what-happens">
-                <h3>What happens to what you type?</h3>
-                
-                <div class="grid grid--3">
-                    
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">Stored on servers</h4>
-                            <p class="card__text">
-                                Conversations are retained by the provider, often for long periods.
-                                A software bug or a data breach is enough to expose them.
-                            </p>
-                        </div>
-                    </article>
+              <li class="timeline__item">
+                <p class="timeline__time">2023</p>
+                <h3 class="timeline__title">Samsung engineers leak source code</h3>
+                <p class="timeline__text">
+                  Samsung engineers pasted confidential source code into ChatGPT while looking for
+                  help with it. The company responded by restricting the use of generative AI
+                  internally.
+                </p>
+              </li>
 
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">Used for training</h4>
-                            <p class="card__text">
-                                Many services use conversations to train future models.
-                                This can usually be disabled in the settings, although few users do so. Information absorbed during training is extremely difficult to remove afterwards.
-                            </p>
-                        </div>
-                    </article>
+              <li class="timeline__item">
+                <p class="timeline__time">2023 and 2024</p>
+                <h3 class="timeline__title">Italy blocks ChatGPT</h3>
+                <p class="timeline__text">
+                  In 2023 the Italian data protection authority suspended ChatGPT for roughly a
+                  month. In December 2024 it fined OpenAI 15 million euros for privacy violations.
+                </p>
+              </li>
 
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">Read by people</h4>
-                            <p class="card__text">
-                                A share of conversations is reviewed by staff for quality control and abuse detection.
-                                A conversation with a chatbot is therefore less private than it appears.
-                            </p>
-                        </div>
-                    </article>
+              <li class="timeline__item">
+                <p class="timeline__time">2025</p>
+                <h3 class="timeline__title">Shared chats appear on Google</h3>
+                <p class="timeline__text">
+                  Conversations that users had shared through a public link began to appear in
+                  Google search results. OpenAI withdrew the feature shortly afterwards.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-                </div>
-            </section>
-
-            <section class="stack" id="never-share">
-                <h3>What you should never share</h3>
-                
-                <div class="table-wrap">
-                    <table class="data-table">
-                        <caption>Data that should never go into a chatbot</caption>
-                        <thead><tr><th>Data</th><th>Example</th><th>Risk</th></tr></thead>
-                        <tbody>
-                            <tr><td>Passwords and codes</td><td>Your e-mail password, a 2FA code</td><td><span class="status status--danger">High</span></td></tr>
-                            <tr><td>ID and bank details</td><td>Passport number, IBAN</td><td><span class="status status--danger">High</span></td></tr>
-                            <tr><td>Health information</td><td>A medical report with your name on it</td><td><span class="status status--danger">High</span></td></tr>
-                            <tr><td>Other people's data</td><td>A friend's address, a classmate's grades</td><td><span class="status status--warning">Medium</span></td></tr>                            
-                            <tr><td>Unpublished work or code</td><td>Code from your company</td><td><span class="status status--warning">Medium</span></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </section>
-
-            <section class="stack" id="real-cases">
-                <h3>Real cases</h3>
-                
-                <ol class="timeline">
-                    
-                    <li class="timeline__item">
-                        <p class="timeline__time">March 2023</p>
-                        <h4 class="timeline__title">A bug shows other users' chats</h4>
-                        <p class="timeline__text">
-                            A bug in an open-source library used by ChatGPT allowed some users to see the titles of other people's conversations.
-                            Payment details of a small number of subscribers were exposed as well.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <p class="timeline__time">2023</p>
-                        <h4 class="timeline__title">Samsung engineers leak source code</h4>
-                        <p class="timeline__text">
-                            Samsung engineers pasted confidential source code into ChatGPT while looking for help with it.
-                            The company responded by restricting the use of generative AI internally.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <p class="timeline__time">2023 and 2024</p>
-                        <h4 class="timeline__title">Italy blocks ChatGPT</h4>
-                        <p class="timeline__text">
-                            In 2023 the Italian data protection authority suspended ChatGPT for roughly a month.
-                            In December 2024 it fined OpenAI 15 million euros for privacy violations.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <p class="timeline__time">2025</p>
-                        <h4 class="timeline__title">Shared chats appear on Google</h4>
-                        <p class="timeline__text">
-                            Conversations that users had shared through a public link began to appear in Google search results.
-                            OpenAI withdrew the feature shortly afterwards.
-                        </p>
-                    </li>
-
-                </ol>
-            </section>
-
-            <section class="stack" id="how-to-protect-yourself">
-                <div class="callout callout--success">
-                    <h3>How to protect yourself</h3>
-                    <ul>
-                        <li><strong>Think before you paste:</strong> anything you would not publish online does not belong in a chatbot.</li>
-                        <li><strong>Remove names:</strong> replace real names and figures with placeholders before typing a text, not only before sending it (some websites record what is typed in a field even before it is submitted).</li>
-                        <li><strong>Check the settings:</strong> disable training on your conversations and use temporary chats where available.</li>
-                        <li><strong>Follow the rules:</strong> in a professional context, use only the tools approved by your organization.</li>
-                    </ul>
-                </div>
-            </section>
-
-
-
+          <section class="stack" id="how-to-protect-yourself">
+            <div class="callout callout--success">
+              <h2>How to protect yourself</h2>
+              <ul>
+                <li>
+                  <strong>Think before you paste:</strong>
+                  anything you would not publish online does not belong in a chatbot.
+                </li>
+                <li>
+                  <strong>Remove names:</strong>
+                  replace real names and figures with placeholders before typing a text, not only
+                  before sending it (some websites record what is typed in a field even before it is
+                  submitted).
+                </li>
+                <li>
+                  <strong>Check the settings:</strong>
+                  disable training on your conversations and use temporary chats where available.
+                </li>
+                <li>
+                  <strong>Follow the rules:</strong>
+                  in a professional context, use only the tools approved by your organization.
+                </li>
+              </ul>
+            </div>
+          </section>
         </article>
+      </section>
     </main>
 
     <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

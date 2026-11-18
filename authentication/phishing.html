@@ -1,204 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Yhoshua Filianoti">
-    <title>Phishing and Fake Login Pages - Cybersecurity Project</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/shared.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Yhoshua Filianoti" />
+    <title>Phishing and Fake Login Pages</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="container section">
+    <main id="main" class="container">
+      <section class="section stack">
         <nav aria-label="Breadcrumb">
-            <ol class="breadcrumbs">
-                <li><a href="../index.html">Home</a></li>
-                <li><span>Authentication</span></li>
-                <li><span aria-current="page">Phishing and Fake Login Pages</span></li>
-            </ol>
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Authentication</a></li>
+            <li aria-current="page">Phishing and Fake Login Pages</li>
+          </ul>
         </nav>
-
         <article class="stack stack--lg">
+          <header class="section__header">
+            <h1>Phishing and Fake Login Pages</h1>
+            <p class="lead">
+              Most stolen accounts are not hacked in any technical sense: the owner simply types the
+              password into the wrong page. A good fake login page looks exactly like the real one,
+              and that is all an attacker needs.
+            </p>
+          </header>
 
-            <header class="section__header">
-                <span class="eyebrow">Authentication</span>
-                <h2 class="section__title">Phishing and Fake Login Pages</h2>
-                <p class="lead">
-                    Most stolen accounts are not hacked in any technical sense: the owner simply types the password into the wrong page.
-                    A good fake login page looks exactly like the real one, and that is all an attacker needs.
+          <section class="stack" id="how-it-works">
+            <h2>How a fake login page works</h2>
+
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__time">Step 1</p>
+                <h3 class="timeline__title">The bait</h3>
+                <p class="timeline__text">
+                  It usually begins with a message from the post office, your bank or the university
+                  IT service. Your parcel is stuck, your account will be locked tomorrow, something
+                  needs your attention right now.
                 </p>
-            </header>
+              </li>
 
-            <section class="stack" id="how-it-works">
-                <h3>How a fake login page works</h3>
-                
-                <ol class="timeline">
-                    
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 1</p>
-                        <h4 class="timeline__title">The bait</h4>
-                        <p class="timeline__text">
-                            It usually begins with a message from the post office, your bank or the university IT service.
-                            Your parcel is stuck, your account will be locked tomorrow, something needs your attention right now.
-                        </p>
-                    </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 2</p>
+                <h3 class="timeline__title">The link</h3>
+                <p class="timeline__text">
+                  There is always a link or a QR code to fix the problem. The address looks
+                  believable if you only glance at it, but the site behind it belongs to the
+                  attacker.
+                </p>
+              </li>
 
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 2</p>
-                        <h4 class="timeline__title">The link</h4>
-                        <p class="timeline__text">
-                            There is always a link or a QR code to fix the problem.
-                            The address looks believable if you only glance at it, but the site behind it belongs to the attacker.
-                        </p>
-                    </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 3</p>
+                <h3 class="timeline__title">The cloned page</h3>
+                <p class="timeline__text">
+                  Copying a login page takes minutes, so the logo, the colors and the layout are all
+                  there. Even the padlock is there, because getting an HTTPS certificate is free.
+                </p>
+              </li>
 
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 3</p>
-                        <h4 class="timeline__title">The cloned page</h4>
-                        <p class="timeline__text">
-                            Copying a login page takes minutes, so the logo, the colors and the layout are all there.
-                            Even the padlock is there, because getting an HTTPS certificate is free.
-                        </p>
-                    </li>
+              <li class="timeline__item">
+                <p class="timeline__time">Step 4</p>
+                <h3 class="timeline__title">The stolen credentials</h3>
+                <p class="timeline__text">
+                  Whatever the victim types goes straight to the attacker, who often logs in within
+                  minutes. The more advanced phishing kits even forward the two-factor code while it
+                  is still valid.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-                    <li class="timeline__item">
-                        <p class="timeline__time">Step 4</p>
-                        <h4 class="timeline__title">The stolen credentials</h4>
-                        <p class="timeline__text">
-                            Whatever the victim types goes straight to the attacker, who often logs in within minutes.
-                            The more advanced phishing kits even forward the two-factor code while it is still valid.
-                        </p>
-                    </li>
-                </ol>
-            </section>
+          <section class="stack" id="real-or-fake">
+            <h2>Real or fake?</h2>
 
-            <section class="stack" id="real-or-fake">
-                <h3>Real or fake?</h3>
-                
-                <div class="table-wrap">
-                    
-                    <table class="data-table">
-                        <caption>Clues that reveal a fake login page</caption>
-                        <thead><tr><th>Clue</th><th>Real page</th><th>Fake page</th></tr></thead>
-                        <tbody>
-                            <tr><td>Address bar</td><td>The exact domain of the service, for example usi.ch</td><td>A similar name with extra words, like usi-login-secure.com</td></tr>
-                            <tr><td>Padlock (HTTPS)</td><td>Present</td><td>Usually there too, since it only means the connection is encrypted</td></tr>
-                            <tr><td>Spelling and design</td><td>Correct</td><td>Small mistakes, a slightly blurry logo</td></tr>
-                            <tr><td>Tone of the message</td><td>Calm</td><td>Urgent: "act now", "your account will be closed"</td></tr>
-                        </tbody>
-                    </table>
+            <div class="table-wrap">
+              <table class="data-table">
+                <caption>Clues that reveal a fake login page</caption>
+                <thead>
+                  <tr>
+                    <th>Clue</th>
+                    <th>Real page</th>
+                    <th>Fake page</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Address bar</td>
+                    <td>The exact domain of the service, for example usi.ch</td>
+                    <td>A similar name with extra words, like usi-login-secure.com</td>
+                  </tr>
+                  <tr>
+                    <td>Padlock (HTTPS)</td>
+                    <td>Present</td>
+                    <td>Usually there too, since it only means the connection is encrypted</td>
+                  </tr>
+                  <tr>
+                    <td>Spelling and design</td>
+                    <td>Correct</td>
+                    <td>Small mistakes, a slightly blurry logo</td>
+                  </tr>
+                  <tr>
+                    <td>Tone of the message</td>
+                    <td>Calm</td>
+                    <td>Urgent: "act now", "your account will be closed"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
 
+          <section class="stack" id="techniques">
+            <h2>Common techniques</h2>
+            <div class="grid grid--3">
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">Lookalike domains</h3>
+                  <p class="card__text">
+                    One character is swapped, as in "paypa1.com", or the real brand is buried in a
+                    longer name. Read quickly, and your brain fills in what it expects to see.
+                  </p>
                 </div>
-            </section>
+              </article>
 
-            <section class="stack" id="techniques">
-                <h3>Common techniques</h3>
-                <div class="grid grid--3">
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">Lookalike domains</h4>
-                            <p class="card__text">
-                                One character is swapped, as in "paypa1.com", or the real brand is buried in a longer name.
-                                Read quickly, and your brain fills in what it expects to see.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">Browser-in-the-Browser</h4>
-                            <p class="card__text">
-                                The page draws its own "Sign in with Google" window, complete with a fake address bar.
-                                It is just part of the page, which is why checking the URL inside it proves nothing.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__body">
-                            <h4 class="card__title">QR code phishing</h4>
-                            <p class="card__text">
-                                A sticker on a parking meter or a code in an email hides the link completely.
-                                You only see where it goes once you are already there.
-                            </p>
-                        </div>
-                    </article>
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">Browser-in-the-Browser</h3>
+                  <p class="card__text">
+                    The page draws its own "Sign in with Google" window, complete with a fake
+                    address bar. It is just part of the page, which is why checking the URL inside
+                    it proves nothing.
+                  </p>
                 </div>
-            </section>
-
-            <section class="stack" id="how-to-protect-yourself">
-                
-                <div class="callout callout--warning">
-                    <h3>How to protect yourself</h3>
-                    <ul>
-                        <li><strong>Do not log in from a link:</strong> if a message asks you to sign in, open the site yourself from a bookmark instead.</li>
-                        <li><strong>Read the domain:</strong> what matters is the name right before .com or .ch, everything on the left of it can be faked.</li>
-                        <li><strong>Turn on two-factor authentication:</strong> a stolen password alone will not get anyone in.</li>
-                        <li><strong>Use passkeys:</strong> a passkey only works on the real website, so a copy has nothing to steal.</li>
-                    </ul>
-                    <p>
-                        A password manager is also a good warning sign: if it does not offer to fill in your password, you are probably not on the site you think. 
-                        See the <a href="password-managers.html">password managers</a> page.
-                    </p>
+              </article>
+              <article class="card">
+                <div class="card__body">
+                  <h3 class="card__title">QR code phishing</h3>
+                  <p class="card__text">
+                    A sticker on a parking meter or a code in an email hides the link completely.
+                    You only see where it goes once you are already there.
+                  </p>
                 </div>
-            </section>
+              </article>
+            </div>
+          </section>
 
-
-
+          <section class="stack" id="how-to-protect-yourself">
+            <div class="callout callout--warning">
+              <h2>How to protect yourself</h2>
+              <ul>
+                <li>
+                  <strong>Do not log in from a link:</strong>
+                  if a message asks you to sign in, open the site yourself from a bookmark instead.
+                </li>
+                <li>
+                  <strong>Read the domain:</strong>
+                  what matters is the name right before .com or .ch, everything on the left of it
+                  can be faked.
+                </li>
+                <li>
+                  <strong>Turn on two-factor authentication:</strong>
+                  a stolen password alone will not get anyone in.
+                </li>
+                <li>
+                  <strong>Use passkeys:</strong>
+                  a passkey only works on the real website, so a copy has nothing to steal.
+                </li>
+              </ul>
+              <p>
+                A password manager is also a good warning sign: if it does not offer to fill in your
+                password, you are probably not on the site you think. See the
+                <a href="password-managers.html">password managers</a>
+                page.
+              </p>
+            </div>
+          </section>
         </article>
+      </section>
     </main>
 
     <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,382 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An introduction to authentication, digital identity, account security and privacy."
+    />
+    <meta name="author" content="Matteo Mignone" />
+    <title>Authentication</title>
+    <!-- Load base styles first, then shared components. -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An introduction to authentication, digital identity, account security and privacy.">
-  <title>Authentication | Cybersecurity and Digital Privacy</title>
-  <!-- Load base styles first, then shared components. -->
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/shared.css">
-<style>
-       
-       /* hover topic cards */
-        .topic-card {
-            transition: background-color .2s ease, border-color .2s ease;
-        }
-
-        .topic-card:hover {
-            background-color: rgba(70, 143, 161, 0.16);
-            border-color: var(--accent-border);
-        }
-
-        /* make the topic cards more compact */
-        #subtopics .topic-card {
-            min-height: 11.5rem;
-            padding: 1rem;
-            gap: .55rem;
-        }
-
-        #subtopics .topic-card__title {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-
-        #subtopics .topic-card::after {
-            font-size: 3.5rem;
-        }
-
-        #subtopics .topic-card__text {
-            margin: 0;
-            font-size: var(--text-xs);
-            line-height: 1.45;
-        }
-
-         /* navbar underline animation */
-       .site-nav__link {
-            position: relative;
-            text-decoration: none;
-        }
-
-        .site-nav__link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0px;
-            width: 100%;
-            height: 2px;
-            background: var(--accent-text);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform .22s ease;
-        }
-
-        .site-nav__link:hover::after,
-        .site-nav__link:focus-visible::after,
-        .site-nav__link.is-active::after {
-            transform: scaleX(1);
-        }
-    
-        /* Keep cards within their columns and anchor targets below the navbar. */
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; }
-        [id] { scroll-margin-top: 7rem; }
-        .topic-card { min-width: 0; }
-        .topic-card__title { overflow-wrap: anywhere; }
-        @media (max-width: 600px) {
-            .site-nav__inner { flex-wrap: wrap; gap: .5rem 1rem; padding-block: .75rem; }
-            .site-nav__links { flex-wrap: wrap; margin-left: 0; }
-        }
-    </style>
-</head>
-
-<body style="background: radial-gradient(circle at 15% 30%, rgba(55, 149, 172, 0.14), transparent 35%), linear-gradient(135deg, #0b2635, #071d2b);">
-
+  <body
+    style="
+      background: radial-gradient(circle at 15% 30%, rgba(55, 149, 172, 0.14), transparent 35%),
+        linear-gradient(135deg, #0b2635, #071d2b);
+    "
+  >
     <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-  <header class="container section">
-    <p class="eyebrow">Cybersecurity and Digital Privacy</p>
-    <h1>Authentication</h1>
-    <p class="lead">
-      How digital systems check who you are, protect your accounts
-      and help keep personal information private.
-    </p>
-  </header>
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li aria-current="page">Authentication</li>
+          </ul>
+        </nav>
 
-  <!-- Links to sections inside this page -->
-  <div class="container">
-  <nav id="menu" class="surface" aria-label="Contents">
-    <h2 class="card__title">Contents</h2>
+        <h1>Authentication</h1>
 
-    <ul class="stack stack--sm">
-      <li><a href="#meaning">What is authentication?</a></li>
-      <li><a href="#identity">Identification, authentication and authorisation</a></li>
-      <li><a href="#risks">Why authentication can fail</a></li>
-      <li><a href="#privacy">Authentication and digital privacy</a></li>
-      <li><a href="#Articles">Explore the articles</a></li>
-      <li><a href="#sources">Sources</a></li>
-    </ul>
-  </nav>
-  </div>
+        <p class="lead">
+          How digital systems check who you are, protect your accounts and help keep personal
+          information private.
+        </p>
 
-  <main id="main" class="container section stack stack--lg">
+        <nav id="menu" class="surface" aria-label="Contents">
+          <h2 class="card__title">Contents</h2>
+          <ul class="stack stack--sm">
+            <li><a href="#meaning">What is authentication?</a></li>
+            <li><a href="#identity">Identification, authentication and authorisation</a></li>
+            <li><a href="#risks">Why authentication can fail</a></li>
+            <li><a href="#privacy">Authentication and digital privacy</a></li>
+            <li><a href="#Articles">Explore the articles</a></li>
+            <li><a href="#sources">Sources</a></li>
+          </ul>
+        </nav>
+        <section id="meaning" class="surface">
+          <h2>What is authentication?</h2>
+          <p>
+            Authentication is the process of checking whether a person or system is who they claim
+            to be. On a website, this usually means verifying that someone controls the credentials
+            associated with an account. Simply knowing an email address or username is not enough:
+            the person must provide evidence that the service accepts.
+          </p>
+        </section>
 
-    <section id="meaning" class="surface">
-      <h2>What is authentication?</h2>
-      <p>
-        Authentication is the process of checking whether a person or system
-        is who they claim to be. On a website, this usually means verifying
-        that someone controls the credentials associated with an account.
-        Simply knowing an email address or username is not enough:
-        the person must provide evidence that the service accepts.
-      </p>
-    </section>
+        <section id="identity" class="surface">
+          <h2>Identification, authentication and authorisation</h2>
+          <p>
+            These terms describe different decisions. Identification tells the system which account
+            is being claimed. Authentication checks the evidence for that claim. Authorisation
+            determines which resources and actions are allowed.
+          </p>
 
-    <section id="identity" class="surface">
-      <h2>Identification, authentication and authorisation</h2>
-      <p>
-        These terms describe different decisions. Identification tells the
-        system which account is being claimed. Authentication checks the
-        evidence for that claim. Authorisation determines which resources
-        and actions are allowed.
-      </p>
+          <h3>A university portal example</h3>
+          <ul>
+            <li>
+              <strong>Identification:</strong>
+              a student enters their university email address.
+            </li>
+            <li>
+              <strong>Authentication:</strong>
+              the portal verifies the student's login credentials.
+            </li>
+            <li>
+              <strong>Authorisation:</strong>
+              the portal allows the student to view their own results, but does not let them change
+              another student's grades.
+            </li>
+          </ul>
+        </section>
 
-      <h3>A university portal example</h3>
-      <ul>
-        <li>
-          <strong>Identification:</strong>
-          a student enters their university email address.
-        </li>
-        <li>
-          <strong>Authentication:</strong>
-          the portal verifies the student's login credentials.
-        </li>
-        <li>
-          <strong>Authorisation:</strong>
-          the portal allows the student to view their own results,
-          but does not let them change another student's grades.
-        </li>
-      </ul>
-    </section>
+        <section id="risks" class="surface">
+          <h2>Why authentication can fail</h2>
+          <p>
+            Attackers can target people as well as software. A fake login page may persuade a user
+            to disclose credentials. Automated attempts may guess passwords or try username-password
+            pairs exposed by another service. Reusing one password can therefore allow a breach
+            elsewhere to affect several accounts.
+          </p>
+          <p>
+            Weak recovery procedures create another route into an account. If an attacker controls
+            the recovery email address, a strong password on the original account may not be enough.
+            Security must cover enrolment, everyday access, recovery and the removal of lost or
+            stolen authenticators.
+          </p>
+          <p>
+            Protection requires several complementary measures: unique passwords, careful handling
+            of login requests, secure recovery options and appropriate authentication methods.
+            Website operators also need to limit automated attempts, protect credentials and
+            maintain secure sessions. A well-designed login screen alone cannot provide these
+            protections.
+          </p>
+        </section>
 
-    <section id="risks" class="surface">
-      <h2>Why authentication can fail</h2>
-      <p>
-        Attackers can target people as well as software. A fake
-        login page may persuade a user to disclose credentials.
-        Automated attempts may guess passwords or try
-        username-password pairs exposed by another service.
-        Reusing one password can therefore allow a breach
-        elsewhere to affect several accounts.
-      </p>
-      <p>
-        Weak recovery procedures create another route into an
-        account. If an attacker controls the recovery email
-        address, a strong password on the original account
-        may not be enough. Security must cover enrolment,
-        everyday access, recovery and the removal of lost
-        or stolen authenticators.
-      </p>
-      <p>
-        Protection requires several complementary measures:
-        unique passwords, careful handling of login requests,
-        secure recovery options and appropriate authentication
-        methods. Website operators also need to limit automated
-        attempts, protect credentials and maintain secure sessions.
-        A well-designed login screen alone cannot provide
-        these protections.
-      </p>
-    </section>
+        <section id="privacy" class="surface">
+          <h2>Authentication and digital privacy</h2>
+          <p>
+            Authentication supports privacy by restricting access to personal information. However,
+            the authentication process can also collect information about users. Device
+            characteristics, login locations and biometric data may themselves be sensitive.
+          </p>
+        </section>
 
-    <section id="privacy" class="surface">
-      <h2>Authentication and digital privacy</h2>
-       <p>
-        Authentication supports privacy by restricting access
-        to personal information. However, the authentication
-        process can also collect information about users.
-        Device characteristics, login locations and biometric
-        data may themselves be sensitive.
-      </p> 
-    </section>
+        <!-- Cards linking to all subtopics -->
+        <section id="Articles" class="section--tight" aria-labelledby="subtopics-title">
+          <div class="section__header">
+            <h2 id="subtopics-title" class="section__title">Explore the articles</h2>
+          </div>
+          <div class="grid grid--3">
+            <a class="topic-card" data-theme="brand" data-index="01" href="passwords.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 01</span>
+              <h3 class="topic-card__title">Passwords and Passphrases</h3>
+              <p class="topic-card__text">
+                Password length, complexity and reuse, and how to create strong, memorable
+                passphrases.
+              </p>
+            </a>
 
-    <!-- Cards linking to all subtopics -->
-       <section id="Articles" class="section--tight" aria-labelledby="subtopics-title">
-      <div class="section__header">
-        <p class="eyebrow">THE CYBERAWARE GUIDE</p>
-        <h2 id="subtopics-title" class="section__title">Explore the articles</h2>
+            <a
+              class="topic-card"
+              data-theme="brand"
+              data-index="02"
+              href="adaptive-authentication.html"
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 02</span>
+              <h3 class="topic-card__title">Adaptive Authentication</h3>
+              <p class="topic-card__text">
+                How checks change according to risk signals such as device, location and login
+                behaviour.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="03" href="biometrics.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 03</span>
+              <h3 class="topic-card__title">Biometric Authentication</h3>
+              <p class="topic-card__text">
+                Fingerprint and facial recognition, including reliability and privacy concerns.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="04" href="passwordless.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 04</span>
+              <h3 class="topic-card__title">Passwordless Authentication and Passkeys</h3>
+              <p class="topic-card__text">
+                Signing in without traditional passwords and resisting credential theft and
+                phishing.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="05" href="password-managers.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 05</span>
+              <h3 class="topic-card__title">Password Managers</h3>
+              <p class="topic-card__text">
+                Generating, storing and autofilling credentials, including benefits and potential
+                risks.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="06" href="phishing.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 06</span>
+              <h3 class="topic-card__title">Phishing and Fake Login Pages</h3>
+              <p class="topic-card__text">
+                Deceptive login requests, warning signs and ways to protect users.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="07" href="password-attacks.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 07</span>
+              <h3 class="topic-card__title">Attacks Against Password-Based Authentication</h3>
+              <p class="topic-card__text">
+                Brute-force attacks, dictionary attacks, credential stuffing and defensive
+                safeguards.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="08" href="single-sign-on.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 08</span>
+              <h3 class="topic-card__title">Single Sign-On and Social Login</h3>
+              <p class="topic-card__text">
+                Using one identity provider across services and the implications for security and
+                data sharing.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="09" href="account-recovery.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 09</span>
+              <h3 class="topic-card__title">Account Recovery and Password Resets</h3>
+              <p class="topic-card__text">
+                Restoring legitimate access while preventing attackers from exploiting recovery
+                procedures.
+              </p>
+            </a>
+
+            <a class="topic-card" data-theme="brand" data-index="10" href="sessions-cookies.html">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <span class="badge badge--outline">IDENTITY</span>
+                <span style="font-size: 25px; color: var(--accent-text)" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+              <span class="topic-card__index">SUBTOPIC 10</span>
+              <h3 class="topic-card__title">Sessions, Cookies, and Staying Logged In</h3>
+              <p class="topic-card__text">
+                Maintaining authenticated access, preventing session hijacking and managing logout
+                and expiration.
+              </p>
+            </a>
+          </div>
+        </section>
+
+        <section id="sources" class="surface">
+          <h2>Sources</h2>
+          <p>
+            The following references provide further information and support the concepts explained
+            on this page.
+          </p>
+          <ul class="stack stack--sm">
+            <li>
+              <a
+                href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+              >
+                OWASP — Authentication Cheat Sheet
+              </a>
+              <p>
+                Authentication principles, secure login procedures, automated attacks and adaptive
+                authentication.
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
+              >
+                OWASP — Multifactor Authentication Cheat Sheet
+              </a>
+              <p>
+                Authentication factors, biometrics, passkeys and the benefits and limitations of
+                different methods.
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+              >
+                OWASP — Password Storage Cheat Sheet
+              </a>
+              <p>
+                Secure password storage and the use of password hashing instead of storing readable
+                passwords.
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+              >
+                OWASP — Session Management Cheat Sheet
+              </a>
+              <p>Session identifiers, cookies, session hijacking, expiration and secure logout.</p>
+            </li>
+            <li>
+              <a href="https://pages.nist.gov/800-63-4/sp800-63.html">
+                NIST — Digital Identity Guidelines (SP 800-63-4)
+              </a>
+              <p>Digital identity, identity proofing, authentication and privacy considerations.</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
+
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="grid grid--3">
-        <a class="topic-card" data-theme="brand" data-index="01" href="passwords.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 01</span>
-          <h3 class="topic-card__title">Passwords and Passphrases</h3>
-          <p class="topic-card__text">Password length, complexity and reuse, and how to create strong, memorable passphrases.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="02" href="adaptive-authentication.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 02</span>
-          <h3 class="topic-card__title">Adaptive Authentication</h3>
-          <p class="topic-card__text">How checks change according to risk signals such as device, location and login behaviour.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="03" href="biometrics.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 03</span>
-          <h3 class="topic-card__title">Biometric Authentication</h3>
-          <p class="topic-card__text">Fingerprint and facial recognition, including reliability and privacy concerns.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="04" href="passwordless.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 04</span>
-          <h3 class="topic-card__title">Passwordless Authentication and Passkeys</h3>
-          <p class="topic-card__text">Signing in without traditional passwords and resisting credential theft and phishing.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="05" href="password-managers.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 05</span>
-          <h3 class="topic-card__title">Password Managers</h3>
-          <p class="topic-card__text">Generating, storing and autofilling credentials, including benefits and potential risks.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="06" href="phishing.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 06</span>
-          <h3 class="topic-card__title">Phishing and Fake Login Pages</h3>
-          <p class="topic-card__text">Deceptive login requests, warning signs and ways to protect users.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="07" href="password-attacks.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 07</span>
-          <h3 class="topic-card__title">Attacks Against Password-Based Authentication</h3>
-          <p class="topic-card__text">Brute-force attacks, dictionary attacks, credential stuffing and defensive safeguards.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="08" href="single-sign-on.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 08</span>
-          <h3 class="topic-card__title">Single Sign-On and Social Login</h3>
-          <p class="topic-card__text">Using one identity provider across services and the implications for security and data sharing.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="09" href="account-recovery.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 09</span>
-          <h3 class="topic-card__title">Account Recovery and Password Resets</h3>
-          <p class="topic-card__text">Restoring legitimate access while preventing attackers from exploiting recovery procedures.</p>
-        </a>
-
-        <a class="topic-card" data-theme="brand" data-index="10" href="sessions-cookies.html">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-            <span class="badge badge--outline">IDENTITY</span>
-            <span style="font-size: 25px; color: var(--accent-text);" aria-hidden="true">↗</span>
-          </div>
-          <span class="topic-card__index">SUBTOPIC 10</span>
-          <h3 class="topic-card__title">Sessions, Cookies, and Staying Logged In</h3>
-          <p class="topic-card__text">Maintaining authenticated access, preventing session hijacking and managing logout and expiration.</p>
-        </a>
-      </div>
-    </section>
-
-      <section id="sources" class="surface">
-      <h2>Sources</h2>
-      <p>The following references provide further information and support the concepts explained on this page.</p>
-      <ul class="stack stack--sm">
-        <li>
-          <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP — Authentication Cheat Sheet</a>
-          <p>Authentication principles, secure login procedures, automated attacks and adaptive authentication.</p>
-        </li>
-        <li>
-          <a href="https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html">OWASP — Multifactor Authentication Cheat Sheet</a>
-          <p>Authentication factors, biometrics, passkeys and the benefits and limitations of different methods.</p>
-        </li>
-        <li>
-          <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP — Password Storage Cheat Sheet</a>
-          <p>Secure password storage and the use of password hashing instead of storing readable passwords.</p>
-        </li>
-        <li>
-          <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP — Session Management Cheat Sheet</a>
-          <p>Session identifiers, cookies, session hijacking, expiration and secure logout.</p>
-        </li>
-        <li>
-          <a href="https://pages.nist.gov/800-63-4/sp800-63.html">NIST — Digital Identity Guidelines (SP 800-63-4)</a>
-          <p>Digital identity, identity proofing, authentication and privacy considerations.</p>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
-
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-  
-</body>
+    </footer>
+  </body>
 </html>

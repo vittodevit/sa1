@@ -1,79 +1,530 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Vittorio Lo Mele" />
     <title>CyberAware | Credits</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/shared.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/shared.css" />
+  </head>
 
-<body>
-
-<header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="index.html">Home</a></li>
-                <li><a class="site-nav__link" href="index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main id="main">
-        <section class="section">
-            <div class="container">
-                <header class="section__header">
-                    <p class="eyebrow">CREDITS</p>
-                    <h1>Credits</h1>
-                    <p class="lead">Acknowledgements and contributions — content coming soon.</p>
-                </header>
-            </div>
-        </section>
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Credits</li>
+          </ul>
+        </nav>
+
+        <h1>Credits</h1>
+
+        <p class="lead">
+          Every page of this website was researched, written and built by the members listed below.
+          The full story behind the collaboration is in the
+          <a href="docs/main.pdf">Documentation PDF</a>
+          .
+        </p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Member</th>
+                <th scope="col">Role</th>
+                <th scope="col">Contributions</th>
+                <th scope="col">Pages</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Angelica Vetere</th>
+                <td>Group leader · Coordination</td>
+                <td>
+                  Organised the team: deadlines, feedback, communication between groups, and
+                  hands-on help with HTML issues and project requirements.
+                </td>
+                <td>
+                  <a href="index.html">Homepage</a>
+                  ,
+                  <a href="docs/main.pdf">Documentation PDF</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Vittorio Lo Mele</th>
+                <td>Group leader · Git &amp; integration</td>
+                <td>
+                  Managed the Git workflow, merge conflicts and the technical integration of
+                  everyone's pages; corrected HTML, structure and navigation site-wide; wrote the
+                  Git guide and project documentation.
+                </td>
+                <td>
+                  <a href="credits.html">Credits (this page)</a>
+                  ,
+                  <a href="docs/main.pdf">Documentation PDF</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Giulio Finocchiaro</th>
+                <td>CSS leader · AI &amp; Authentication</td>
+                <td>
+                  Co-authored the shared CSS system every page is built on, took on extra CSS work,
+                  and wrote the internal component documentation.
+                </td>
+                <td>
+                  <a href="authentication/adaptive-authentication.html">Adaptive authentication</a>
+                  ,
+                  <a href="authentication/biometrics.html">Biometric authentication</a>
+                  ,
+                  <a href="authentication/passwordless.html">Passwordless &amp; passkeys</a>
+                  ,
+                  <a href="ai-risks/ai-surveillance.html">AI surveillance</a>
+                  ,
+                  <a href="docs/css-docs/components.html">CSS components doc</a>
+                  ,
+                  <a href="docs/css-docs/article.html">CSS article template</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Lazar Bogosavljevic</th>
+                <td>CSS leader · Malware</td>
+                <td>
+                  Maintained and extended the shared CSS components for the whole team; integrated
+                  modifications into the component documentation.
+                </td>
+                <td><a href="malware/keylogger.html">Keyloggers</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Adam Balice</th>
+                <td>Topic leader · Threats &amp; Malware</td>
+                <td>
+                  Coordinated the Common Threats and Malware group and kept it organised; wrote both
+                  section overviews and two core threat pages.
+                </td>
+                <td>
+                  <a href="common-threats/index.html">Common Threats overview</a>
+                  ,
+                  <a href="malware/index.html">Malware overview</a>
+                  ,
+                  <a href="common-threats/sql-injection.html">SQL injection</a>
+                  ,
+                  <a href="common-threats/mitm.html">Man-in-the-middle</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Jiaming Ren</th>
+                <td>Member · Common Threats</td>
+                <td>Four well-executed threat pages, delivered cooperatively.</td>
+                <td>
+                  <a href="common-threats/ddos.html">DDoS attacks</a>
+                  ,
+                  <a href="common-threats/authentication-attacks.html">Authentication attacks</a>
+                  ,
+                  <a href="common-threats/phishing.html">Phishing &amp; spoofing</a>
+                  ,
+                  <a href="common-threats/supply-chain.html">Supply chain attacks</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Marco Scapinello</th>
+                <td>Member · Malware</td>
+                <td>
+                  Viruses, worms, trojans and ransomware pages, built with the shared CSS structure
+                  and imagery.
+                </td>
+                <td>
+                  <a href="malware/viruses.html">Computer viruses</a>
+                  ,
+                  <a href="malware/worm.html">Worms</a>
+                  ,
+                  <a href="malware/trojan-dropper-rat.html">Trojans, droppers &amp; RATs</a>
+                  ,
+                  <a href="malware/ransomware.html">Ransomware</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Camilla Budelli</th>
+                <td>Member · Malware</td>
+                <td>
+                  Botnets, persistence, rootkits and evasion pages; applied corrections and
+                  modifications whenever necessary.
+                </td>
+                <td>
+                  <a href="malware/botnets-and-c2-architecture.html">Botnets &amp; C2</a>
+                  ,
+                  <a
+                    href="malware/persistence-mechanisms-in-operating-systems-and-anti-analysis.html"
+                  >
+                    Persistence &amp; anti-analysis
+                  </a>
+                  ,
+                  <a href="malware/rootkit.html">Rootkits</a>
+                  ,
+                  <a href="malware/evasion-techniques.html">Evasion techniques</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Carlo Augusto Conti</th>
+                <td>Topic leader · Privacy &amp; Incidents</td>
+                <td>
+                  Coordinated the Privacy and Famous Incidents group; responsive documentation,
+                  clarifications and consistent replies.
+                </td>
+                <td>
+                  <a href="famous-incidents/index.html">Famous Incidents overview</a>
+                  ,
+                  <a href="online-privacy/index.html">Digital Privacy overview</a>
+                  ,
+                  <a href="online-privacy/the-privacy-dilemma.html">The privacy dilemma</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Francesco Taddei</th>
+                <td>Member · Digital Privacy</td>
+                <td>Clear, complete and well-sourced pages on privacy, tracking and brokers.</td>
+                <td>
+                  <a href="online-privacy/privacy-intro.html">What is digital privacy?</a>
+                  ,
+                  <a href="online-privacy/privacy-footprints.html">
+                    Footprints, cookies &amp; trackers
+                  </a>
+                  ,
+                  <a href="online-privacy/privacy-data-brokers.html">Data brokers</a>
+                  ,
+                  <a href="online-privacy/privacy-browsers.html">Privacy browsers</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tommaso Fasolo</th>
+                <td>Member · Digital Privacy</td>
+                <td>Detailed, organised pages on laws, VPNs, encryption and social networks.</td>
+                <td>
+                  <a href="online-privacy/privacy-laws-and-regulations.html">
+                    Privacy laws &amp; regulations
+                  </a>
+                  ,
+                  <a href="online-privacy/vpns.html">VPNs</a>
+                  ,
+                  <a href="online-privacy/encryption.html">Encryption</a>
+                  ,
+                  <a href="online-privacy/social-networks.html">Social networks</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Bora Lapushi</th>
+                <td>Member · Famous Incidents</td>
+                <td>
+                  Breaches, ransomware, consequences and incident response; good use of the CSS
+                  components.
+                </td>
+                <td>
+                  <a href="famous-incidents/major-data-breaches.html">Major data breaches</a>
+                  ,
+                  <a href="famous-incidents/ransomware.html">
+                    Ransomware &amp; destructive attacks
+                  </a>
+                  ,
+                  <a href="famous-incidents/consequences.html">Consequences of incidents</a>
+                  ,
+                  <a href="famous-incidents/incident-response.html">Who detects &amp; responds</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Melis Tezcan</th>
+                <td>Member · Famous Incidents</td>
+                <td>
+                  History and evolution of incidents, cyberespionage and modern threats, with
+                  sources and the shared structure.
+                </td>
+                <td>
+                  <a href="famous-incidents/introduction-earliest-incidents.html">
+                    Earliest incidents
+                  </a>
+                  ,
+                  <a href="famous-incidents/evolution-cybersecurity-incidents.html">
+                    Evolution of incidents
+                  </a>
+                  ,
+                  <a href="famous-incidents/cyberespionage-cyber-sabotage.html">
+                    Cyberespionage &amp; sabotage
+                  </a>
+                  ,
+                  <a href="famous-incidents/cybersecurity-today-php-case.html">The PHP case</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Matteo Mignone</th>
+                <td>Topic leader · Authentication &amp; AI</td>
+                <td>
+                  Built the overview and index pages of both sections instead of individual
+                  articles; provided corrections promptly when fixes were requested.
+                </td>
+                <td>
+                  <a href="ai-risks/index.html">Risk Brought by AI overview</a>
+                  ,
+                  <a href="authentication/index.html">Authentication overview</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Alejandro Munera Pineda</th>
+                <td>Member · AI &amp; Authentication</td>
+                <td>Completed his pages on passwords, profiling, disinformation and bias.</td>
+                <td>
+                  <a href="authentication/passwords.html">Passwords &amp; passphrases</a>
+                  ,
+                  <a href="ai-risks/profiling.html">Data profiling</a>
+                  ,
+                  <a href="ai-risks/disinformation.html">AI disinformation</a>
+                  ,
+                  <a href="ai-risks/bias.html">Bias &amp; discrimination</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Ahmet Sezer Uygül</th>
+                <td>Member · AI risks</td>
+                <td>
+                  Deepfakes, prompt injection, poisoning and hallucinations; active feedback in the
+                  group chat.
+                </td>
+                <td>
+                  <a href="ai-risks/deepfakes.html">Deepfakes</a>
+                  ,
+                  <a href="ai-risks/prompt-injection.html">Prompt injection</a>
+                  ,
+                  <a href="ai-risks/data-poisoning.html">Data &amp; model poisoning</a>
+                  ,
+                  <a href="ai-risks/ai-hallucinations.html">AI hallucinations</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Atakan Kyuchukov</th>
+                <td>Member · Authentication</td>
+                <td>
+                  Attacks, social login, recovery and sessions; provided feedback on the work.
+                </td>
+                <td>
+                  <a href="authentication/password-attacks.html">Password attacks</a>
+                  ,
+                  <a href="authentication/single-sign-on.html">Single sign-on</a>
+                  ,
+                  <a href="authentication/account-recovery.html">Account recovery</a>
+                  ,
+                  <a href="authentication/sessions-cookies.html">Sessions &amp; cookies</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Yhoshua Filianoti</th>
+                <td>Member · AI &amp; Authentication</td>
+                <td>
+                  Password managers, phishing, AI-assisted malware and chatbot data; joined more
+                  actively in the final stage.
+                </td>
+                <td>
+                  <a href="authentication/password-managers.html">Password managers</a>
+                  ,
+                  <a href="authentication/phishing.html">Phishing &amp; fake logins</a>
+                  ,
+                  <a href="ai-risks/ai-malware.html">AI-assisted malware</a>
+                  ,
+                  <a href="ai-risks/chatbot-data.html">Chatbot data risks</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Raul Moreno</th>
+                <td>Topic leader · Practices &amp; Communication</td>
+                <td>
+                  Coordinated both sections: task assignment, research guidance, content structure
+                  and HTML corrections; co-authored the Secure Communication pages.
+                </td>
+                <td>
+                  <a href="secure-communication/index.html">Secure Communication overview</a>
+                  ,
+                  <a href="secure-communication/email-security.html">Email security</a>
+                  ,
+                  <a href="secure-communication/end-to-end-messaging.html">End-to-end messaging</a>
+                  ,
+                  <a href="secure-communication/digital-signatures.html">Digital signatures</a>
+                  ,
+                  <a href="secure-communication/public-wifi.html">Public Wi-Fi</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Veronika Pavlova</th>
+                <td>Member · Secure Communication</td>
+                <td>
+                  Researched the Secure Communication topic and created all of its pages, later
+                  refined together with Raul.
+                </td>
+                <td>
+                  <a href="secure-communication/encryption-basic.html">Encryption basics</a>
+                  ,
+                  <a href="secure-communication/https-tls.html">HTTPS &amp; TLS</a>
+                  ,
+                  <a href="secure-communication/email-security.html">Email security</a>
+                  ,
+                  <a href="secure-communication/end-to-end-messaging.html">End-to-end messaging</a>
+                  ,
+                  <a href="secure-communication/digital-signatures.html">Digital signatures</a>
+                  ,
+                  <a href="secure-communication/public-wifi.html">Public Wi-Fi</a>
+                  ,
+                  <a href="secure-communication/index.html">Secure Communication overview</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tugrul Yildirim</th>
+                <td>Member · Good Security Practices</td>
+                <td>
+                  Researched the Good Security Practices topic thoroughly and created all of the
+                  section's pages.
+                </td>
+                <td>
+                  <a href="security-practices/index.html">Good Practices overview</a>
+                  ,
+                  <a href="security-practices/password-hygiene.html">Password hygiene</a>
+                  ,
+                  <a href="security-practices/mfa.html">Multi-factor authentication</a>
+                  ,
+                  <a href="security-practices/software-updates.html">Software updates</a>
+                  ,
+                  <a href="security-practices/backups.html">Backups</a>
+                  ,
+                  <a href="security-practices/device-security.html">Device security</a>
+                  ,
+                  <a href="security-practices/safe-online-behaviour.html">Safe online behaviour</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Mohammadreza Ravasizadeh</th>
+                <td>Member · Practices &amp; Communication</td>
+                <td>
+                  File sharing and browser extension permissions; adapted the pages to the shared
+                  design and added illustrations.
+                </td>
+                <td>
+                  <a href="secure-communication/file-sharing.html">Safe file sharing</a>
+                  ,
+                  <a href="security-practices/browser-extensions.html">
+                    Browser extension permissions
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Gjorgji Zlatevski</th>
+                <td>Member · Practices &amp; Communication</td>
+                <td>
+                  Four security guides with illustrations, plus a small additional stylesheet
+                  prepared for the CSS team.
+                </td>
+                <td>
+                  <a href="security-practices/home-router.html">Home router security</a>
+                  ,
+                  <a href="security-practices/usb-safety.html">USB safety</a>
+                  ,
+                  <a href="security-practices/device-handover.html">Device handover</a>
+                  ,
+                  <a href="secure-communication/online-meetings.html">Online meeting security</a>
+                  ,
+                  <a href="security-practices/browser-extensions.html">
+                    Browser extension permissions
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-muted">
+          Role and contribution summaries are taken from the team's
+          <a href="docs/main.pdf">Documentation PDF</a>
+          ; page attributions come from each page's author metadata and the Git history.
+        </p>
+
+        <div class="cluster">
+          <a class="btn btn--primary" href="index.html">Back to the homepage</a>
+        </div>
+      </section>
     </main>
 
-<footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="common-threats/index.html">Common Threats</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="malware/index.html">Malware</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="online-privacy/index.html">Privacy</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="famous-incidents/index.html">Famous Incidents</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li>
+              <span class="site-footer__text">Software Atelier 1</span>
+            </li>
+            <li>
+              <span class="site-footer__text">USI 2026/27</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,199 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Veronika Pavlova & Raul Moreno">
-        <title>Email security</title>
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/shared.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Veronika Pavlova & Raul Moreno" />
+    <title>Email security</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-    <style>
-        /* navbar underline animation */
-        .site-nav__link {
-            position: relative;
-            text-decoration: none;
-        }
-
-        .site-nav__link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0px;
-            width: 100%;
-            height: 2px;
-            background: var(--accent-text);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform .22s ease;
-        }
-
-        .site-nav__link:hover::after,
-        .site-nav__link:focus-visible::after,
-        .site-nav__link.is-active::after {
-            transform: scaleX(1);
-        }
-    </style>
-
-    <body>
-
-        <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-        <main class="container">
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Secure Communication</a></li>
+            <li aria-current="page">Email security</li>
+          </ul>
+        </nav>
+        <h1>Email security</h1>
 
-            <section class="section stack stack--lg">
+        <p class="lead">
+          Usual email is similar to a postcard. It is usually encrypted during transfer, but
+          providers may still be able to read the content.
+        </p>
 
-                <div class="stack stack--sm">
-                    <ul class="breadcrumbs">
-                        <li><a href="index.html">Secure Communication</a></li>
-                        <li aria-current="page">Email security</li>
-                    </ul>
+        <div class="surface stack stack--sm">
+          <h2>Postcard vs sealed letter</h2>
+          <p>
+            <strong>Normal email:</strong>
+            like a postcard.
+          </p>
+          <p>
+            <strong>End-to-end encrypted email:</strong>
+            like a sealed letter.
+          </p>
+        </div>
 
-                    <h1>Email security</h1>
+        <div class="surface stack stack--sm">
+          <img src="../img/email-security.png" alt="Email security illustration" />
+          <p class="text-muted">
+            Secure email methods help protect messages from unauthorized access.
+          </p>
+        </div>
 
-                    <p class="lead">
-                        Usual email is similar to a postcard. It is usually 
-                        encrypted during transfer, but providers may still be able to
-                        read the content.
-                    </p>
-                </div>
+        <div class="stack stack--sm">
+          <h2>Email security methods</h2>
 
-                <div class="surface stack stack--sm">
-                    <h3>Postcard vs sealed letter</h3>
-                    <p><strong>Normal email:</strong> like a postcard.</p>
-                    <p><strong>End-to-end encrypted email:</strong> like a sealed letter.</p>
-                </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Methods</th>
+                  <th>What it does</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>TLS</strong></td>
+                  <td>Encrypts between servers, but providers can still read.</td>
+                </tr>
+                <tr>
+                  <td><strong>PGP</strong></td>
+                  <td>Only the recipient can decrypt the message.</td>
+                </tr>
+                <tr>
+                  <td><strong>S/MIME</strong></td>
+                  <td>Encryption and signatures using certificates.</td>
+                </tr>
+                <tr>
+                  <td><strong>SPF / DKIM / DMARC</strong></td>
+                  <td>Helps verify the sender's domain.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-                <div class="surface stack stack--sm">
-                    <img src="../img/email-security.png" alt="Email security illustration">
-                    <p class="text-muted">Secure email methods help protect messages from unauthorized access.</p>
-                </div>
+          <p>
+            Since February 2024, Gmail and Yahoo have introduced stricter email authentication
+            requirements for bulk senders.
+          </p>
+        </div>
 
-                <div class="stack stack--sm">
-                    <h2>Email security methods</h2>
+        <div class="callout">
+          <h3 class="callout__title">Example</h3>
+          <p>
+            Sending a scan of your ID through normal email may leave readable copies on multiple
+            services. A secure upload portal is a safer option.
+          </p>
+        </div>
 
-                    <div class="table-wrap">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Methods</th>
-                                    <th>What it does</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>TLS</strong></td>
-                                    <td>Encrypts between servers, but providers can still read.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>PGP</strong></td>
-                                    <td>Only the recipient can decrypt the message.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>S/MIME</strong></td>
-                                    <td>Encryption and signatures using certificates.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>SPF / DKIM / DMARC</strong></td>
-                                    <td>Helps verify the sender's domain.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <div class="surface stack stack--sm">
+          <h3>Quick tips</h3>
+          <ul>
+            <li>Check the real sender address.</li>
+            <li>Do not email passwords or identity documents.</li>
+            <li>Use encrypted email for sensitive information.</li>
+          </ul>
+        </div>
 
-                    <p>
-                        Since February 2024, Gmail and Yahoo have introduced
-                        stricter email authentication requirements for bulk senders.
-                    </p>
-                </div>
+        <div class="stack stack--sm">
+          <p class="text-muted text-sm">
+            Source:
+            <a href="https://support.google.com/transparencyreport/answer/7381230?hl=es-419">
+              Google Transparency Report, Email Encryption FAQs
+            </a>
+          </p>
 
-                <div class="callout">
-                    <h3 class="callout__title">Example</h3>
-                    <p>
-                        Sending a scan of your ID through normal email
-                        may leave readable copies on multiple services.
-                        A secure upload portal is a safer option.
-                    </p>
-                </div>
+          <div class="cluster">
+            <a class="btn btn--secondary" href="end-to-end-messaging.html">
+              ← End-to-end messaging
+            </a>
+            <a class="btn btn--primary" href="public-wifi.html">Public Wi-Fi risks →</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-                <div class="surface stack stack--sm">
-                    <h3>Quick tips</h3>
-                    <ul>
-                        <li>Check the real sender address.</li>
-                        <li>Do not email passwords or identity documents.</li>
-                        <li>Use encrypted email for sensitive information.</li>
-                    </ul>
-                </div>
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                <div class="stack stack--sm">
-                    <p class="text-muted text-sm">
-                        Source: <a href="https://support.google.com/transparencyreport/answer/7381230?hl=es-419">Google Transparency Report, Email Encryption FAQs</a>
-                    </p>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <div class="cluster">
-                        <a class="btn btn--secondary" href="end-to-end-messaging.html">
-                            ← End-to-end messaging
-                        </a>
-                        <a class="btn btn--primary" href="public-wifi.html">
-                            Public Wi-Fi risks →
-                        </a>
-                    </div>
-                </div>
-
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
-
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-    </body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

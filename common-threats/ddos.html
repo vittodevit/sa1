@@ -1,186 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jiaming Ren" />
+    <title>DDoS Attacks</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Jiaming Ren">
-  <title>DDoS Attacks</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/shared.css">
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-  <!-- Page content -->
-  <main id="main">
-    <div class="container container--narrow section">
+    <!-- Page content -->
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Common Threats</a></li>
+            <li aria-current="page">DDoS Attacks</li>
+          </ul>
+        </nav>
+        <h1>DDoS Attacks</h1>
+        <p>
+          A
+          <strong>DDoS</strong>
+          (Distributed Denial of Service) attack tries to make a website or an online service
+          unavailable. The attacker sends so much traffic from many computers at the same time that
+          the server cannot answer real users anymore.
+        </p>
 
-      <h1>DDoS Attacks</h1>
-      <p>
-        A <strong>DDoS</strong> (Distributed Denial of Service) attack tries to make a website or an
-        online service unavailable. The attacker sends so much traffic from many computers at the same
-        time that the server cannot answer real users anymore.
-      </p>
+        <h2>DoS and DDoS</h2>
+        <p>
+          In a
+          <strong>DoS</strong>
+          attack the traffic comes from one computer, so it is easy to block. In a
+          <strong>DDoS</strong>
+          attack the traffic comes from thousands of devices all over the world, so it is much
+          harder to tell the attack apart from normal visitors.
+        </p>
+        <p>
+          These devices are usually part of a
+          <strong>botnet</strong>
+          : computers, routers and cameras infected with malware and controlled by the attacker.
+          Their owners often do not know it.
+        </p>
 
-      <h2>DoS and DDoS</h2>
-      <p>
-        In a <strong>DoS</strong> attack the traffic comes from one computer, so it is easy to block.
-        In a <strong>DDoS</strong> attack the traffic comes from thousands of devices all over the world,
-        so it is much harder to tell the attack apart from normal visitors.
-      </p>
-      <p>
-        These devices are usually part of a <strong>botnet</strong>: computers, routers and cameras
-        infected with malware and controlled by the attacker. Their owners often do not know it.
-      </p> 
-      
-      <figure style="margin: 4rem 0;">
-        <img src="../img/ddos-botnet.png" alt="Diagram of a botnet attack: the botmaster controls a C&amp;C server, which sends orders to many bots that all attack one target server" width="627" height="790">
-         <figcaption style="margin-top: 0.75rem;">How a botnet is used in a DDoS attack.</figcaption>
-      </figure>
-      
-      <h2>The three types of DDoS</h2>
+        <figure style="margin: 4rem 0">
+          <img
+            src="../img/ddos-botnet.png"
+            alt="Diagram of a botnet attack: the botmaster controls a C&amp;C server, which sends orders to many bots that all attack one target server"
+            width="627"
+            height="790"
+          />
+          <figcaption style="margin-top: 0.75rem">
+            How a botnet is used in a DDoS attack.
+          </figcaption>
+        </figure>
 
-      <h3>1. Volumetric attacks</h3>
-      <p>
-        The goal is to fill the victim's internet connection with useless traffic. A common technique is
-        <strong>amplification</strong>: the attacker sends small requests to public servers (for example DNS
-        servers) but writes the victim's address as the sender. The servers send big answers to the victim.
-      </p>
+        <h2>The three types of DDoS</h2>
 
-      <div class="table-wrap">
-      <table class="data-table">
-        <caption>Amplification factors of some protocols</caption>
-        <tr>
-          <th>Protocol</th>
-          <th>Amplification</th>
-        </tr>
-        <tr>
-          <td>DNS</td>
-          <td>28 to 54 times</td>
-        </tr>
-        <tr>
-          <td>NTP</td>
-          <td>556 times</td>
-        </tr>
-        <tr>
-          <td>Memcached</td>
-          <td>10,000 to 51,000 times</td>
-        </tr>
-      </table>
+        <h3>1. Volumetric attacks</h3>
+        <p>
+          The goal is to fill the victim's internet connection with useless traffic. A common
+          technique is
+          <strong>amplification</strong>
+          : the attacker sends small requests to public servers (for example DNS servers) but writes
+          the victim's address as the sender. The servers send big answers to the victim.
+        </p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Amplification factors of some protocols</caption>
+            <tr>
+              <th>Protocol</th>
+              <th>Amplification</th>
+            </tr>
+            <tr>
+              <td>DNS</td>
+              <td>28 to 54 times</td>
+            </tr>
+            <tr>
+              <td>NTP</td>
+              <td>556 times</td>
+            </tr>
+            <tr>
+              <td>Memcached</td>
+              <td>10,000 to 51,000 times</td>
+            </tr>
+          </table>
+        </div>
+
+        <h3>2. Protocol attacks</h3>
+        <p>
+          These attacks use the rules of network protocols to use up the memory of servers and
+          firewalls. The best known is the
+          <strong>SYN flood</strong>
+          . To open a TCP connection, the client sends
+          <code>SYN</code>
+          , the server answers
+          <code>SYN-ACK</code>
+          and waits for the final
+          <code>ACK</code>
+          . The attacker sends many
+          <code>SYN</code>
+          packets and never finishes the connection, so the server keeps waiting until it has no
+          space left for real users.
+        </p>
+
+        <h3>3. Application layer (L7) attacks</h3>
+        <p>
+          These attacks target the website itself (layer 7 of the network model). Every request
+          looks normal, but the requests are slow and expensive for the server, for example searches
+          or logins. Examples are
+          <strong>HTTP floods</strong>
+          and
+          <strong>Slowloris</strong>
+          , which keeps many connections open by sending data very slowly.
+        </p>
+
+        <h2>Famous examples</h2>
+        <ul>
+          <li>
+            <strong>Mirai (2016):</strong>
+            a botnet made of IoT devices with default passwords attacked the DNS provider Dyn, and
+            many popular websites became unreachable.
+          </li>
+          <li>
+            <strong>GitHub (2018):</strong>
+            GitHub received about 1.35 Tbps of traffic from a Memcached amplification attack and was
+            offline for a few minutes.
+          </li>
+          <li>
+            <strong>HTTP/2 Rapid Reset (2023):</strong>
+            a new L7 technique reached 398 million requests per second against Google.
+          </li>
+        </ul>
+
+        <h2>How to defend</h2>
+        <ul>
+          <li>
+            Use a CDN or a DDoS protection service that spreads the traffic over many servers.
+          </li>
+          <li>Enable SYN cookies against SYN floods.</li>
+          <li>Limit how many requests one user can send per second (rate limiting).</li>
+          <li>Use a Web Application Firewall to block bots.</li>
+          <li>Change the default passwords of your devices so they cannot join a botnet.</li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ul>
+          <li>
+            <a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/">
+              Cloudflare, "What is a DDoS attack?"
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/">
+              Cloudflare, "SYN flood attack"
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cloudflare.com/learning/ddos/glossary/mirai-botnet/">
+              Cloudflare, "What is the Mirai botnet?"
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.cisa.gov/news-events/alerts/2014/01/17/udp-based-amplification-attacks"
+            >
+              CISA, "UDP-Based Amplification Attacks"
+            </a>
+          </li>
+          <li>
+            <a href="https://github.blog/2018-03-01-ddos-incident-report/">
+              GitHub Blog, "February 28th DDoS Incident Report"
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://cloud.google.com/blog/products/identity-security/how-it-works-the-novel-http2-rapid-reset-ddos-attack"
+            >
+              Google Cloud Blog, "How it works: The novel HTTP/2 Rapid Reset DDoS attack"
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://sectigostore.com/blog/botnet-attacks-what-is-a-botnet-how-does-it-work/"
+            >
+              Image: "How a Botnet Attack Works", INFOSEC INSIGHTS
+            </a>
+          </li>
+        </ul>
+
+        <p><a href="authentication-attacks.html">Next page: Authentication attacks</a></p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
+
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
       </div>
-
-      <h3>2. Protocol attacks</h3>
-      <p>
-        These attacks use the rules of network protocols to use up the memory of servers and firewalls.
-        The best known is the <strong>SYN flood</strong>. To open a TCP connection, the client sends
-        <code>SYN</code>, the server answers <code>SYN-ACK</code> and waits for the final <code>ACK</code>.
-        The attacker sends many <code>SYN</code> packets and never finishes the connection, so the server
-        keeps waiting until it has no space left for real users.
-      </p>
-
-      <h3>3. Application layer (L7) attacks</h3>
-      <p>
-        These attacks target the website itself (layer 7 of the network model). Every request looks normal,
-        but the requests are slow and expensive for the server, for example searches or logins.
-        Examples are <strong>HTTP floods</strong> and <strong>Slowloris</strong>, which keeps many connections
-        open by sending data very slowly.
-      </p>
-
-      <h2>Famous examples</h2>
-      <ul>
-        <li>
-          <strong>Mirai (2016):</strong> a botnet made of IoT devices with default passwords attacked the DNS
-          provider Dyn, and many popular websites became unreachable.
-        </li>
-        <li>
-          <strong>GitHub (2018):</strong> GitHub received about 1.35 Tbps of traffic from a Memcached
-          amplification attack and was offline for a few minutes.
-        </li>
-        <li>
-          <strong>HTTP/2 Rapid Reset (2023):</strong> a new L7 technique reached 398 million requests per
-          second against Google.
-        </li>
-      </ul>
-
-      <h2>How to defend</h2>
-      <ul>
-        <li>Use a CDN or a DDoS protection service that spreads the traffic over many servers.</li>
-        <li>Enable SYN cookies against SYN floods.</li>
-        <li>Limit how many requests one user can send per second (rate limiting).</li>
-        <li>Use a Web Application Firewall to block bots.</li>
-        <li>Change the default passwords of your devices so they cannot join a botnet.</li>
-      </ul>
-
-      <h2>Sources</h2>
-      <ul>
-        <li><a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/">Cloudflare, "What is a DDoS attack?"</a></li>
-        <li><a href="https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/">Cloudflare, "SYN flood attack"</a></li>
-        <li><a href="https://www.cloudflare.com/learning/ddos/glossary/mirai-botnet/">Cloudflare, "What is the Mirai botnet?"</a></li>
-        <li><a href="https://www.cisa.gov/news-events/alerts/2014/01/17/udp-based-amplification-attacks">CISA, "UDP-Based Amplification Attacks"</a></li>
-        <li><a href="https://github.blog/2018-03-01-ddos-incident-report/">GitHub Blog, "February 28th DDoS Incident Report"</a></li>
-        <li><a href="https://cloud.google.com/blog/products/identity-security/how-it-works-the-novel-http2-rapid-reset-ddos-attack">Google Cloud Blog, "How it works: The novel HTTP/2 Rapid Reset DDoS attack"</a></li>
-        <li><a href="https://sectigostore.com/blog/botnet-attacks-what-is-a-botnet-how-does-it-work/">Image: "How a Botnet Attack Works", INFOSEC INSIGHTS</a></li>
-      </ul>
-
-      <p><a href="authentication-attacks.html">Next page: Authentication attacks</a></p>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
-
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

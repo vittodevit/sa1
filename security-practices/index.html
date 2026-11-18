@@ -1,203 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Tugrul Yildirim">
-        <title>Good Security Practices</title>
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/shared.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tugrul Yildirim" />
+    <title>Good Security Practices</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-    <body>
-
-        <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-        <main class="container">
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li aria-current="page">Good Security Practices</li>
+          </ul>
+        </nav>
+        <h1>Good Security Practices</h1>
 
-            <section class="section stack">
+        <p class="lead">
+          Most cyberattacks do not require a genius hacker. They succeed because people reuse
+          passwords, postpone software updates, or keep no backups. Adopting a few simple daily
+          habits stops most of them.
+        </p>
 
-                <ul class="breadcrumbs">
-                    <li aria-current="page">Good Security Practices</li>
-                </ul>
+        <div class="surface">
+          <h2>Why everyday habits matter</h2>
+          <p>
+            According to the
+            <strong>2025 Verizon Data Breach Investigations Report (DBIR)</strong>
+            , a human action was involved in about
+            <strong>60%</strong>
+            of breaches. The most common entry points were stolen passwords (
+            <strong>22%</strong>
+            ), followed by unpatched software vulnerabilities (
+            <strong>20%</strong>
+            ).
+          </p>
+        </div>
 
-                <h1>Good Security Practices</h1>
+        <h2>Explore the topics</h2>
 
-                <p class="lead">
-                    Most cyberattacks do not require a genius hacker. They succeed because people reuse passwords, 
-                    postpone software updates, or keep no backups. Adopting a few simple daily habits stops most of them.
-                </p>
+        <div class="grid grid--3">
+          <a class="topic-card" href="password-hygiene.html">
+            <span class="topic-card__index">01</span>
+            <h3 class="topic-card__title">Password hygiene</h3>
+            <p class="topic-card__text">A strong, unique password for every account.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                <div class="surface">
-                    <h3>Why everyday habits matter</h3>
-                    <p>
-                        According to the <strong>2025 Verizon Data Breach Investigations Report (DBIR)</strong>, a human action was involved 
-                        in about <strong>60%</strong> of breaches. The most common entry points were stolen passwords (<strong>22%</strong>), 
-                        followed by unpatched software vulnerabilities (<strong>20%</strong>).
-                    </p>
-                </div>
+          <a class="topic-card" href="mfa.html">
+            <span class="topic-card__index">02</span>
+            <h3 class="topic-card__title">Multi-factor authentication</h3>
+            <p class="topic-card__text">Add a second step to log in.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                <h2>Explore the topics</h2>
+          <a class="topic-card" href="software-updates.html">
+            <span class="topic-card__index">03</span>
+            <h3 class="topic-card__title">Software updates</h3>
+            <p class="topic-card__text">Install security fixes quickly.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                <div class="grid grid--3">
-                    
-                    <a class="topic-card" href="password-hygiene.html">
-                        <span class="topic-card__index">01</span>
-                        <h3 class="topic-card__title">Password hygiene</h3>
-                        <p class="topic-card__text">A strong, unique password for every account.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="backups.html">
+            <span class="topic-card__index">04</span>
+            <h3 class="topic-card__title">Backups</h3>
+            <p class="topic-card__text">Keep copies of your important files.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="mfa.html">
-                        <span class="topic-card__index">02</span>
-                        <h3 class="topic-card__title">Multi-factor authentication</h3>
-                        <p class="topic-card__text">Add a second step to log in.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="device-security.html">
+            <span class="topic-card__index">05</span>
+            <h3 class="topic-card__title">Device security</h3>
+            <p class="topic-card__text">Lock and protect your phone and laptop.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="software-updates.html">
-                        <span class="topic-card__index">03</span>
-                        <h3 class="topic-card__title">Software updates</h3>
-                        <p class="topic-card__text">Install security fixes quickly.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="safe-online-behaviour.html">
+            <span class="topic-card__index">06</span>
+            <h3 class="topic-card__title">Safe online behaviour</h3>
+            <p class="topic-card__text">Think before you click, and know what to do if hacked.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="backups.html">
-                        <span class="topic-card__index">04</span>
-                        <h3 class="topic-card__title">Backups</h3>
-                        <p class="topic-card__text">Keep copies of your important files.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="../secure-communication/index.html">
+            <span class="topic-card__index">07</span>
+            <h3 class="topic-card__title">Secure Communication</h3>
+            <p class="topic-card__text">Learn how to protect messages and communicate securely.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="device-security.html">
-                        <span class="topic-card__index">05</span>
-                        <h3 class="topic-card__title">Device security</h3>
-                        <p class="topic-card__text">Lock and protect your phone and laptop.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="home-router.html">
+            <span class="topic-card__index">08</span>
+            <h3 class="topic-card__title">Home router security</h3>
+            <p class="topic-card__text">Check your router settings and separate guest access.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="safe-online-behaviour.html">
-                        <span class="topic-card__index">06</span>
-                        <h3 class="topic-card__title">Safe online behaviour</h3>
-                        <p class="topic-card__text">Think before you click, and know what to do if hacked.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="usb-safety.html">
+            <span class="topic-card__index">09</span>
+            <h3 class="topic-card__title">USB drives and accessories</h3>
+            <p class="topic-card__text">
+              Know what to check before connecting unfamiliar hardware.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="../secure-communication/index.html">
-                        <span class="topic-card__index">07</span>
-                        <h3 class="topic-card__title">Secure Communication</h3>
-                        <p class="topic-card__text">Learn how to protect messages and communicate securely.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="device-handover.html">
+            <span class="topic-card__index">10</span>
+            <h3 class="topic-card__title">Selling or recycling a device</h3>
+            <p class="topic-card__text">
+              Prepare your device and erase personal data before handing it over.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="home-router.html">
-                        <span class="topic-card__index">08</span>
-                        <h3 class="topic-card__title">Home router security</h3>
-                        <p class="topic-card__text">Check your router settings and separate guest access.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="../secure-communication/online-meetings.html">
+            <span class="topic-card__index">11</span>
+            <h3 class="topic-card__title">Online meeting security</h3>
+            <p class="topic-card__text">
+              Manage who joins your meetings and who can share their screen.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="usb-safety.html">
-                        <span class="topic-card__index">09</span>
-                        <h3 class="topic-card__title">USB drives and accessories</h3>
-                        <p class="topic-card__text">Know what to check before connecting unfamiliar hardware.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="../secure-communication/file-sharing.html">
+            <span class="topic-card__index">12</span>
+            <h3 class="topic-card__title">Safe file sharing</h3>
+            <p class="topic-card__text">Choose recipients, control editing and review access.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-                    <a class="topic-card" href="device-handover.html">
-                        <span class="topic-card__index">10</span>
-                        <h3 class="topic-card__title">Selling or recycling a device</h3>
-                        <p class="topic-card__text">Prepare your device and erase personal data before handing it over.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+          <a class="topic-card" href="browser-extensions.html">
+            <span class="topic-card__index">13</span>
+            <h3 class="topic-card__title">Browser extension permissions</h3>
+            <p class="topic-card__text">Review what browser add-ons can read and change.</p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
+        </div>
 
-                    <a class="topic-card" href="../secure-communication/online-meetings.html">
-                        <span class="topic-card__index">11</span>
-                        <h3 class="topic-card__title">Online meeting security</h3>
-                        <p class="topic-card__text">Manage who joins your meetings and who can share their screen.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
+        <p class="text-muted">
+          Source:
+          <a
+            href="https://www.optery.com/phishings-role-in-breachesbehind-the-numbers-of-verizons-2025-dbir/"
+            target="_blank"
+            rel="noopener"
+          >
+            Verizon DBIR 2025
+          </a>
+        </p>
 
-                    <a class="topic-card" href="../secure-communication/file-sharing.html">
-                        <span class="topic-card__index">12</span>
-                        <h3 class="topic-card__title">Safe file sharing</h3>
-                        <p class="topic-card__text">Choose recipients, control editing and review access.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
-
-                    <a class="topic-card" href="browser-extensions.html">
-                        <span class="topic-card__index">13</span>
-                        <h3 class="topic-card__title">Browser extension permissions</h3>
-                        <p class="topic-card__text">Review what browser add-ons can read and change.</p>
-                        <span class="topic-card__cta">Read more</span>
-                    </a>
-
-                </div>
-
-                <p class="text-muted">
-                    Source: <a href="https://www.optery.com/phishings-role-in-breachesbehind-the-numbers-of-verizons-2025-dbir/" target="_blank" rel="noopener">Verizon DBIR 2025</a>
-                </p>
-
-                <div class="cluster">
-                    <a class="btn btn--primary" href="password-hygiene.html">
-                        Password hygiene
-                    </a>
-                </div>
-
-            </section>
-
-        </main>
-    
+        <div class="cluster">
+          <a class="btn btn--primary" href="password-hygiene.html">Password hygiene</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

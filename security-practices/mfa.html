@@ -1,153 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Tugrul Yildirim">
-        <title>Multi-factor authentication</title>
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/shared.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tugrul Yildirim" />
+    <title>Multi-factor authentication</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-    <body>
-
-        <header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-        <main class="container">
+    <main id="main" class="container">
+      <section class="section stack">
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Good Security Practices</a></li>
+            <li aria-current="page">Multi-factor authentication</li>
+          </ul>
+        </nav>
+        <h1>Multi-factor authentication</h1>
 
-            <section class="section stack">
+        <p class="lead">
+          Even if someone steals your password, a second factor stops them. A 2023 Microsoft study
+          found that MFA lowered the risk of an account being hacked by 99.22%.
+        </p>
 
-                <ul class="breadcrumbs">
-                    <li><a href="index.html">Good Security Practices</a></li>
-                    <li aria-current="page">Multi-factor authentication</li>
-                </ul>
+        <div class="surface">
+          <img src="../img/mfa.png" alt="Multi-factor authentication factors" />
+          <p>MFA combines multiple independent categories of verification to secure accounts.</p>
+        </div>
 
-                <h1>Multi-factor authentication</h1>
+        <h2>Three kinds of factors</h2>
 
-                <p class="lead">
-                    Even if someone steals your password, a second factor stops them. A 2023 Microsoft study found 
-                    that MFA lowered the risk of an account being hacked by 99.22%.
-                </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Something you know</th>
+                <th>Something you have</th>
+                <th>Something you are</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Password, PIN</td>
+                <td>Phone, security key</td>
+                <td>Fingerprint, face</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                <div class="surface">
-                    <img src="../img/mfa.png" alt="Multi-factor authentication factors">
-                    <p>MFA combines multiple independent categories of verification to secure accounts.</p>
-                </div>
+        <h2>From weakest to strongest</h2>
 
-                <h2>Three kinds of factors</h2>
+        <ol>
+          <li>
+            <strong>SMS code:</strong>
+            better than nothing, but can be stolen by SIM swapping.
+          </li>
+          <li>
+            <strong>Authenticator app code:</strong>
+            generates secure codes directly on your device.
+          </li>
+          <li>
+            <strong>Push notification with number matching:</strong>
+            interactive approval on your phone.
+          </li>
+          <li>
+            <strong>Passkey or security key:</strong>
+            phishing-resistant because nothing is typed into fake sites.
+          </li>
+        </ol>
 
-                <div class="table-wrap">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Something you know</th>
-                                <th>Something you have</th>
-                                <th>Something you are</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Password, PIN</td>
-                                <td>Phone, security key</td>
-                                <td>Fingerprint, face</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div class="callout">
+          <h3 class="callout__title">Real example: Uber, 2022</h3>
+          <p>
+            An attacker with a stolen password sent push notification after push notification until
+            an employee accepted one ("MFA fatigue"), allowing entry into internal systems. Never
+            approve a login you didn't start.
+          </p>
+        </div>
 
-                <h2>From weakest to strongest</h2>
+        <div class="surface">
+          <h3>Quick tips</h3>
+          <ul>
+            <li>Turn on MFA for your email today.</li>
+            <li>Prefer an app or passkey over SMS.</li>
+            <li>Never approve a login you didn't start.</li>
+          </ul>
+        </div>
 
-                <ol>
-                    <li><strong>SMS code:</strong> better than nothing, but can be stolen by SIM swapping.</li>
-                    <li><strong>Authenticator app code:</strong> generates secure codes directly on your device.</li>
-                    <li><strong>Push notification with number matching:</strong> interactive approval on your phone.</li>
-                    <li><strong>Passkey or security key:</strong> phishing-resistant because nothing is typed into fake sites.</li>
-                </ol>
+        <p class="text-muted">
+          Source:
+          <a href="https://arxiv.org/abs/2305.00945" target="_blank" rel="noopener">
+            Microsoft Research (2023)
+          </a>
+          ; FIDO Alliance; Appsecco
+        </p>
 
-                <div class="callout">
-                    <h3 class="callout__title">Real example: Uber, 2022</h3>
-                    <p>
-                        An attacker with a stolen password sent push notification after push notification until an employee 
-                        accepted one ("MFA fatigue"), allowing entry into internal systems. Never approve a login you didn't start.
-                    </p>
-                </div>
-
-                <div class="surface">
-                    <h3>Quick tips</h3>
-                    <ul>
-                        <li>Turn on MFA for your email today.</li>
-                        <li>Prefer an app or passkey over SMS.</li>
-                        <li>Never approve a login you didn't start.</li>
-                    </ul>
-                </div>
-
-                <p class="text-muted">
-                    Source: <a href="https://arxiv.org/abs/2305.00945" target="_blank" rel="noopener">Microsoft Research (2023)</a>; FIDO Alliance; Appsecco
-                </p>
-
-                <div class="cluster">
-                    <a class="btn btn--secondary" href="password-hygiene.html">
-                        Password hygiene
-                    </a>
-                    <a class="btn btn--primary" href="software-updates.html">
-                        Software updates
-                    </a>
-                </div>
-
-            </section>
-
-        </main>
-    
+        <div class="cluster">
+          <a class="btn btn--secondary" href="password-hygiene.html">Password hygiene</a>
+          <a class="btn btn--primary" href="software-updates.html">Software updates</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

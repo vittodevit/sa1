@@ -1,341 +1,195 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Carlo Augusto Conti">
-    <title>Digital Privacy Index  </title> 
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/shared.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Carlo Augusto Conti" />
+    <title>Digital Privacy</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-<style> 
-
-/* Navbar CSS customizations taken from main index page */
-/* navbar underline animation */
-    .site-nav__link {
-        position: relative;
-        text-decoration: none;
-        }
-
-    .site-nav__link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        width: 100%;
-        height: 2px;
-        background: var(--accent-text);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform .22s ease;
-        }
-
-    .site-nav__link:hover::after,
-    .site-nav__link:focus-visible::after,
-    .site-nav__link.is-active::after {
-        transform: scaleX(1);
-        }
-
-
-/* Animations for the unit cards taken from main index */      
-         .unit-card {
-            transition: background-color .2s ease, border-color .2s ease;
-        }
-
-        .unit-card:hover {
-            background-color: rgba(70, 143, 161, 0.16);
-            border-color: var(--accent-border);
-        }
-
-
-/* Animation for introduction button */
-.component__preview .btn {
-    transition: transform 0.2s ease;
-}
-
-.component__preview .btn:hover {
-    transform: translateY(-3px);
-}
-
-
-/* CSS taken from components CSS page */
-    /* Outer preview box for one component section. */
-    .component {
-      display: grid;
-      overflow: hidden;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      background: var(--color-surface);
-    }
-
-    /* Inner area with a soft radial accent in the top-left corner. */
-    .component__preview {
-      display: grid;
-      gap: var(--space-2);
-      padding: clamp(1rem, 3vw, 1.75rem);
-      background:
-        radial-gradient(40rem 20rem at 10% 0%, var(--accent-soft), transparent 60%),
-        var(--color-surface);
-    }
-
-</style>
-</head>
-
-
-
-<body>
-
-<!-- Shared header taken from main index page-->
-<header class="site-header">
-        <nav class="container site-nav__inner" aria-label="Main navigation">
-            <a class="brand" href="../index.html">
-                <span class="brand__copy">CyberAware</span>
-            </a>
-            <ul class="site-nav__links">
-                <li><a class="site-nav__link" href="../index.html">Home</a></li>
-                <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
-                <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
-                <li><a class="site-nav__link" href="../credits.html"> Credits</a></li> 
-            </ul>
-        </nav>
+  <body>
+    <header class="site-header">
+      <nav class="container site-nav__inner" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="brand__copy">CyberAware</span>
+        </a>
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#topics">Topics</a></li>
+          <li><a class="site-nav__link" href="../index.html#mission">Our mission</a></li>
+          <li><a class="site-nav__link" href="../credits.html">Credits</a></li>
+        </ul>
+      </nav>
     </header>
 
-
- <!-- Beginning of main and content-->
- <main id="main" class="container">
-
-<!-- Breadcrumb: helps readers understand where this page sits. -->
+    <main id="main" class="container">
+      <section class="section stack">
         <nav aria-label="Breadcrumb">
-          <br>
-          <ol class="breadcrumbs">
+          <ul class="breadcrumbs">
             <li><a href="../index.html">Home</a></li>
-            <li><span aria-current="page">Digital Privacy</span></li>
-          </ol>
+            <li aria-current="page">Digital Privacy</li>
+          </ul>
         </nav>
+        <h1>Digital Privacy</h1>
 
+        <p class="lead">
+          Every click leaves a trace. From the websites we visit to the information we share, our
+          digital lives leave behind more than we might imagine. Explore how your data is collected,
+          who can access it, and what you can do to protect your privacy.
+        </p>
 
-    <section class="section" id="navigation">
-      <div class="container">
-        <div class="component">
-          <div class="component__preview">
-              <!-- Page header: a small eyebrow, a title and an optional intro. -->
-                <header class="stack stack--sm">
-                  <p class="eyebrow">Cyberaware</p>
-                  <div class="section__header">
-                    <h1 class="section__title">Digital Privacy</h1>
-                    </div>
-                <h2>Every <a class="btn btn--primary" href="#articles">CLICK</a> leaves a trace. Who's following yours?</h2>
-                  <p class="text-muted">From the websites we visit to the information we share, our digital lives leave behind more than we might imagine. 
-                    Explore how your data is collected, who can access it, and what you can do to protect your privacy.</p>
-                    </header>
-                  </div>
-                  </div>
-                  </div>
-                  </section>
-            
-<!-- Cards from CSS used for the index -->
-        <section class=" container section section--tight" id="articles">
-            <h2 class="section__title">Beyond the Click</h2>
-            <div class="stack stack--sm">
-                <div class="grid grid--3">
+        <h2>Explore the topics</h2>
 
-            <!-- Article 1-->
-                <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 1</span>
-                    <span>Francesco Taddei</span>
-                  </div>
-                  <h3 class="unit-card__title">Introduction to Digital Privacy</h3>
-                  <p class="unit-card__text">
-                    Discover what digital privacy means, why it matters, and how it affects our everyday lives.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Overview</span>
-                    <a class="btn btn--link btn--sm" href="privacy-intro.html">Open article →</a>
-                  </div>
-                </article>
+        <div class="grid grid--3">
+          <a class="topic-card" href="privacy-intro.html">
+            <span class="topic-card__index">01</span>
+            <h3 class="topic-card__title">Introduction to Digital Privacy</h3>
+            <p class="topic-card__text">
+              What digital privacy means, why it matters, and how it affects our everyday lives.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
+          <a class="topic-card" href="privacy-footprints.html">
+            <span class="topic-card__index">02</span>
+            <h3 class="topic-card__title">Digital footprints, cookies and trackers</h3>
+            <p class="topic-card__text">
+              Every online action leaves traces. How websites track your activity and collect
+              information.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-            <!-- Article 2-->
-            <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 2</span>
-                    <span>Francesco Taddei</span>
-                  </div>
-                  <h3 class="unit-card__title">Digital Footprints, Cookies & Trackers</h3>
-                  <p class="unit-card__text">
-                    Every online action leaves traces. Explore how websites track your activity and collect information.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Tracking</span>
-                    <a class="btn btn--link btn--sm" href="privacy-footprints.html">Open article →</a>
-                  </div>
-                </article>
-            
-                
-            <!-- Article 3-->
-                <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 3</span>
-                    <span>Francesco Taddei</span>
-                  </div>
-                  <h3 class="unit-card__title">Data Brokers, Mining & Selling</h3>
-                  <p class="unit-card__text">
-                    Who profits from your personal information? Discover how data is collected, analysed, and sold.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Data Collection</span>
-                    <a class="btn btn--link btn--sm" href="privacy-data-brokers.html">Open article →</a>
-                  </div>
-                </article>
-                
+          <a class="topic-card" href="privacy-data-brokers.html">
+            <span class="topic-card__index">03</span>
+            <h3 class="topic-card__title">Data brokers, mining and selling</h3>
+            <p class="topic-card__text">
+              Who profits from your personal information? How data is collected, analysed, and sold.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-            <!-- Article 4-->    
-            <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 4</span>
-                    <span>Tommaso Fasolo</span>
-                  </div>
-                  <h3 class="unit-card__title">Privacy Laws & Regulations</h3>
-                  <p class="unit-card__text">
-                    Learn how privacy laws protect personal information and what rights you have over your data.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Legislation</span>
-                    <a class="btn btn--link btn--sm" href="privacy-laws-and-regulations.html">Open article →</a>
-                  </div>
-                </article>
+          <a class="topic-card" href="privacy-laws-and-regulations.html">
+            <span class="topic-card__index">04</span>
+            <h3 class="topic-card__title">Privacy laws and regulations</h3>
+            <p class="topic-card__text">
+              How privacy laws protect personal information and what rights you have over your data.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
+          <a class="topic-card" href="vpns.html">
+            <span class="topic-card__index">05</span>
+            <h3 class="topic-card__title">Virtual private networks (VPNs)</h3>
+            <p class="topic-card__text">
+              How VPNs work, what they protect, and their limitations for your online activity.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-            <!-- Article 5-->    
-                <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 5</span>
-                    <span>Tommaso Fasolo</span>
-                  </div>
-                  <h3 class="unit-card__title">Virtual Private Networks (VPNs)</h3>
-                  <p class="unit-card__text">
-                    Explore how VPNs work, what they protect, and their limitations in keeping your online activity private.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Technology</span>
-                    <a class="btn btn--link btn--sm" href="vpns.html">Open article →</a>
-                  </div>
-                </article>
+          <a class="topic-card" href="encryption.html">
+            <span class="topic-card__index">06</span>
+            <h3 class="topic-card__title">Cryptography and encryption</h3>
+            <p class="topic-card__text">
+              How encryption protects sensitive information and keeps digital communications secure.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
+          <a class="topic-card" href="privacy-browsers.html">
+            <span class="topic-card__index">07</span>
+            <h3 class="topic-card__title">Privacy-focused browsers</h3>
+            <p class="topic-card__text">
+              Can choosing a different browser improve your privacy? Alternatives that limit online
+              tracking.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
-            <!-- Article 6-->
-            <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 6</span>
-                    <span>Tommaso Fasolo</span>
-                  </div>
-                  <h3 class="unit-card__title">Cryptography & Encryption</h3>
-                  <p class="unit-card__text">
-                    Discover how encryption protects sensitive information and helps keep digital communications secure.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Security</span>
-                    <a class="btn btn--link btn--sm" href="encryption.html">Open article →</a>
-                  </div>
-                </article>
+          <a class="topic-card" href="social-networks.html">
+            <span class="topic-card__index">08</span>
+            <h3 class="topic-card__title">Social networks and privacy</h3>
+            <p class="topic-card__text">
+              How much do social networks know about you? The privacy risks of sharing your life
+              online.
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
 
+          <a class="topic-card" href="the-privacy-dilemma.html">
+            <span class="topic-card__index">09</span>
+            <h3 class="topic-card__title">The privacy dilemma</h3>
+            <p class="topic-card__text">
+              How much privacy are we willing to sacrifice for convenience and security?
+            </p>
+            <span class="topic-card__cta">Read more</span>
+          </a>
+        </div>
 
-            <!-- Article 7-->
-            <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 7</span>
-                    <span>Francesco Taddei</span>
-                  </div>
-                  <h3 class="unit-card__title">Privacy Focused Browsers</h3>
-                  <p class="unit-card__text">
-                    Can choosing a different browser improve your privacy? Explore alternatives designed to limit online tracking.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Privacy Tools</span>
-                    <a class="btn btn--link btn--sm" href="privacy-browsers.html">Open article →</a>
-                  </div>
-                </article>
+        <div class="cluster">
+          <a class="btn btn--primary" href="privacy-intro.html">Introduction to Digital Privacy</a>
+        </div>
+      </section>
+    </main>
 
-                
-            <!-- Article 8-->
-                <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 8</span>
-                    <span>Tommaso Fasolo</span>
-                  </div>
-                  <h3 class="unit-card__title">Social Networks & Privacy</h3>
-                  <p class="unit-card__text">
-                    How much do social networks know about you? Explore the privacy risks of sharing your life online.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Social Media</span>
-                    <a class="btn btn--link btn--sm" href="social-networks.html">Open article →</a>
-                  </div>
-                </article>
-                
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <!-- Left column: logo and a short description. -->
+        <div class="site-footer__brand">
+          <span class="brand__copy">
+            CyberAware
+            <br />
+            <span class="brand__sub">USI · Software Atelier I</span>
+          </span>
+          <p class="site-footer__text">
+            One click can compromise everything. Awareness can protect it all..
+          </p>
+        </div>
 
-            <!-- Article 9-->    
-            <article class="unit-card">
-                  <div class="unit-card__meta">
-                    <span>Article 9</span>
-                    <span>Carlo Conti</span>
-                  </div>
-                  <h3 class="unit-card__title">The Privacy Dilemma</h3>
-                  <p class="unit-card__text">
-                    How much privacy are we willing to sacrifice for convenience and security? Explore the difficult balance.
-                  </p>
-                  <div class="unit-card__footer">
-                    <span class="badge badge--outline">Discussion</span>
-                    <a class="btn btn--link btn--sm" href="the-privacy-dilemma.html">Open article →</a>
-                  </div>
-                </article>
-            </div>
-            </div>
-            </section>
-</main>
+        <!-- Middle column: the same modules as the main navigation. -->
+        <div>
+          <h2 class="site-footer__title">Explore</h2>
+          <ul class="site-footer__list site-footer__list--grid">
+            <li>
+              <a class="site-footer__link" href="../common-threats/index.html">Common Threats</a>
+            </li>
+            <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
+            <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
+            <li>
+              <a class="site-footer__link" href="../famous-incidents/index.html">
+                Famous Incidents
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../security-practices/index.html">
+                Good Security Practices
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../secure-communication/index.html">
+                Secure Communication
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../ai-risks/index.html">Risk Brought by AI</a>
+            </li>
+            <li>
+              <a class="site-footer__link" href="../authentication/index.html">Authentication</a>
+            </li>
+          </ul>
+        </div>
 
-
- <!-- Shared footer: project identity, modules and project information. -->
-  <footer class="site-footer">
-                  <div class="container site-footer__main">
-                    <!-- Left column: logo and a short description. -->
-                    <div class="site-footer__brand">
-                      <span class="brand__copy">
-                        CyberAware
-                        <br>
-                        <span class="brand__sub">USI · Software Atelier I</span>
-                      </span>
-                      <p class="site-footer__text">One click can compromise everything. Awareness can protect it all..
-                      </p>
-                    </div>
-
-                    <!-- Middle column: the same modules as the main navigation. -->
-                    <div>
-                      <h2 class="site-footer__title">Explore</h2>
-                      <ul class="site-footer__list site-footer__list--grid">
-                        <li><a class="site-footer__link" href="../common-threats/index.html">Common Threats</a></li>
-                        <li><a class="site-footer__link" href="../malware/index.html">Malware</a></li>
-                        <li><a class="site-footer__link" href="../online-privacy/index.html">Privacy</a></li>
-                        <li><a class="site-footer__link" href="../famous-incidents/index.html">Famous Incidents</a></li>
-                        <li><a class="site-footer__link" href="../security-practices/index.html">Good Security Practices</a></li>
-                        <li><a class="site-footer__link" href="../secure-communication/index.html">Secure Communication</a></li>
-                        <li><a class="site-footer__link" href="../authentication/index.html">Authentication</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Right column: information about the project and the group. -->
-                    <div>
-                      <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
-                      <ul class="site-footer__list">
-                        <li><span class="site-footer__text">Software Atelier 1</span></li>
-                        <li><span class="site-footer__text">USI 2026/27</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </footer>
-    
-</body>
+        <!-- Right column: information about the project and the group. -->
+        <div>
+          <h2 class="site-footer__title">Group 3 - CyberSecurity</h2>
+          <ul class="site-footer__list">
+            <li><span class="site-footer__text">Software Atelier 1</span></li>
+            <li><span class="site-footer__text">USI 2026/27</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
-
-            
