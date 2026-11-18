@@ -20,7 +20,7 @@ See [here](docs/main.pdf)
 - *Carlo Augusto Conti ([Contitor](https://github.com/Contitor))*: Privacy, famous incidents
   - Francesco Taddei ([france999ll](https://github.com/france999ll))
   - Tommaso Fasolo ([TommasoFasoloUSI](https://github.com/TommasoFasoloUSI))
-  - Bora Lapushi ([borallapushi](https://github.com/borallapushi))
+  - Bora Llapushi ([borallapushi](https://github.com/borallapushi))
   - Melis Tezcan ([melistezcan](https://github.com/melistezcan))
 - *Raul Moreno ([rmoreno1206](https://github.com/rmoreno1206))*: good security practices, secure communication
   - Veronika Pavlova ([pavlovaveronika942](https://github.com/pavlovaveronika942))
